@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('cidcodigo');
 		echo $this->Form->input('cidnome');
-		echo $this->Form->input('cidestado');
+		echo $this->Form->input('estados');
 		echo $this->Form->input('cidcep');
 		echo $this->Form->input('cidcodigonfe');
 	?>

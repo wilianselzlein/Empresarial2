@@ -40,6 +40,7 @@ class CidadesController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Cidade->create();
+			$this->request->data['Cidade']['cidestado'] = $this->request->data['Cidade']['estados'];
 			if ($this->Cidade->save($this->request->data)) {
 				$this->Session->setFlash(__('The cidade has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -63,6 +64,7 @@ class CidadesController extends AppController {
 			throw new NotFoundException(__('Invalid cidade'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			$this->request->data['Cidade']['cidestado'] = $this->request->data['Cidade']['estados'];
 			if ($this->Cidade->save($this->request->data)) {
 				$this->Session->setFlash(__('The cidade has been saved'));
 				$this->redirect(array('action' => 'index'));
