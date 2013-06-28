@@ -1,10 +1,10 @@
 <div class="grupoclientes form">
 <?php echo $this->Form->create('Grupocliente'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Grupocliente'); ?></legend>
+		<legend><?php echo __('Edit Grupo de Cliente'); ?></legend>
 	<?php
-		echo $this->Form->input('gruclicodigo');
-		echo $this->Form->input('gruclinome');
+		echo $this->Form->input('gruclicodigo', array('label' => 'Código'));
+		echo $this->Form->input('gruclinome', array('label' => 'Nome'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

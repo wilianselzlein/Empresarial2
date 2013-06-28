@@ -1,13 +1,13 @@
 <div class="grupofins index">
-	<h2><?php echo __('Grupofins'); ?></h2>
+	<h2><?php echo __('Grupo Financeiro'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('grufincodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('grufinnome'); ?></th>
+			<th><?php echo $this->Paginator->sort('grufincodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('grufinnome', 'Nome'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($grupofins as $grupofin): ?>
-	<tr>
+	<tr> 
 		<td><?php echo h($grupofin['Grupofin']['grufincodigo']); ?>&nbsp;</td>
 		<td><?php echo h($grupofin['Grupofin']['grufinnome']); ?>&nbsp;</td>
 		<td class="actions">

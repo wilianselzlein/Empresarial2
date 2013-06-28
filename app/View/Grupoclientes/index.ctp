@@ -1,9 +1,9 @@
 <div class="grupoclientes index">
-	<h2><?php echo __('Grupoclientes'); ?></h2>
+	<h2><?php echo __('Grupos de Clientes'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('gruclicodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('gruclinome'); ?></th>
+			<th><?php echo $this->Paginator->sort('gruclicodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('gruclinome', 'Nome'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($grupoclientes as $grupocliente): ?>

@@ -2,8 +2,8 @@
 	<h2><?php echo __('Bancos'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('bancodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('bannome'); ?></th>
+			<th><?php echo $this->Paginator->sort('bancodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('bannome', 'Nome'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($bancos as $banco): ?>

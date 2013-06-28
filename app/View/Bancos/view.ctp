@@ -1,12 +1,12 @@
 <div class="bancos view">
 <h2><?php  echo __('Banco'); ?></h2>
 	<dl>
-		<dt><?php echo __('Bancodigo'); ?></dt>
+		<dt><?php echo __('Código'); ?></dt>
 		<dd>
 			<?php echo h($banco['Banco']['bancodigo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Bannome'); ?></dt>
+		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
 			<?php echo h($banco['Banco']['bannome']); ?>
 			&nbsp;

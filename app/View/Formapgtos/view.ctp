@@ -1,37 +1,37 @@
 <div class="formapgtos view">
 <h2><?php  echo __('Formapgto'); ?></h2>
 	<dl>
-		<dt><?php echo __('Forcodigo'); ?></dt>
+		<dt><?php echo __('Código'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['forcodigo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Fornome'); ?></dt>
+		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['fornome']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Fortipo'); ?></dt>
+		<dt><?php echo __('Tipo'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['fortipo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Formesdia'); ?></dt>
+		<dt><?php echo __('Dia Faturamento'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['formesdia']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Forprazofixo'); ?></dt>
+		<dt><?php echo __('Prazo Fixo'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['forprazofixo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Forsigla'); ?></dt>
+		<dt><?php echo __('Sigla'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['forsigla']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Forsituacao'); ?></dt>
+		<dt><?php echo __('Situação'); ?></dt>
 		<dd>
 			<?php echo h($formapgto['Formapgto']['forsituacao']); ?>
 			&nbsp;

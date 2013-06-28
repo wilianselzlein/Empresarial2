@@ -3,13 +3,13 @@
 	<fieldset>
 		<legend><?php echo __('Edit Formapgto'); ?></legend>
 	<?php
-		echo $this->Form->input('forcodigo');
-		echo $this->Form->input('fornome');
-		echo $this->Form->input('fortipo');
-		echo $this->Form->input('formesdia');
-		echo $this->Form->input('forprazofixo');
-		echo $this->Form->input('forsigla');
-		echo $this->Form->input('forsituacao');
+		echo $this->Form->input('forcodigo', array('label' => 'Código'));
+		echo $this->Form->input('fornome', array('label' => 'Nome'));
+		echo $this->Form->input('fortipo', array('label' => 'Tipo (1)À Vista - (2)À Prazo'));
+		echo $this->Form->input('formesdia', array('label' => 'Dia do Faturamento'));
+		echo $this->Form->input('forprazofixo', array('label' => 'Prazo Fixo (Informe o número de parcelas desejada)'));
+		echo $this->Form->input('forsigla', array('label' => 'Sigla'));
+		echo $this->Form->input('forsituacao', array('label' => 'Situação (A)tivo (I)nativo'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

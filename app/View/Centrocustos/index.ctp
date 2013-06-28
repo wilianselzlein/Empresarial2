@@ -2,10 +2,10 @@
 	<h2><?php echo __('Centrocustos'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('cencuscodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('cencusanalitico'); ?></th>
-			<th><?php echo $this->Paginator->sort('cencusnome'); ?></th>
-			<th><?php echo $this->Paginator->sort('cencusempresa'); ?></th>
+			<th><?php echo $this->Paginator->sort('cencuscodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('cencusanalitico', 'Analítico'); ?></th>
+			<th><?php echo $this->Paginator->sort('cencusnome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('cencusempresa', 'Empresa'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($centrocustos as $centrocusto): ?>
@@ -13,7 +13,7 @@
 		<td><?php echo h($centrocusto['Centrocusto']['cencuscodigo']); ?>&nbsp;</td>
 		<td><?php echo h($centrocusto['Centrocusto']['cencusanalitico']); ?>&nbsp;</td>
 		<td><?php echo h($centrocusto['Centrocusto']['cencusnome']); ?>&nbsp;</td>
-		<td><?php echo h($centrocusto['Centrocusto']['cencusempresa']); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link($centrocusto['Empresa']['empnome'], array('controller' => 'empresas', 'action' => 'view', $centrocusto['Centrocusto']['cencusempresa'])); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $centrocusto['Centrocusto']['cencuscodigo'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $centrocusto['Centrocusto']['cencuscodigo'])); ?>

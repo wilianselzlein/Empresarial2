@@ -2,11 +2,11 @@
 	<h2><?php echo __('Cidades'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('cidcodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('cidnome'); ?></th>
-			<th><?php echo $this->Paginator->sort('cidestado'); ?></th>
-			<th><?php echo $this->Paginator->sort('cidcep'); ?></th>
-			<th><?php echo $this->Paginator->sort('cidcodigonfe'); ?></th>
+			<th><?php echo $this->Paginator->sort('cidcodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('cidnome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('cidestado', 'Estado'); ?></th>
+			<th><?php echo $this->Paginator->sort('cidcep', 'CEP'); ?></th>
+			<th><?php echo $this->Paginator->sort('cidcodigonfe', 'Código NFE'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($cidades as $cidade): ?>

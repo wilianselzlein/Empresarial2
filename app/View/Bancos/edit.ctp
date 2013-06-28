@@ -3,8 +3,8 @@
 	<fieldset>
 		<legend><?php echo __('Edit Banco'); ?></legend>
 	<?php
-		echo $this->Form->input('bancodigo');
-		echo $this->Form->input('bannome');
+		echo $this->Form->input('bancodigo', array('label' => 'Código'));
+		echo $this->Form->input('bannome', array('label' => 'Nome'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -3,7 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Add Banco'); ?></legend>
 	<?php
-		echo $this->Form->input('bannome');
+		echo $this->Form->input('bannome', array('label' => 'Nome'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

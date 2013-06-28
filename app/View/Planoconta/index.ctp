@@ -1,11 +1,11 @@
 <div class="planoconta index">
-	<h2><?php echo __('Planoconta'); ?></h2>
+	<h2><?php echo __('Planos de Contas'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('placodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('planome'); ?></th>
-			<th><?php echo $this->Paginator->sort('plaempresa'); ?></th>
-			<th><?php echo $this->Paginator->sort('plaanalitico'); ?></th>
+			<th><?php echo $this->Paginator->sort('placodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('planome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('plaempresa', 'Empresa'); ?></th>
+			<th><?php echo $this->Paginator->sort('plaanalitico', 'Analítico'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($planoconta as $planocontum): ?>

@@ -4,9 +4,9 @@
 		<legend><?php echo __('Add Cidade'); ?></legend>
 	<?php
 		echo $this->Form->input('cidnome', array('label' => 'Nome'));
-		echo $this->Form->input('estados');
-		echo $this->Form->input('cidcep');
-		echo $this->Form->input('cidcodigonfe');
+		echo $this->Form->input('estados', array('label' => 'UF'));
+		echo $this->Form->input('cidcep', array('label' => 'CEP'));
+		echo $this->Form->input('cidcodigonfe', array('label' => 'Código NFE'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

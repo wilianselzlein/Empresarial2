@@ -2,13 +2,13 @@
 	<h2><?php echo __('Formapgtos'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('forcodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('fornome'); ?></th>
-			<th><?php echo $this->Paginator->sort('fortipo'); ?></th>
-			<th><?php echo $this->Paginator->sort('formesdia'); ?></th>
-			<th><?php echo $this->Paginator->sort('forprazofixo'); ?></th>
-			<th><?php echo $this->Paginator->sort('forsigla'); ?></th>
-			<th><?php echo $this->Paginator->sort('forsituacao'); ?></th>
+			<th><?php echo $this->Paginator->sort('forcodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('fornome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('fortipo', 'Tipo'); ?></th>
+			<th><?php echo $this->Paginator->sort('formesdia', 'Dia Fat.'); ?></th>
+			<th><?php echo $this->Paginator->sort('forprazofixo', 'Prazo Fixo'); ?></th>
+			<th><?php echo $this->Paginator->sort('forsigla', 'Sigla'); ?></th>
+			<th><?php echo $this->Paginator->sort('forsituacao', 'Situação'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($formapgtos as $formapgto): ?>

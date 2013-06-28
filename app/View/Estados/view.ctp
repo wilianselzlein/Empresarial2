@@ -31,6 +31,6 @@
 		<li><?php echo $this->Html->link(__('List Estados'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Estado'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Pais'), array('controller' => 'pais', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estcodigo Paicodigo'), array('controller' => 'pais', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New País'), array('controller' => 'pais', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

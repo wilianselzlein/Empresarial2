@@ -1,24 +1,24 @@
 <div class="centrocustos view">
 <h2><?php  echo __('Centrocusto'); ?></h2>
 	<dl>
-		<dt><?php echo __('Cencuscodigo'); ?></dt>
+		<dt><?php echo __('Código'); ?></dt>
 		<dd>
 			<?php echo h($centrocusto['Centrocusto']['cencuscodigo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Cencusanalitico'); ?></dt>
+		<dt><?php echo __('Analítico'); ?></dt>
 		<dd>
 			<?php echo h($centrocusto['Centrocusto']['cencusanalitico']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Cencusnome'); ?></dt>
+		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
 			<?php echo h($centrocusto['Centrocusto']['cencusnome']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Cencusempresa'); ?></dt>
+		<dt><?php echo __('Empresa'); ?></dt>
 		<dd>
-			<?php echo h($centrocusto['Centrocusto']['cencusempresa']); ?>
+			<?php echo $this->Html->link($centrocusto['Empresa']['empnome'], array('controller' => 'empresas', 'action' => 'view', $centrocusto['Centrocusto']['cencusempresa'])); ?>
 			&nbsp;
 		</dd>
 	</dl>
