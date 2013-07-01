@@ -19,8 +19,6 @@ foreach ($users as $user): ?>
 <td><?php echo h($user['User']['created']); ?>&nbsp;</td>
 <td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
 <td class="actions">
-<?php echo $this->Html->link(__('Visualizar'), array('action' => 'view', $user['User']['id'])); ?>
-<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $user['User']['id'])); ?>
 <?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
 </td>
 </tr>

@@ -40,7 +40,8 @@ $cakeDescription = __d('cake_dev', 'Empresarial');
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link('Inicial', array('controller' => 'pages', 'action' => 'display')) . '   '; ?></h1>
+			<h1><?php echo $this->Html->link('Inicial', array('controller' => 'pages', 'action' => 'display')) . ' | ' . 
+				$this->Html->link('Logout', array('controller' => 'Users', 'action'=>'logout')); ?></h1>
 		</div>
 		<div id="content">
 
