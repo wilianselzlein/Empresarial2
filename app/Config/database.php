@@ -18,5 +18,5 @@ class DATABASE_CONFIG {
 		'password' => '123456',
 		'database' => 'u674794948_empre',
 		'prefix' => 't',
-	);*/	
+	);*/
 }

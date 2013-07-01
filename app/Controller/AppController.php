@@ -53,4 +53,30 @@ class AppController extends Controller {
         )*/
     );
 
+    public $helpers = array(
+        'Session',
+        //'Locale.Locale',
+        'Html',
+        'Form',
+        'Js'/*,
+        'FilterResults.Search' => array(
+            'operators' => array(
+                'LIKE'       => 'containing',
+                'NOT LIKE'   => 'not containing',
+                'LIKE BEGIN' => 'starting with',
+                'LIKE END'   => 'ending with',
+                '='  => 'equal to',
+                '!=' => 'different',
+                '>'  => 'greater than',
+                '>=' => 'greater or equal to',
+                '<'  => 'less than',
+                '<=' => 'less or equal to'
+            )
+        )*/
+    );
+    
+    /*function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+    }*/
+    
 }
