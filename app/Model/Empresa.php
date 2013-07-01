@@ -104,7 +104,7 @@ class Empresa extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'empfax' => array(
+		/*'empfax' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -293,7 +293,7 @@ class Empresa extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		),*/
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed

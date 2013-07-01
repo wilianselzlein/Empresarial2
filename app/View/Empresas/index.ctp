@@ -2,32 +2,32 @@
 	<h2><?php echo __('Empresas'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('empcodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('empnome'); ?></th>
-			<th><?php echo $this->Paginator->sort('empendereco'); ?></th>
-			<th><?php echo $this->Paginator->sort('empbairro'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcidade'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcep'); ?></th>
-			<th><?php echo $this->Paginator->sort('empfone'); ?></th>
-			<th><?php echo $this->Paginator->sort('empfax'); ?></th>
-			<th><?php echo $this->Paginator->sort('empemail'); ?></th>
-			<th><?php echo $this->Paginator->sort('emphomepage'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcnpj'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcpf'); ?></th>
-			<th><?php echo $this->Paginator->sort('empie'); ?></th>
-			<th><?php echo $this->Paginator->sort('empim'); ?></th>
-			<th><?php echo $this->Paginator->sort('emprg'); ?></th>
-			<th><?php echo $this->Paginator->sort('emporgaoexprg'); ?></th>
-			<th><?php echo $this->Paginator->sort('empdataemprg'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcontato'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcontador'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcrccontador'); ?></th>
-			<th><?php echo $this->Paginator->sort('emptitular'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcargotitular'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcpftitular'); ?></th>
-			<th><?php echo $this->Paginator->sort('empregjunta'); ?></th>
-			<th><?php echo $this->Paginator->sort('empdataregjunta'); ?></th>
-			<th><?php echo $this->Paginator->sort('empobs'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('empnome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('empendereco', 'Endereço'); ?></th>
+			<th><?php echo $this->Paginator->sort('empbairro', 'Bairro'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcidade', 'Cidade'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcep', 'CEP'); ?></th>
+			<th><?php echo $this->Paginator->sort('empfone', 'Fone'); ?></th>
+			<th><?php echo $this->Paginator->sort('empfax', 'Fax'); ?></th>
+			<th><?php echo $this->Paginator->sort('empemail', 'Email'); ?></th>
+			<th><?php echo $this->Paginator->sort('emphomepage', 'Site'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcnpj', 'CNPJ'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcpf', 'CPF'); ?></th>
+			<th><?php echo $this->Paginator->sort('empie', 'IE'); ?></th>
+			<th><?php echo $this->Paginator->sort('empim', 'IM'); ?></th>
+			<th><?php echo $this->Paginator->sort('emprg', 'RG'); ?></th>
+			<th><?php echo $this->Paginator->sort('emporgaoexprg', 'Orgão Exp.'); ?></th>
+			<th><?php echo $this->Paginator->sort('empdataemprg', 'Data Exp.'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcontato', 'Contato'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcontador', 'Contador'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcrccontador', 'CRC'); ?></th>
+			<th><?php echo $this->Paginator->sort('emptitular', 'Titular'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcargotitular', 'Cargo'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcpftitular', 'CPF'); ?></th>
+			<th><?php echo $this->Paginator->sort('empregjunta', 'Reg Junta'); ?></th>
+			<th><?php echo $this->Paginator->sort('empdataregjunta', 'Data Reg Junta'); ?></th>
+			<th><?php echo $this->Paginator->sort('empobs', 'Obs'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($empresas as $empresa): ?>
@@ -85,8 +85,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Empresa'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

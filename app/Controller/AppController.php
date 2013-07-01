@@ -32,4 +32,25 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    
+    public $components = array(
+        'Session',
+        //'Email',
+        //'RequestHandler',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'cidades', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+        )/*,
+        'FilterResults.Filter' => array(
+            'auto' => array(
+                'paginate' => false,
+                'explode'  => true,  // recommended
+            ),
+            'explode' => array(
+                'character'   => ' ',
+                'concatenate' => 'AND',
+            )
+        )*/
+    );
+
 }

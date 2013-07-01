@@ -9,6 +9,7 @@
 			<th><?php echo $this->Paginator->sort('forprazofixo', 'Prazo Fixo'); ?></th>
 			<th><?php echo $this->Paginator->sort('forsigla', 'Sigla'); ?></th>
 			<th><?php echo $this->Paginator->sort('forsituacao', 'Situação'); ?></th>
+			<th><?php echo $this->Paginator->sort('forcontabil', 'Contabil'); ?></th>			
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($formapgtos as $formapgto): ?>
@@ -20,6 +21,7 @@
 		<td><?php echo h($formapgto['Formapgto']['forprazofixo']); ?>&nbsp;</td>
 		<td><?php echo h($formapgto['Formapgto']['forsigla']); ?>&nbsp;</td>
 		<td><?php echo h($formapgto['Formapgto']['forsituacao']); ?>&nbsp;</td>
+		<td><?php echo h($formapgto['Formapgto']['forcontabil']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $formapgto['Formapgto']['forcodigo'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $formapgto['Formapgto']['forcodigo'])); ?>

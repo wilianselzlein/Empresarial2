@@ -36,6 +36,11 @@
 			<?php echo h($formapgto['Formapgto']['forsituacao']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Contábil'); ?></dt>
+		<dd>
+			<?php echo h($formapgto['Formapgto']['forcontabil']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

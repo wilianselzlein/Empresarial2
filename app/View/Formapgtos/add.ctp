@@ -9,6 +9,7 @@
 		echo $this->Form->input('forprazofixo', array('label' => 'Prazo Fixo (Informe o número de parcelas desejada)'));
 		echo $this->Form->input('forsigla', array('label' => 'Sigla'));
 		echo $this->Form->input('forsituacao', array('label' => 'Situação (A)tivo (I)nativo'));
+		echo $this->Form->input('forcontabil', array('label' => 'Contábil (S)im (N)ão'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

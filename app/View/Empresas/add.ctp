@@ -3,31 +3,32 @@
 	<fieldset>
 		<legend><?php echo __('Add Empresa'); ?></legend>
 	<?php
-		echo $this->Form->input('empnome');
-		echo $this->Form->input('empendereco');
-		echo $this->Form->input('empbairro');
-		echo $this->Form->input('empcidade');
-		echo $this->Form->input('empcep');
-		echo $this->Form->input('empfone');
-		echo $this->Form->input('empfax');
-		echo $this->Form->input('empemail');
-		echo $this->Form->input('emphomepage');
-		echo $this->Form->input('empcnpj');
-		echo $this->Form->input('empcpf');
-		echo $this->Form->input('empie');
-		echo $this->Form->input('empim');
-		echo $this->Form->input('emprg');
-		echo $this->Form->input('emporgaoexprg');
-		echo $this->Form->input('empdataemprg');
-		echo $this->Form->input('empcontato');
-		echo $this->Form->input('empcontador');
-		echo $this->Form->input('empcrccontador');
-		echo $this->Form->input('emptitular');
-		echo $this->Form->input('empcargotitular');
-		echo $this->Form->input('empcpftitular');
-		echo $this->Form->input('empregjunta');
-		echo $this->Form->input('empdataregjunta');
-		echo $this->Form->input('empobs');
+		echo $this->Form->input('empcodigo', array('label' => 'Código'));
+		echo $this->Form->input('empnome', array('label' => 'Nome'));
+		echo $this->Form->input('empendereco', array('label' => 'Endereço'));
+		echo $this->Form->input('empbairro', array('label' => 'Bairro'));
+		echo $this->Form->input('cidade', array('label' => 'Cidade'));
+		echo $this->Form->input('empcep', array('label' => 'CEP'));
+		echo $this->Form->input('empfone', array('label' => 'Fone'));
+		echo $this->Form->input('empfax', array('label' => 'Fax'));
+		echo $this->Form->input('empemail', array('label' => 'Email'));
+		echo $this->Form->input('emphomepage', array('label' => 'Site'));
+		echo $this->Form->input('empcnpj', array('label' => 'CNPJ'));
+		echo $this->Form->input('empcpf', array('label' => 'CPF'));
+		echo $this->Form->input('empie', array('label' => 'IE'));
+		echo $this->Form->input('empim', array('label' => 'IM'));
+		echo $this->Form->input('emprg', array('label' => 'RG'));
+		echo $this->Form->input('emporgaoexprg', array('label' => 'Orgão Exp.'));
+		echo $this->Form->input('empdataemprg', array('label' => 'Data Exp.'));
+		echo $this->Form->input('empcontato', array('label' => 'Contato'));
+		echo $this->Form->input('empcontador', array('label' => 'Contador'));
+		echo $this->Form->input('empcrccontador', array('label' => 'CRC Contador'));
+		echo $this->Form->input('emptitular', array('label' => 'Titular'));
+		echo $this->Form->input('empcargotitular', array('label' => 'Cargo Titular'));
+		echo $this->Form->input('empcpftitular', array('label' => 'CPF Titular'));
+		echo $this->Form->input('empregjunta', array('label' => 'Reg. Junta'));
+		echo $this->Form->input('empdataregjunta', array('label' => 'Data Reg. Junta'));
+		echo $this->Form->input('empobs', array('label' => 'Observação'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -36,7 +37,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Empresas'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>

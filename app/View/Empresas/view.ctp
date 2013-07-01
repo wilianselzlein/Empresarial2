@@ -1,22 +1,22 @@
 <div class="empresas view">
 <h2><?php  echo __('Empresa'); ?></h2>
 	<dl>
-		<dt><?php echo __('Empcodigo'); ?></dt>
+		<dt><?php echo __('Código'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcodigo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empnome'); ?></dt>
+		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empnome']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empendereco'); ?></dt>
+		<dt><?php echo __('Endereço'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empendereco']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empbairro'); ?></dt>
+		<dt><?php echo __('Bairro'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empbairro']); ?>
 			&nbsp;
@@ -26,107 +26,107 @@
 			<?php echo $this->Html->link($empresa['Cidade']['cidnome'], array('controller' => 'cidades', 'action' => 'view', $empresa['Cidade']['cidcodigo'])); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcep'); ?></dt>
+		<dt><?php echo __('CEP'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcep']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empfone'); ?></dt>
+		<dt><?php echo __('Fone'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empfone']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empfax'); ?></dt>
+		<dt><?php echo __('Fax'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empfax']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empemail'); ?></dt>
+		<dt><?php echo __('Email'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empemail']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Emphomepage'); ?></dt>
+		<dt><?php echo __('Site'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['emphomepage']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcnpj'); ?></dt>
+		<dt><?php echo __('CNPJ'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcnpj']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcpf'); ?></dt>
+		<dt><?php echo __('CPF'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcpf']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empie'); ?></dt>
+		<dt><?php echo __('IE'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empie']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empim'); ?></dt>
+		<dt><?php echo __('IM'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empim']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Emprg'); ?></dt>
+		<dt><?php echo __('RG'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['emprg']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Emporgaoexprg'); ?></dt>
+		<dt><?php echo __('Orgão Exp.'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['emporgaoexprg']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empdataemprg'); ?></dt>
+		<dt><?php echo __('Data Exp.'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empdataemprg']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcontato'); ?></dt>
+		<dt><?php echo __('Contato'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcontato']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcontador'); ?></dt>
+		<dt><?php echo __('Contador'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcontador']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcrccontador'); ?></dt>
+		<dt><?php echo __('CRC Contador'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcrccontador']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Emptitular'); ?></dt>
+		<dt><?php echo __('Titular'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['emptitular']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcargotitular'); ?></dt>
+		<dt><?php echo __('Cargo Titular'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcargotitular']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empcpftitular'); ?></dt>
+		<dt><?php echo __('CPF Titular'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empcpftitular']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empregjunta'); ?></dt>
+		<dt><?php echo __('Reg Junta'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empregjunta']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empdataregjunta'); ?></dt>
+		<dt><?php echo __('Data Reg. Junta'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empdataregjunta']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Empobs'); ?></dt>
+		<dt><?php echo __('Observação'); ?></dt>
 		<dd>
 			<?php echo h($empresa['Empresa']['empobs']); ?>
 			&nbsp;
@@ -136,10 +136,10 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Empresa'), array('action' => 'edit', $empresa['Empresa']['empcodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Empresa'), array('action' => 'delete', $empresa['Empresa']['empcodigo']), null, __('Are you sure you want to delete # %s?', $empresa['Empresa']['empcodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Empresas'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Empresa'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $empresa['Empresa']['empcodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $empresa['Empresa']['empcodigo']), null, __('Are you sure you want to delete # %s?', $empresa['Empresa']['empcodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
