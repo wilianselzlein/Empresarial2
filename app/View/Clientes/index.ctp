@@ -2,49 +2,49 @@
 	<h2><?php echo __('Clientes'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('clicodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort(' clidatacad'); ?></th>
-			<th><?php echo $this->Paginator->sort('clipessoa'); ?></th>
-			<th><?php echo $this->Paginator->sort('clirazao'); ?></th>
-			<th><?php echo $this->Paginator->sort('clifantasia'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliendereco'); ?></th>
-			<th><?php echo $this->Paginator->sort('clibairro'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicomplemento'); ?></th>
-			<th><?php echo $this->Paginator->sort('clinumero'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicidade'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicep'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicxpostal'); ?></th>
-			<th><?php echo $this->Paginator->sort('clifone'); ?></th>
-			<th><?php echo $this->Paginator->sort('clifax'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicelular'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliemail'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliemailalt'); ?></th>
-			<th><?php echo $this->Paginator->sort('clihomepage'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicontatofin'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicnpj'); ?></th>
-			<th><?php echo $this->Paginator->sort('clicpf'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliie'); ?></th>
-			<th><?php echo $this->Paginator->sort('cligrupo'); ?></th>
-			<th><?php echo $this->Paginator->sort('clisituacao'); ?></th>
-			<th><?php echo $this->Paginator->sort('clidatanasc'); ?></th>
-			<th><?php echo $this->Paginator->sort('clinaturalidade'); ?></th>
-			<th><?php echo $this->Paginator->sort('clipai'); ?></th>
-			<th><?php echo $this->Paginator->sort('climae'); ?></th>
-			<th><?php echo $this->Paginator->sort('clirg'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliorgaoexprg'); ?></th>
-			<th><?php echo $this->Paginator->sort('clidataexprg'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliobs'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliformapgto'); ?></th>
-			<th><?php echo $this->Paginator->sort('clidiafatura'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliim'); ?></th>
-			<th><?php echo $this->Paginator->sort('clitipcob'); ?></th>
-			<th><?php echo $this->Paginator->sort('cliopcaocad'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicodigo', 'Código'); ?></th>
+			<!--<th><?php // echo $this->Paginator->sort('clidatacad'); ?></th>-->
+			<th><?php echo $this->Paginator->sort('clipessoa', 'Pes'); ?></th>
+			<th><?php echo $this->Paginator->sort('clirazao', 'Razão Social'); ?></th>
+			<th><?php echo $this->Paginator->sort('clifantasia', 'Fantasia'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliendereco', 'Endereço'); ?></th>
+			<th><?php echo $this->Paginator->sort('clibairro', 'Bairro'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicomplemento', 'Complemento'); ?></th>
+			<th><?php echo $this->Paginator->sort('clinumero', 'Número'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicidade', 'Cidade'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicep', 'CEP'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicxpostal', 'Cx Postal'); ?></th>
+			<th><?php echo $this->Paginator->sort('clifone', 'Fone'); ?></th>
+			<th><?php echo $this->Paginator->sort('clifax', 'Fax'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicelular', 'Celular'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliemail', 'Email'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliemailalt', 'Email Alt.'); ?></th>
+			<th><?php echo $this->Paginator->sort('clihomepage', 'Site'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicontatofin', 'Contato'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicnpj', 'CNPJ'); ?></th>
+			<th><?php echo $this->Paginator->sort('clicpf', 'CPF'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliie', 'IE'); ?></th>
+			<th><?php echo $this->Paginator->sort('cligrupo', 'Grupo'); ?></th>
+			<th><?php echo $this->Paginator->sort('clisituacao', 'Situação'); ?></th>
+			<th><?php echo $this->Paginator->sort('clidatanasc', 'Data Nasc'); ?></th>
+			<th><?php echo $this->Paginator->sort('clinaturalidade', 'Naturalidade'); ?></th>
+			<th><?php echo $this->Paginator->sort('clipai', 'Pai'); ?></th>
+			<th><?php echo $this->Paginator->sort('climae', 'Mãe'); ?></th>
+			<th><?php echo $this->Paginator->sort('clirg', 'RG'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliorgaoexprg', 'Orgão Exp.'); ?></th>
+			<th><?php echo $this->Paginator->sort('clidataexprg', 'Data Exp'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliobs', 'Obs'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliformapgto', 'Forma Pgto'); ?></th>
+			<th><?php echo $this->Paginator->sort('clidiafatura', 'Dia Fatura'); ?></th>
+			<th><?php echo $this->Paginator->sort('cliim', 'IM'); ?></th>
+			<th><?php echo $this->Paginator->sort('clitipcob', 'Tipo Cob.'); ?></th>
+			<!--<th><?php //echo $this->Paginator->sort('cliopcaocad', 'Opção Cad.'); ?></th>-->
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($clientes as $cliente): ?>
 	<tr>
 		<td><?php echo h($cliente['Cliente']['clicodigo']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente'][' clidatacad']); ?>&nbsp;</td>
+		<!--<td><?php // echo h($cliente['Cliente']['clidatacad']); ?>&nbsp;</td>-->
 		<td><?php echo h($cliente['Cliente']['clipessoa']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clirazao']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clifantasia']); ?>&nbsp;</td>
@@ -67,7 +67,9 @@
 		<td><?php echo h($cliente['Cliente']['clicnpj']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clicpf']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['cliie']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cligrupo']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($cliente['Grupocliente']['gruclinome'], array('controller' => 'grupoclientes', 'action' => 'view', $cliente['Cliente']['cligrupo'])); ?>
+		</td>
 		<td><?php echo h($cliente['Cliente']['clisituacao']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clidatanasc']); ?>&nbsp;</td>
 		<td>
@@ -79,11 +81,16 @@
 		<td><?php echo h($cliente['Cliente']['cliorgaoexprg']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clidataexprg']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['cliobs']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cliformapgto']); ?>&nbsp;</td>
+
+		<td>
+			<?php echo $this->Html->link($cliente['Formapgto']['fornome'], array('controller' => 'formapgtos', 'action' => 'view', $cliente['Cliente']['cliformapgto'])); ?>
+		</td>
 		<td><?php echo h($cliente['Cliente']['clidiafatura']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['cliim']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['clitipcob']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cliopcaocad']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($cliente['Tipocob']['tipcobnome'], array('controller' => 'tipocobs', 'action' => 'view', $cliente['Cliente']['clitipcob'])); ?>
+		</td>
+		<!--<td><?php //echo h($cliente['Cliente']['cliopcaocad']); ?>&nbsp;</td>-->
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cliente['Cliente']['clicodigo'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cliente['Cliente']['clicodigo'])); ?>
@@ -109,8 +116,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Cliente'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Cidade'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

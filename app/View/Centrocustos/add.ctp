@@ -1,7 +1,7 @@
 <div class="centrocustos form">
 <?php echo $this->Form->create('Centrocusto'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Centrocusto'); ?></legend>
+		<legend><?php echo __('Add Centro de Custo'); ?></legend>
 	<?php
 		echo $this->Form->input('cencusanalitico', array('label' => 'Analítico'));
 		echo $this->Form->input('cencusnome', array('label' => 'Nome'));
@@ -13,6 +13,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('List Centrocustos'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

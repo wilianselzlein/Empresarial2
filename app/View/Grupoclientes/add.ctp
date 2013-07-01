@@ -11,6 +11,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('List Grupos de Clientes'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

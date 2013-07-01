@@ -4,42 +4,42 @@
 		<legend><?php echo __('Edit Cliente'); ?></legend>
 	<?php
 		echo $this->Form->input('clicodigo');
-		echo $this->Form->input(' clidatacad');
-		echo $this->Form->input('clipessoa');
-		echo $this->Form->input('clirazao');
-		echo $this->Form->input('clifantasia');
-		echo $this->Form->input('cliendereco');
-		echo $this->Form->input('clibairro');
-		echo $this->Form->input('clicomplemento');
-		echo $this->Form->input('clinumero');
-		echo $this->Form->input('clicidade');
-		echo $this->Form->input('clicep');
-		echo $this->Form->input('clicxpostal');
-		echo $this->Form->input('clifone');
-		echo $this->Form->input('clifax');
-		echo $this->Form->input('clicelular');
-		echo $this->Form->input('cliemail');
-		echo $this->Form->input('cliemailalt');
-		echo $this->Form->input('clihomepage');
-		echo $this->Form->input('clicontatofin');
-		echo $this->Form->input('clicnpj');
-		echo $this->Form->input('clicpf');
-		echo $this->Form->input('cliie');
-		echo $this->Form->input('cligrupo');
-		echo $this->Form->input('clisituacao');
-		echo $this->Form->input('clidatanasc');
-		echo $this->Form->input('clinaturalidade');
-		echo $this->Form->input('clipai');
-		echo $this->Form->input('climae');
-		echo $this->Form->input('clirg');
-		echo $this->Form->input('cliorgaoexprg');
-		echo $this->Form->input('clidataexprg');
-		echo $this->Form->input('cliobs');
-		echo $this->Form->input('cliformapgto');
-		echo $this->Form->input('clidiafatura');
-		echo $this->Form->input('cliim');
-		echo $this->Form->input('clitipcob');
-		echo $this->Form->input('cliopcaocad');
+		//echo $this->Form->input('clidatacad');
+		echo $this->Form->input('clipessoa', array('label' => 'Pessoa F/J'));
+		echo $this->Form->input('clirazao', array('label' => 'Razao Social'));
+		echo $this->Form->input('clifantasia', array('label' => 'Fantaisa'));
+		echo $this->Form->input('cliendereco', array('label' => 'Endereço'));
+		echo $this->Form->input('clibairro', array('label' => 'Bairro'));
+		echo $this->Form->input('clicomplemento', array('label' => 'Complemento'));
+		echo $this->Form->input('clinumero', array('label' => 'Número'));
+		echo $this->Form->input('cidades', array('label' => 'Cidade'));
+		echo $this->Form->input('clicep', array('label' => 'CEP'));
+		echo $this->Form->input('clicxpostal', array('label' => 'Cx Postal'));
+		echo $this->Form->input('clifone', array('label' => 'Fone'));
+		echo $this->Form->input('clifax', array('label' => 'Fax'));
+		echo $this->Form->input('clicelular', array('label' => 'Celular'));
+		echo $this->Form->input('cliemail', array('label' => 'Email'));
+		echo $this->Form->input('cliemailalt', array('label' => 'Email Alt'));
+		echo $this->Form->input('clihomepage', array('label' => 'Site'));
+		echo $this->Form->input('clicontatofin', array('label' => 'Contato Fin'));
+		echo $this->Form->input('clicnpj', array('label' => 'CNPJ'));
+		echo $this->Form->input('clicpf', array('label' => 'CPF'));
+		echo $this->Form->input('cliie', array('label' => 'Inscrição Estadual'));
+		echo $this->Form->input('grupo', array('label' => 'Grupo'));
+		echo $this->Form->input('clisituacao', array('label' => 'Situação (A)tivo = (I)nativo'));
+		echo $this->Form->input('clidatanasc', array('label' => 'Data Nascimento'));
+		echo $this->Form->input('Naturalidades', array('label' => 'Naturalidade'));
+		echo $this->Form->input('clipai', array('label' => 'Nome do Pai'));
+		echo $this->Form->input('climae', array('label' => 'Nome da Mãe'));
+		echo $this->Form->input('clirg', array('label' => 'RG'));
+		echo $this->Form->input('cliorgaoexprg', array('label' => 'Orgão Expedidot'));
+		echo $this->Form->input('clidataexprg', array('label' => 'Data Experdição'));
+		echo $this->Form->input('cliobs', array('label' => 'Observação'));
+		echo $this->Form->input('formapgtos', array('label' => 'Forma de Pagamento'));
+		echo $this->Form->input('clidiafatura', array('label' => 'Dia da Fatura'));
+		echo $this->Form->input('cliim', array('label' => 'Inscrição Municipal'));
+		echo $this->Form->input('tipocobs', array('label' => 'Tipo de Cobrança'));
+		//echo $this->Form->input('cliopcaocad', array('label' => ''));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -49,7 +49,7 @@
 	<ul>
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Cliente.clicodigo')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Cliente.clicodigo'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Clientes'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>

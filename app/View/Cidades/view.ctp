@@ -31,10 +31,10 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Cidade'), array('action' => 'edit', $cidade['Cidade']['cidcodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Cidade'), array('action' => 'delete', $cidade['Cidade']['cidcodigo']), null, __('Are you sure you want to delete # %s?', $cidade['Cidade']['cidcodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cidade'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cidade['Cidade']['cidcodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cidade['Cidade']['cidcodigo']), null, __('Are you sure you want to delete # %s?', $cidade['Cidade']['cidcodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Estados'), array('controller' => 'estados', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Estado'), array('controller' => 'estados', 'action' => 'add')); ?> </li>
 	</ul>

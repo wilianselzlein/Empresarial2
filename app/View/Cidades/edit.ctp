@@ -17,7 +17,7 @@
 	<ul>
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Cidade.cidcodigo')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Cidade.cidcodigo'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Estados'), array('controller' => 'estados', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Estado'), array('controller' => 'estados', 'action' => 'add')); ?> </li>
 	</ul>

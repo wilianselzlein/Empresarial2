@@ -1,5 +1,5 @@
 <div class="formapgtos view">
-<h2><?php  echo __('Formapgto'); ?></h2>
+<h2><?php  echo __('Forma de Pagamentos'); ?></h2>
 	<dl>
 		<dt><?php echo __('Código'); ?></dt>
 		<dd>
@@ -41,9 +41,9 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Formapgto'), array('action' => 'edit', $formapgto['Formapgto']['forcodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Formapgto'), array('action' => 'delete', $formapgto['Formapgto']['forcodigo']), null, __('Are you sure you want to delete # %s?', $formapgto['Formapgto']['forcodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Formapgtos'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Formapgto'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $formapgto['Formapgto']['forcodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $formapgto['Formapgto']['forcodigo']), null, __('Are you sure you want to delete # %s?', $formapgto['Formapgto']['forcodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>

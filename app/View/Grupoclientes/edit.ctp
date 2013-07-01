@@ -14,6 +14,6 @@
 	<ul>
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Grupocliente.gruclicodigo')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Grupocliente.gruclicodigo'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Grupoclientes'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

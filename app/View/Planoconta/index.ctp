@@ -12,7 +12,7 @@
 	<tr>
 		<td><?php echo h($planocontum['Planocontum']['placodigo']); ?>&nbsp;</td>
 		<td><?php echo h($planocontum['Planocontum']['planome']); ?>&nbsp;</td>
-		<td><?php echo h($planocontum['Planocontum']['plaempresa']); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link($planocontum['Empresas']['empnome'], array('controller' => 'empresas', 'action' => 'view', $planocontum['Planocontum']['plaempresa'])); ?>&nbsp;</td>
 		<td><?php echo h($planocontum['Planocontum']['plaanalitico']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $planocontum['Planocontum']['placodigo'])); ?>
@@ -39,6 +39,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Planocontum'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
 	</ul>
 </div>

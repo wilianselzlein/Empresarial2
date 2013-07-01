@@ -1,10 +1,10 @@
 <div class="tipocobs index">
-	<h2><?php echo __('Tipocobs'); ?></h2>
+	<h2><?php echo __('Tipos de cobrança'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('tipcobcodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('tipcobnome'); ?></th>
-			<th><?php echo $this->Paginator->sort('tipcobsituacao'); ?></th>
+			<th><?php echo $this->Paginator->sort('tipcobcodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('tipcobnome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('tipcobsituacao', 'Situação'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($tipocobs as $tipocob): ?>
@@ -37,6 +37,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Tipocob'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
 	</ul>
 </div>

@@ -40,6 +40,7 @@ class PlanocontaController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Planocontum->create();
+			$this->request->data['Planocontum']['plaempresa'] = $this->request->data['Planocontum']['empresas'];
 			if ($this->Planocontum->save($this->request->data)) {
 				$this->Session->setFlash(__('The planocontum has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -47,7 +48,7 @@ class PlanocontaController extends AppController {
 				$this->Session->setFlash(__('The planocontum could not be saved. Please, try again.'));
 			}
 		}
-		$empresas = $this->Planocontum->Empresa->find('list');
+		$empresas = $this->Planocontum->Empresas->find('list');
 		$this->set(compact('empresas'));
 	}
 
@@ -63,6 +64,7 @@ class PlanocontaController extends AppController {
 			throw new NotFoundException(__('Invalid planocontum'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			$this->request->data['Planocontum']['plaempresa'] = $this->request->data['Planocontum']['empresas'];
 			if ($this->Planocontum->save($this->request->data)) {
 				$this->Session->setFlash(__('The planocontum has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -73,7 +75,7 @@ class PlanocontaController extends AppController {
 			$options = array('conditions' => array('Planocontum.' . $this->Planocontum->primaryKey => $id));
 			$this->request->data = $this->Planocontum->find('first', $options);
 		}
-		$empresas = $this->Planocontum->Empresa->find('list');
+		$empresas = $this->Planocontum->Empresas->find('list');
 		$this->set(compact('empresas'));
 	}
 

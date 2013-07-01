@@ -35,7 +35,7 @@ App::uses('Debugger', 'Utility');
 		<li><?php echo $this->Html->link(__('Grupos de Clientes'), array('controller' => 'grupoclientes', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Grupos Financeiros'), array('controller' => 'grupofins', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
+		<!--<li><?php //echo $this->Html->link(__('Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>-->
 		<li><?php echo $this->Html->link(__('Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

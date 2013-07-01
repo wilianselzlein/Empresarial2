@@ -40,7 +40,7 @@ class CentrocustosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Centrocusto->create();
-			$this->request->data['CentroCusto']['cencusempresa'] = $this->request->data['CentroCusto']['empresa'];
+			$this->request->data['Centrocusto']['cencusempresa'] = $this->request->data['Centrocusto']['empresa'];
 			if ($this->Centrocusto->save($this->request->data)) {
 				$this->Session->setFlash(__('The centrocusto has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -48,7 +48,7 @@ class CentrocustosController extends AppController {
 				$this->Session->setFlash(__('The centrocusto could not be saved. Please, try again.'));
 			}
 		}
-		$empresa = $this->Centrocusto->Empresa->find('list', array('fields' => array('empresa.empcodigo', 'empresa.empnome')));
+		$empresa = $this->Centrocusto->Empresa->find('list', array('fields' => array('Empresa.empcodigo', 'Empresa.empnome')));
 		$this->set(compact('empresa'));
 	}
 
@@ -64,7 +64,7 @@ class CentrocustosController extends AppController {
 			throw new NotFoundException(__('Invalid centrocusto'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			$this->request->data['CentroCusto']['cencusempresa'] = $this->request->data['CentroCusto']['empresa'];
+			$this->request->data['Centrocusto']['cencusempresa'] = $this->request->data['Centrocusto']['empresa'];
 			if ($this->Centrocusto->save($this->request->data)) {
 				$this->Session->setFlash(__('The centrocusto has been saved'));
 				$this->redirect(array('action' => 'index'));

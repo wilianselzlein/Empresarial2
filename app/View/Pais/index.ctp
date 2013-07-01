@@ -1,11 +1,11 @@
 <div class="pais index">
-	<h2><?php echo __('Pais'); ?></h2>
+	<h2><?php echo __('Países'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('paicodigo'); ?></th>
-			<th><?php echo $this->Paginator->sort('painome'); ?></th>
-			<th><?php echo $this->Paginator->sort('paiddi'); ?></th>
-			<th><?php echo $this->Paginator->sort('paicodigobacen'); ?></th>
+			<th><?php echo $this->Paginator->sort('paicodigo', 'Código'); ?></th>
+			<th><?php echo $this->Paginator->sort('painome', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('paiddi', 'Nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('paicodigobacen', 'Código Bacen'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($pais as $pai): ?>
@@ -39,6 +39,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Pai'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
 	</ul>
 </div>

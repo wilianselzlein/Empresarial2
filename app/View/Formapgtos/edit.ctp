@@ -1,7 +1,7 @@
 <div class="formapgtos form">
 <?php echo $this->Form->create('Formapgto'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Formapgto'); ?></legend>
+		<legend><?php echo __('Edit Forma de Pagamento'); ?></legend>
 	<?php
 		echo $this->Form->input('forcodigo', array('label' => 'Código'));
 		echo $this->Form->input('fornome', array('label' => 'Nome'));
@@ -19,6 +19,6 @@
 	<ul>
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Formapgto.forcodigo')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Formapgto.forcodigo'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Formapgtos'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

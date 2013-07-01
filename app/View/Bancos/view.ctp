@@ -16,9 +16,9 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Banco'), array('action' => 'edit', $banco['Banco']['bancodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Banco'), array('action' => 'delete', $banco['Banco']['bancodigo']), null, __('Are you sure you want to delete # %s?', $banco['Banco']['bancodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Bancos'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Banco'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $banco['Banco']['bancodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $banco['Banco']['bancodigo']), null, __('Are you sure you want to delete # %s?', $banco['Banco']['bancodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>
