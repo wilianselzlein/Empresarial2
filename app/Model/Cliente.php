@@ -27,7 +27,7 @@ class Cliente extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'clifantasia';
+	public $displayField = 'clirazao';
 
 /**
  * Validation rules
