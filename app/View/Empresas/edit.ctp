@@ -7,7 +7,7 @@
 		echo $this->Form->input('empnome', array('label' => 'Nome'));
 		echo $this->Form->input('empendereco', array('label' => 'Endereço'));
 		echo $this->Form->input('empbairro', array('label' => 'Bairro'));
-		echo $this->Form->input('cidade', array('label' => 'Cidade'));
+		echo $this->Form->input("empcidade" ,array('type' => 'select', 'label' => 'Cidade','options'=>$cidades));
 		echo $this->Form->input('empcep', array('label' => 'CEP'));
 		echo $this->Form->input('empfone', array('label' => 'Fone'));
 		echo $this->Form->input('empfax', array('label' => 'Fax'));
