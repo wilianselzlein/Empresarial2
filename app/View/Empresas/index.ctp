@@ -13,7 +13,7 @@
 			<th><?php echo $this->Paginator->sort('empemail', 'Email'); ?></th>
 			<th><?php echo $this->Paginator->sort('emphomepage', 'Site'); ?></th>
 			<th><?php echo $this->Paginator->sort('empcnpj', 'CNPJ'); ?></th>
-			<th><?php echo $this->Paginator->sort('empcpf', 'CPF'); ?></th>
+			<th><?php echo $this->Paginator->sort('empcpf', 'CPF'); ?></div></th>
 			<th><?php echo $this->Paginator->sort('empie', 'IE'); ?></th>
 			<th><?php echo $this->Paginator->sort('empim', 'IM'); ?></th>
 			<th><?php echo $this->Paginator->sort('emprg', 'RG'); ?></th>
@@ -27,7 +27,7 @@
 			<th><?php echo $this->Paginator->sort('empcpftitular', 'CPF'); ?></th>
 			<th><?php echo $this->Paginator->sort('empregjunta', 'Reg Junta'); ?></th>
 			<th><?php echo $this->Paginator->sort('empdataregjunta', 'Data Reg Junta'); ?></th>
-			<th><?php echo $this->Paginator->sort('empobs', 'Obs'); ?></th>
+			<th class="inv"><?php echo $this->Paginator->sort('empobs', 'Obs'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($empresas as $empresa): ?>
@@ -59,7 +59,7 @@
 		<td><?php echo h($empresa['Empresa']['empcpftitular']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empregjunta']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empdataregjunta']); ?>&nbsp;</td>
-		<td><?php echo h($empresa['Empresa']['empobs']); ?>&nbsp;</td>
+		<td class="inv"><?php echo h($empresa['Empresa']['empobs']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $empresa['Empresa']['empcodigo'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $empresa['Empresa']['empcodigo'])); ?>

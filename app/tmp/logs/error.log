@@ -2254,3 +2254,13 @@ Stack Trace:
 #8 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
 #9 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2013-07-04 22:06:54 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Empresas\edit.ctp, line 23]
+2013-07-04 22:06:54 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /Empresarial2/empresas/edit/1
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 23, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 23, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

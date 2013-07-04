@@ -1,3 +1,4 @@
+<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
 <div class="empresas form">
 <?php echo $this->Form->create('Empresa'); ?>
 	<fieldset>
@@ -8,26 +9,26 @@
 		echo $this->Form->input('empendereco', array('label' => 'Endereço'));
 		echo $this->Form->input('empbairro', array('label' => 'Bairro'));
 		echo $this->Form->input("empcidade" ,array('type' => 'select', 'label' => 'Cidade','options'=>$cidades));
-		echo $this->Form->input('empcep', array('label' => 'CEP'));
+		echo $this->Form->input('empcep', array('label' => 'CEP', 'id' => 'cep'));
 		echo $this->Form->input('empfone', array('label' => 'Fone'));
 		echo $this->Form->input('empfax', array('label' => 'Fax'));
 		echo $this->Form->input('empemail', array('label' => 'Email'));
 		echo $this->Form->input('emphomepage', array('label' => 'Site'));
-		echo $this->Form->input('empcnpj', array('label' => 'CNPJ'));
-		echo $this->Form->input('empcpf', array('label' => 'CPF'));
+		echo $this->Form->input('empcnpj', array('label' => 'CNPJ', 'id' => 'cnpj'));
+		echo $this->Form->input('empcpf', array('label' => 'CPF', 'id' => 'cpf'));
 		echo $this->Form->input('empie', array('label' => 'IE'));
 		echo $this->Form->input('empim', array('label' => 'IM'));
 		echo $this->Form->input('emprg', array('label' => 'RG'));
 		echo $this->Form->input('emporgaoexprg', array('label' => 'Orgão Exp.'));
-		echo $this->Form->input('empdataemprg', array('label' => 'Data Exp.'));
+		echo $this->Form->input('empdataemprg', array('label' => 'Data Exp.', 'dateFormat' => 'DMY'));
 		echo $this->Form->input('empcontato', array('label' => 'Contato'));
 		echo $this->Form->input('empcontador', array('label' => 'Contador'));
 		echo $this->Form->input('empcrccontador', array('label' => 'CRC Contador'));
 		echo $this->Form->input('emptitular', array('label' => 'Titular'));
 		echo $this->Form->input('empcargotitular', array('label' => 'Cargo Titular'));
-		echo $this->Form->input('empcpftitular', array('label' => 'CPF Titular'));
+		echo $this->Form->input('empcpftitular', array('label' => 'CPF Titular', 'id' => 'cpf'));
 		echo $this->Form->input('empregjunta', array('label' => 'Reg. Junta'));
-		echo $this->Form->input('empdataregjunta', array('label' => 'Data Reg. Junta'));
+		echo $this->Form->input('empdataregjunta', array('label' => 'Data Reg. Junta', 'dateFormat' => 'DMY'));
 		echo $this->Form->input('empobs', array('label' => 'Observação'));
 	?>
 	</fieldset>
