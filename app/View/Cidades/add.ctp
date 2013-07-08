@@ -1,11 +1,12 @@
+<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
 <div class="cidades form">
 <?php echo $this->Form->create('Cidade'); ?>
 	<fieldset>
 		<legend><?php echo __('Add Cidade'); ?></legend>
 	<?php
 		echo $this->Form->input('cidnome', array('label' => 'Nome'));
-		echo $this->Form->input('estados', array('label' => 'UF'));
-		echo $this->Form->input('cidcep', array('label' => 'CEP'));
+		echo $this->Form->input("cidestado" ,array('type' => 'select', 'label' => 'UF','options'=>$estados));
+		echo $this->Form->input('cidcep', array('label' => 'CEP', 'id' => 'cep'));
 		echo $this->Form->input('cidcodigonfe', array('label' => 'Código NFE'));
 	?>
 	</fieldset>

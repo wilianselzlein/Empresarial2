@@ -76,7 +76,7 @@ class Centrocusto extends AppModel {
 	public $belongsTo = array(
 		'Empresa' => array(
 			'className' => 'empresa',
-			'foreignKey' => false,
+			'foreignKey' => 'cencusempresa',
 			'conditions' => array('CentroCusto.cencusempresa = Empresa.empcodigo'),
 			'depend' => true,
 			'fields' => '',

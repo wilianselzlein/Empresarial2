@@ -67,10 +67,10 @@ class Planocontum extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Empresas' => array(
+		'Empresa' => array(
 			'className' => 'Empresa',
 			'foreignKey' => false,
-			'conditions' => array('Planocontum.plaempresa = Empresas.empcodigo'),
+			'conditions' => array('Planocontum.plaempresa = Empresa.empcodigo'),
 			'fields' => '',
 			'order' => ''
 		)

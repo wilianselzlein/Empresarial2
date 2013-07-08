@@ -13,7 +13,7 @@
 		</dd>
 		<dt><?php echo __('Empresa'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($planocontum['Empresas']['empnome'], array('controller' => 'empresas', 'action' => 'view', $planocontum['Planocontum']['plaempresa'])); ?>
+			<?php echo $this->Html->link($planocontum['Empresa']['empnome'], array('controller' => 'empresas', 'action' => 'view', $planocontum['Planocontum']['plaempresa'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Analítico'); ?></dt>

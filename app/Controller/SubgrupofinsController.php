@@ -40,7 +40,6 @@ class SubgrupofinsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Subgrupofin->create();
-			$this->request->data['Subgrupofin']['subgfgrupo'] = $this->request->data['Subgrupofin']['grupofins'];
 			if ($this->Subgrupofin->save($this->request->data)) {
 				$this->Session->setFlash(__('The subgrupofin has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -64,7 +63,6 @@ class SubgrupofinsController extends AppController {
 			throw new NotFoundException(__('Invalid subgrupofin'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			$this->request->data['Subgrupofin']['subgfgrupo'] = $this->request->data['Subgrupofin']['grupofins'];
 			if ($this->Subgrupofin->save($this->request->data)) {
 				$this->Session->setFlash(__('The subgrupofin has been saved'));
 				$this->redirect(array('action' => 'index'));

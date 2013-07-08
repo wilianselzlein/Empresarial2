@@ -9,7 +9,7 @@ class ClientesController extends AppController {
 
 /**
  * index method
- *
+ *s
  * @return void
  */
 	public function index() {
@@ -40,11 +40,6 @@ class ClientesController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Cliente->create();
-			$this->request->data['Cliente']['cligrupo'] = $this->request->data['Cliente']['grupos'];
-			$this->request->data['Cliente']['clitipcob'] = $this->request->data['Cliente']['tipocobs'];
-			$this->request->data['Cliente']['cliformapgto'] = $this->request->data['Cliente']['formapgtos'];
-			$this->request->data['Cliente']['clinaturalidade'] = $this->request->data['Cliente']['Naturalidades'];
-			$this->request->data['Cliente']['clicidade'] = $this->request->data['Cliente']['cidades'];
 			if ($this->Cliente->save($this->request->data)) {
 				$this->Session->setFlash(__('The cliente has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -72,11 +67,6 @@ class ClientesController extends AppController {
 			throw new NotFoundException(__('Invalid cliente'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-		        $this->request->data['Cliente']['cligrupo'] = $this->request->data['Cliente']['grupo'];
-			$this->request->data['Cliente']['clitipcob'] = $this->request->data['Cliente']['tipocobs'];
-			$this->request->data['Cliente']['cliformapgto'] = $this->request->data['Cliente']['formapgtos'];
-			$this->request->data['Cliente']['clinaturalidade'] = $this->request->data['Cliente']['Naturalidades'];
-			$this->request->data['Cliente']['clicidade'] = $this->request->data['Cliente']['cidades'];
 			if ($this->Cliente->save($this->request->data)) {
 				$this->Session->setFlash(__('The cliente has been saved'));
 				$this->redirect(array('action' => 'index'));

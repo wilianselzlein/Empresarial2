@@ -26,7 +26,7 @@
 		echo $this->Form->input('empcrccontador', array('label' => 'CRC Contador'));
 		echo $this->Form->input('emptitular', array('label' => 'Titular'));
 		echo $this->Form->input('empcargotitular', array('label' => 'Cargo Titular'));
-		echo $this->Form->input('empcpftitular', array('label' => 'CPF Titular', 'id' => 'cpf'));
+		echo $this->Form->input('empcpftitular', array('label' => 'CPF Titular', 'id' => 'cpf1'));
 		echo $this->Form->input('empregjunta', array('label' => 'Reg. Junta'));
 		echo $this->Form->input('empdataregjunta', array('label' => 'Data Reg. Junta', 'dateFormat' => 'DMY'));
 		echo $this->Form->input('empobs', array('label' => 'Observação'));

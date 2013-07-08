@@ -40,7 +40,6 @@ class EstadosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Estado->create();
-			$this->request->data['Estado']['estpais'] = $this->request->data['Estado']['pais'];
 			if ($this->Estado->save($this->request->data)) {
 				$this->Session->setFlash(__('The estado has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -64,7 +63,6 @@ class EstadosController extends AppController {
 			throw new NotFoundException(__('Invalid estado'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			$this->request->data['Estado']['estpais'] = $this->request->data['Estado']['pais'];
 			if ($this->Estado->save($this->request->data)) {
 				$this->Session->setFlash(__('The estado has been saved'));
 				$this->redirect(array('action' => 'index'));

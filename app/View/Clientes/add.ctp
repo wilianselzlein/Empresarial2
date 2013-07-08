@@ -6,7 +6,7 @@
 	<?php
 		//echo $this->Form->input('clidatacad');
 		echo $this->Form->input('clipessoa', array('label' => 'Pessoa F/J'));
-		echo $this->Form->input('clirazao', array('label' => 'Razão Social'));
+		echo $this->Form->input('clirazao', array('label' => 'Razao Social'));
 		echo $this->Form->input('clifantasia', array('label' => 'Fantaisa'));
 		echo $this->Form->input('cliendereco', array('label' => 'Endereço'));
 		echo $this->Form->input('clibairro', array('label' => 'Bairro'));
@@ -25,20 +25,20 @@
 		echo $this->Form->input('clicnpj', array('label' => 'CNPJ', 'id' => 'cnpj'));
 		echo $this->Form->input('clicpf', array('label' => 'CPF', 'id' => 'cpf'));
 		echo $this->Form->input('cliie', array('label' => 'Inscrição Estadual'));
-		echo $this->Form->input('cligrupo' ,array('type' => 'select', 'label' => 'Grupo','options'=>$grupo));
+		echo $this->Form->input('cligrupo' ,array('type' => 'select', 'label' => 'Grupo','options'=>$grupos));
 		echo $this->Form->input('clisituacao', array('label' => 'Situação (A)tivo = (I)nativo'));
 		echo $this->Form->input('clidatanasc', array('label' => 'Data Nascimento', 'dateFormat' => 'DMY'));
-		echo $this->Form->input('clicidade' ,array('type' => 'select', 'label' => 'Naturalidade','options'=>$naturalidades));
+		echo $this->Form->input('clinaturalidade' ,array('type' => 'select', 'label' => 'Naturalidade','options'=>$naturalidades));
 		echo $this->Form->input('clipai', array('label' => 'Nome do Pai'));
 		echo $this->Form->input('climae', array('label' => 'Nome da Mãe'));
 		echo $this->Form->input('clirg', array('label' => 'RG'));
 		echo $this->Form->input('cliorgaoexprg', array('label' => 'Orgão Expedidot'));
 		echo $this->Form->input('clidataexprg', array('label' => 'Data Experdição', 'dateFormat' => 'DMY'));
 		echo $this->Form->input('cliobs', array('label' => 'Observação'));
-		echo $this->Form->input('formapgtos', array('label' => 'Forma de Pagamento'));
+		echo $this->Form->input('cliformapgto' ,array('type' => 'select', 'label' => 'Forma de Pagamento','options'=>$formapgtos));
 		echo $this->Form->input('clidiafatura', array('label' => 'Dia da Fatura'));
 		echo $this->Form->input('cliim', array('label' => 'Inscrição Municipal'));
-		echo $this->Form->input('tipocobs', array('label' => 'Tipo de Cobrança'));
+		echo $this->Form->input('clitipcob' ,array('type' => 'select', 'label' => 'Tipo de Cobrança','options'=>$tipocobs));
 		//echo $this->Form->input('cliopcaocad', array('label' => ''));
 	?>
 	</fieldset>

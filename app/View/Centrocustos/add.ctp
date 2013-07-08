@@ -1,11 +1,12 @@
+<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
 <div class="centrocustos form">
 <?php echo $this->Form->create('Centrocusto'); ?>
 	<fieldset>
 		<legend><?php echo __('Add Centro de Custo'); ?></legend>
 	<?php
-		echo $this->Form->input('cencusanalitico', array('label' => 'Analítico'));
+		echo $this->Form->input('cencusanalitico', array('label' => 'Analítico', 'id' => 'analitico'));
 		echo $this->Form->input('cencusnome', array('label' => 'Nome'));
-		echo $this->Form->input('empresa', array('label' => 'Empresa'));
+		echo $this->Form->input("cencusempresa" ,array('type' => 'select', 'label' => 'Empresa','options'=>$empresa));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

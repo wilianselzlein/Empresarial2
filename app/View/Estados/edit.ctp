@@ -6,7 +6,7 @@
 		echo $this->Form->input('estcodigo', array('label' => 'Código'));
 		echo $this->Form->input('estnome', array('label' => 'Nome'));
 		echo $this->Form->input('estsigla', array('label' => 'Sigla'));
-		echo $this->Form->input('pais', array('label' => 'País'));
+		echo $this->Form->input("estpais" ,array('type' => 'select', 'label' => 'País','options'=>$pais));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

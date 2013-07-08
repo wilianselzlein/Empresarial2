@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('subgfcodigo', array('label' => 'Código'));
 		echo $this->Form->input('subgfnome', array('label' => 'Nome'));
-		echo $this->Form->input('grupofins', array('label' => 'Grupo'));
+		echo $this->Form->input('subgfgrupo' ,array('type' => 'select', 'label' => 'Grupo','options'=>$grupofins));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

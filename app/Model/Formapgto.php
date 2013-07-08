@@ -54,14 +54,7 @@ class Formapgto extends AppModel {
 			),
 		),
 		'fortipo' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+			'rule' => array('multiple', array('in'  => array('1', '2')))
 		),
 		'formesdia' => array(
 			'numeric' => array(
@@ -94,14 +87,10 @@ class Formapgto extends AppModel {
 			),
 		),
 		'forsituacao' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+			'rule' => array('multiple', array('in'  => array('A', 'I')))
+		),
+		'forcontabil' => array(
+			'rule' => array('multiple', array('in'  => array('S', 'N')))
 		),
 	);
 }
