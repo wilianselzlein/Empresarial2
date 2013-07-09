@@ -40,13 +40,15 @@ class FinanceirosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Financeiro->create();
-			debug($this->request->data['CentroCusto']); die;
+			debug($this->request->data);
 			if ($this->Financeiro->save($this->request->data)) {
 				$id = $this->Financeiro->getLastInsertId(); 
-				foreach($this->request->data['CentroCusto'] as $Financeirocentrocusto) {
-					$Financeirocentrocusto['finccregistro']=$id;
+				foreach($this->request->data['CentroCusto'] as $financeirocentrocusto) {
+					$financeirocentrocusto['finccregistro']=$id;
+					$financeirocentrocusto['finccpercentual']=0.00;
+					debug($financeirocentrocusto);
 					$this->Financeiro->FinanceiroCentroCusto->create();
-					$this->Financeiro->FinanceiroCentroCusto->save($Financeirocentrocusto);
+					$this->Financeiro->FinanceiroCentroCusto->save($financeirocentrocusto);
 				}
 				$this->Session->setFlash(__('Documento  ' . $this->request->data['Financeiro']['findcto1'] . ' salvo. Id ' . $id));
 				$this->redirect(array('action' => 'index'));

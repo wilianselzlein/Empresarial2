@@ -19,14 +19,14 @@ class Financeirocentrocusto extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'finccregistro';
+	public $primaryKey = array('finccregistro', 'fincccentrocusto');
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'fincccentrocusto';
+	//public $displayField = 'fincccentrocusto';
 
 /**
  * Validation rules
