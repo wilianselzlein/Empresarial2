@@ -40,8 +40,15 @@ class FinanceirosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Financeiro->create();
+			debug($this->request->data['CentroCusto']); die;
 			if ($this->Financeiro->save($this->request->data)) {
-				$this->Session->setFlash(__('The financeiro has been saved'));
+				$id = $this->Financeiro->getLastInsertId(); 
+				foreach($this->request->data['CentroCusto'] as $Financeirocentrocusto) {
+					$Financeirocentrocusto['finccregistro']=$id;
+					$this->Financeiro->FinanceiroCentroCusto->create();
+					$this->Financeiro->FinanceiroCentroCusto->save($Financeirocentrocusto);
+				}
+				$this->Session->setFlash(__('Documento  ' . $this->request->data['Financeiro']['findcto1'] . ' salvo. Id ' . $id));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The financeiro could not be saved. Please, try again.'));
@@ -51,7 +58,8 @@ class FinanceirosController extends AppController {
 		$clientes = $this->Financeiro->Cliente->find('list');
 		$tipocobs = $this->Financeiro->Tipocob->find('list');
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
-		$this->set(compact('empresas', 'clientes', 'tipocobs', 'subgrupofins'));
+		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
+		$this->set(compact('empresas', 'clientes', 'tipocobs', 'subgrupofins', 'centrocustos'));
 	}
 
 /**

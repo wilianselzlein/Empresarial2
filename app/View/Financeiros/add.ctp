@@ -1,12 +1,13 @@
+<?php include DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
 <div class="financeiros form">
 <?php echo $this->Form->create('Financeiro'); ?>
 	<fieldset>
 		<legend><?php echo __('Add Financeiro'); ?></legend>
 	<?php
 		echo $this->Form->input('fintipo', array('label' => 'Tipo'));
-		echo $this->Form->input('empresa', array('label' => 'Empresa'));
+		echo $this->Form->input('finempresa' ,array('type' => 'select', 'label' => 'Empresa','options'=>$empresas));
 		//echo $this->Form->input('finold');
-		echo $this->Form->input('cliente', array('label' => 'Cliente'));
+		echo $this->Form->input('fincliente' ,array('type' => 'select', 'label' => 'Cliente','options'=>$clientes));
 		echo $this->Form->input('findcto1', array('label' => 'Documento'));
 		echo $this->Form->input('findcto2', array('label' => 'Referenciado'));
 		echo $this->Form->input('finparcela', array('label' => 'Parcela'));
@@ -15,8 +16,8 @@
 		echo $this->Form->input('finprevvcto', array('label' => 'Previsão de Vencimento'));
 		echo $this->Form->input('finvalor', array('label' => 'Valor'));
 		echo $this->Form->input('findesccomercial', array('label' => 'Desc. Comercial'));
-		echo $this->Form->input('tipocob', array('label' => 'Tipo de Cob.'));
-		echo $this->Form->input('subgrupofin', array('label' => 'Subgrupo Fin.'));
+		echo $this->Form->input('fintipocob' ,array('type' => 'select', 'label' => 'Tipo de Cobrança','options'=>$tipocobs));
+		echo $this->Form->input('finsubgrupofin' ,array('type' => 'select', 'label' => 'Subgrupo Fin.','options'=>$subgrupofins));
 		echo $this->Form->input('finnossonum', array('label' => 'Nosso Núm.'));
 		echo $this->Form->input('finsituacao', array('label' => 'Situação'));
 		echo $this->Form->input('finvalorpago', array('label' => 'Valor Pago'));
@@ -29,13 +30,24 @@
 		echo $this->Form->input('findataprotesto', array('label' => 'Data Protesto'));
 		echo $this->Form->input('finobs2', array('label' => 'Observação 2'));
 	?>
+	<table id="mytable" border="0" style="width: 350px" cellpadding="0" cellspacing="0">
+		<tr id="cc0" style="display:none;">
+			<td width="65%"><?php echo $this->Form->input('unused.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos)); ?></td>
+			<td><?php echo $this->Form->input('unused.finccvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+			<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo')) ?></td>
+		</tr>
+		<tr id="trAdd" >
+			<td colspan="2">
+				<?php echo $this->Form->button('Adicionar Centro de Custo',array('type'=>'button','title'=>'Adicionar Centro de Custo','onclick'=>'addCC()'));?>
+		</td>
+	</tr>
+	</table>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
 		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Empresa'), array('controller' => 'empresas', 'action' => 'add')); ?> </li>
@@ -47,3 +59,18 @@
 		<li><?php echo $this->Html->link(__('New Subgrupo Fin.'), array('controller' => 'subgrupofins', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+<script type='text/javascript'>
+	var lastRow=0;
+
+	function addCC() {
+		lastRow++;
+		$("#mytable tbody>tr:#cc0").clone(true).attr('id','cc'+lastRow).removeAttr('style').insertBefore("#mytable tbody>tr:#trAdd");
+		$("#cc"+lastRow+" img").attr('onclick','removeCC('+lastRow+')');
+		$("#cc"+lastRow+" select").attr('name','data[CentroCusto]['+lastRow+'][fincccentrocusto]').attr('id','CentroCustocencuscodigo'+lastRow);
+		$("#cc"+lastRow+" input").attr('name','data[CentroCusto]['+lastRow+'][finccvalor]').attr('id','CentroCustofinccvalor'+lastRow);
+	}
+
+	function removeCC(x) {
+		$("#cc"+x).remove();
+	}
+</script>
