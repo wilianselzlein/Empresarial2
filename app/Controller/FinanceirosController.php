@@ -44,6 +44,7 @@ class FinanceirosController extends AppController {
 			if ($this->Financeiro->save($this->request->data)) {
 				$id = $this->Financeiro->getLastInsertId(); 
 				foreach($this->request->data['CentroCusto'] as $financeirocentrocusto) {
+					//$ret = $this->query("INSERT INTO Notes (user_id,date_added,date_modified,details)  VALUES (1,'2008-01-01 17:22','2008-01-01','Test');"); 
 					$financeirocentrocusto['finccregistro']=$id;
 					$financeirocentrocusto['finccpercentual']=0.00;
 					debug($financeirocentrocusto);

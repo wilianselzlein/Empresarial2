@@ -24,11 +24,11 @@ class FinanceirocentrocustosController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
-		if (!$this->Financeirocentrocusto->exists($id)) {
-			throw new NotFoundException(__('Invalid financeirocentrocusto'));
-		}
-		$options = array('conditions' => array('Financeirocentrocusto.' . $this->Financeirocentrocusto->primaryKey => $id));
+	public function view($registro = null, $centrocusto = null) {
+		//if (!$this->Financeirocentrocusto->exists(array($registro, $centrocusto))) {
+		//	throw new NotFoundException(__('Invalid financeirocentrocusto'));
+		//}
+		$options = array('conditions' => array('Financeirocentrocusto.finccregistro = ' . $registro . ' and Financeirocentrocusto.fincccentrocusto = ' . $centrocusto));
 		$this->set('financeirocentrocusto', $this->Financeirocentrocusto->find('first', $options));
 	}
 
@@ -39,6 +39,7 @@ class FinanceirocentrocustosController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			debug($this->request->data);
 			$this->Financeirocentrocusto->create();
 			if ($this->Financeirocentrocusto->save($this->request->data)) {
 				$this->Session->setFlash(__('The financeirocentrocusto has been saved'));

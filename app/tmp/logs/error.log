@@ -8,3 +8,271 @@ Stack Trace:
 #3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-07-11 15:15:05 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-11 15:37:25 Error: [MissingControllerException] Controller class FinanceiroentrocustosController could not be found.
+Exception Attributes: array (
+  'class' => 'FinanceiroentrocustosController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/financeiroentrocustos
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-11 15:38:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists('2')
+#7 [internal function]: FinanceirocentrocustosController->view('2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:40:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:40:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:40:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:40:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:41:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:41:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:41:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:41:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:41:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/view/2/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(28): Model->exists(Array)
+#7 [internal function]: FinanceirocentrocustosController->view('2', '2')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 15:44:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1
+Request URL: /Empresarial2/financeirocentrocustos/view/2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(32): Model->find('first', Array)
+#6 [internal function]: FinanceirocentrocustosController->view('2')
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#10 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-07-11 16:02:54 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'debug' at line 1
+Request URL: /Empresarial2/financeirocentrocustos/add
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('debug', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('debug', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('debug', Array, Array)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(800): DboSource->query('debug', Array, Object(Financeirocentrocusto))
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1693): Model->__call('debug', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1693): Financeirocentrocusto->debug('primaryKey')
+#7 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(44): Model->save(Array)
+#8 [internal function]: FinanceirocentrocustosController->add()
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-07-11 16:03:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Financeirocentrocusto.Array' in 'where clause'
+Request URL: /Empresarial2/financeirocentrocustos/delete/1
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2606): Model->find('count', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(90): Model->exists()
+#7 [internal function]: FinanceirocentrocustosController->delete('1')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-07-11 16:12:43 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-3' for key 'PRIMARY'
+Request URL: /Empresarial2/financeirocentrocustos/add
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `em...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `em...')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Financeirocentrocusto), Array, Array)
+#4 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(44): Model->save(Array)
+#5 [internal function]: FinanceirocentrocustosController->add()
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-07-11 16:58:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1' for key 'PRIMARY'
+Request URL: /Empresarial2/financeirocentrocustos/add
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `empresa...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `empresa...')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1733): Mysql->update(Object(Financeirocentrocusto), Array, Array)
+#4 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(64): Model->save(Array)
+#5 [internal function]: FinanceirocentrocustosController->add()
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-07-11 16:58:23 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1' for key 'PRIMARY'
+Request URL: /Empresarial2/financeirocentrocustos/add
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `empresa...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `empresa...')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1733): Mysql->update(Object(Financeirocentrocusto), Array, Array)
+#4 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(64): Model->save(Array)
+#5 [internal function]: FinanceirocentrocustosController->add()
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
