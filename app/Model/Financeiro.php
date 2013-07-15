@@ -317,7 +317,15 @@ class Financeiro extends AppModel {
 			//'order'         => 'Comment.created DESC',
 			//'limit'         => '5',
 			//'dependent'     => true
-		)
+		),
+		'FinanceiroPlanoConta' => array(
+			'className'     => 'Financeiroplanoconta',
+			'foreignKey'    => 'finccregistro',
+			//'conditions'    => array('Comment.status' => '1'),
+			//'order'         => 'Comment.created DESC',
+			//'limit'         => '5',
+			//'dependent'     => true
+		),    
 	);
 
 	public $belongsTo = array(

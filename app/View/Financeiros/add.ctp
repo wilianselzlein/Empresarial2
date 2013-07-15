@@ -30,18 +30,31 @@
 		echo $this->Form->input('findataprotesto', array('label' => 'Data Protesto'));
 		echo $this->Form->input('finobs2', array('label' => 'Observação 2'));
 	?>
-	<table id="mytable" border="0" style="width: 350px" cellpadding="0" cellspacing="0">
-		<tr id="cc0" style="display:none;">
-			<td width="65%"><?php echo $this->Form->input('unused.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos)); ?></td>
-			<td><?php echo $this->Form->input('unused.finccvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
-			<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo')) ?></td>
-		</tr>
-		<tr id="trAdd" >
-			<td colspan="2">
-				<?php echo $this->Form->button('Adicionar Centro de Custo',array('type'=>'button','title'=>'Adicionar Centro de Custo','onclick'=>'addCC()'));?>
+	<!--<table id="mytablecc" border="0" style="width: 350px" cellpadding="0" cellspacing="0">
+	    <tr id="cc0" style="display:none;">
+		<td width="65%"><?php echo $this->Form->input('unused.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos)); ?></td>
+		<td><?php echo $this->Form->input('unused.finccvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo')) ?></td>
+	    </tr>
+	    <tr id="trAdd" >
+		<td colspan="2">
+		    <?php echo $this->Form->button('Adicionar Centro de Custo',array('type'=>'button','title'=>'Adicionar Centro de Custo','onclick'=>'addCC()'));?>
 		</td>
-	</tr>
+	    </tr>
+	</table>-->
+	<table id="mytablepc" border="0" style="width: 350px" cellpadding="0" cellspacing="0">
+	    <tr id="pc0" style="display:none;">
+		<td width="65%"><?php echo $this->Form->input('unused.finpcplanoconta', array('type' => 'select', 'label' => 'Plano de Conta', 'options' => $planocontas)); ?></td>
+		<td><?php echo $this->Form->input('unused.finpcvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Plano de Conta')) ?></td>
+	    </tr>
+	    <tr id="trAdd" >
+		<td colspan="2">
+		    <?php echo $this->Form->button('Adicionar Plano de Conta',array('type'=>'button','title'=>'Adicionar Plano de Conta','onclick'=>'addPC()'));?>
+		</td>
+	    </tr>
 	</table>
+		
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
@@ -64,7 +77,7 @@
 
 	function addCC() {
 		lastRow++;
-		$("#mytable tbody>tr:#cc0").clone(true).attr('id','cc'+lastRow).removeAttr('style').insertBefore("#mytable tbody>tr:#trAdd");
+		$("#mytablecc tbody>tr:#cc0").clone(true).attr('id','cc'+lastRow).removeAttr('style').insertBefore("#mytablecc tbody>tr:#trAdd");
 		$("#cc"+lastRow+" img").attr('onclick','removeCC('+lastRow+')');
 		$("#cc"+lastRow+" select").attr('name','data[CentroCusto]['+lastRow+'][fincccentrocusto]').attr('id','CentroCustocencuscodigo'+lastRow);
 		$("#cc"+lastRow+" input").attr('name','data[CentroCusto]['+lastRow+'][finccvalor]').attr('id','CentroCustofinccvalor'+lastRow);
@@ -72,5 +85,17 @@
 
 	function removeCC(x) {
 		$("#cc"+x).remove();
+	}
+
+	function addPC() {
+		lastRow++;
+		$("#mytablepc tbody>tr:#pc0").clone(true).attr('id','pc'+lastRow).removeAttr('style').insertBefore("#mytablepc tbody>tr:#trAdd");
+		$("#pc"+lastRow+" img").attr('onclick','removePC('+lastRow+')');
+		$("#pc"+lastRow+" select").attr('name','data[PlanoConta]['+lastRow+'][finpcplanoconta]').attr('id','PlanoContaplaconcodigo'+lastRow);
+		$("#pc"+lastRow+" input").attr('name','data[PlanoConta]['+lastRow+'][finpcvalor]').attr('id','PlanoContafinpcvalor'+lastRow);
+	}
+
+	function removePC(x) {
+		$("#pc"+x).remove();
 	}
 </script>

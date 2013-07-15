@@ -40,16 +40,25 @@ class FinanceirosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Financeiro->create();
-			debug($this->request->data);
+			debug($this->request->data); 
 			if ($this->Financeiro->save($this->request->data)) {
 				$id = $this->Financeiro->getLastInsertId(); 
-				foreach($this->request->data['CentroCusto'] as $financeirocentrocusto) {
-					//$ret = $this->query("INSERT INTO Notes (user_id,date_added,date_modified,details)  VALUES (1,'2008-01-01 17:22','2008-01-01','Test');"); 
-					$financeirocentrocusto['finccregistro']=$id;
-					$financeirocentrocusto['finccpercentual']=0.00;
-					debug($financeirocentrocusto);
-					$this->Financeiro->FinanceiroCentroCusto->create();
-					$this->Financeiro->FinanceiroCentroCusto->save($financeirocentrocusto);
+				if (isset($this->request->data['CentroCusto'])) {
+				    foreach($this->request->data['CentroCusto'] as $financeirocentrocusto) {
+					    //$ret = $this->query("INSERT INTO Notes (user_id,date_added,date_modified,details)  VALUES (1,'2008-01-01 17:22','2008-01-01','Test');"); 
+					    $financeirocentrocusto['finccregistro']=$id;
+					    $financeirocentrocusto['finccpercentual']=0.00;
+					    $this->Financeiro->FinanceiroCentroCusto->create();
+					    $this->Financeiro->FinanceiroCentroCusto->save($financeirocentrocusto);
+				    }
+				}
+				if (isset($this->request->data['PlanoConta'])) {
+				    foreach($this->request->data['PlanoConta'] as $financeiroplanocontum) {
+					    $financeiroplanocontum['finpcregistro']=$id;
+					    $financeiroplanocontum['finpcpercentual']=0.00;
+					    $this->Financeiro->FinanceiroPlanoConta->create();
+					    $this->Financeiro->FinanceiroPlanoConta->save($financeiroplanocontum);
+				    }
 				}
 				$this->Session->setFlash(__('Documento  ' . $this->request->data['Financeiro']['findcto1'] . ' salvo. Id ' . $id));
 				$this->redirect(array('action' => 'index'));
@@ -62,7 +71,8 @@ class FinanceirosController extends AppController {
 		$tipocobs = $this->Financeiro->Tipocob->find('list');
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
 		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
-		$this->set(compact('empresas', 'clientes', 'tipocobs', 'subgrupofins', 'centrocustos'));
+		$planocontas = $this->Financeiro->FinanceiroPlanoConta->PlanoConta->find('list');
+		$this->set(compact('empresas', 'clientes', 'tipocobs', 'subgrupofins', 'centrocustos', 'planocontas'));
 	}
 
 /**
