@@ -48,7 +48,16 @@
 		<td><?php echo h($cliente['Cliente']['clipessoa']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clirazao']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clifantasia']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cliendereco']); ?>&nbsp;</td>
+		<td><?php echo h($cliente['Cliente']['cliendereco']); ?>&nbsp;
+		    <?php 
+			if (! $cliente['Cliente']['cliendereco'] == '')
+			echo $this->Html->link(
+				$this->Html->image('world.png', array('alt' => 'Visualizar no Google Maps', 'border' => '0')),
+				'https://maps.google.com/maps?q='.$cliente['Cliente']['cliendereco'].' '.$cliente['Cliente']['clinumero'].' '.$cliente['Cliente']['clibairro'].','.$cliente['Cidade']['cidnome'].'&hl=pt',
+				array('target' => '_blank', 'escape' => false)
+			);
+		    ?>			
+		</td>
 		<td><?php echo h($cliente['Cliente']['clibairro']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clicomplemento']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clinumero']); ?>&nbsp;</td>

@@ -398,3 +398,269 @@ Stack Trace:
 #7 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
 #8 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-07-17 01:44:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FinanceiroPlanoConta.finccregistro' in 'field list'
+Request URL: /Empresarial2/financeiros/edit/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Financeiro), 'SELECT `Finance...', Array)
+#5 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Financeiro), Object(Financeiroplanoconta), 'hasMany', 'FinanceiroPlano...', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#7 D:\PHP\Xampp\htdocs\Empresarial2\app\Controller\FinanceirosController.php(98): Model->find('first', Array)
+#8 [internal function]: FinanceirosController->edit('1')
+#9 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirosController), Array)
+#10 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-07-17 02:18:11 Error: Fatal Error (4): syntax error, unexpected 'var' (T_VAR), expecting variable (T_VARIABLE) in [D:\PHP\Xampp\htdocs\Empresarial2\app\Controller\FinanceirosController.php, line 9]
+2013-07-17 02:18:11 Error: [FatalErrorException] syntax error, unexpected 'var' (T_VAR), expecting variable (T_VARIABLE)
+Request URL: /Empresarial2/financeiros/add
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\PHP\Xampp\ht...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\PHP\Xampp\ht...', 9, Array)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\PHP\Xampp\ht...', 9, Array)
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-17 02:31:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FinanceiroPlanoConta.finccregistro' in 'field list'
+Request URL: /Empresarial2/financeiros/edit/18
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Financeiro), 'SELECT `Finance...', Array)
+#5 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Financeiro), Object(Financeiroplanoconta), 'hasMany', 'FinanceiroPlano...', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#7 D:\PHP\Xampp\htdocs\Empresarial2\app\Controller\FinanceirosController.php(104): Model->find('first', Array)
+#8 [internal function]: FinanceirosController->edit('18')
+#9 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirosController), Array)
+#10 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-07-17 02:58:41 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxHelper',
+  'plugin' => false,
+)
+Request URL: /Empresarial2/financeiros
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Ajax')
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(835): HelperCollection->__isset('Ajax')
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\View\Financeiros\index.ctp(38): View->__get('Ajax')
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\Xampp\ht...')
+#4 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\Xampp\ht...', Array)
+#5 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\Xampp\ht...')
+#6 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#7 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#8 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-07-17 03:06:52 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+Exception Attributes: array (
+  'class' => 'JavascriptHelper',
+  'plugin' => false,
+)
+Request URL: /Empresarial2/financeiros
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(962): HelperCollection->load('Javascript', Array)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\Helper.php(203): View->loadHelper('Javascript', Array)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\View\Helper\AjaxHelper.php(299): Helper->__get('Javascript')
+#3 D:\PHP\Xampp\htdocs\Empresarial2\app\View\Financeiros\index.ctp(39): AjaxHelper->link('CC', Array, Array)
+#4 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\Xampp\ht...')
+#5 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\Xampp\ht...', Array)
+#6 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\Xampp\ht...')
+#7 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#8 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#9 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#10 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-07-17 03:10:39 Error: [MissingActionException] Action FinanceirocentrocustosController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceirocentrocustosController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:10:44 Error: [MissingViewException] View file "D:\PHP\Xampp\htdocs\Empresarial2\app\View\Financeirocentrocustos\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\Xampp\\htdocs\\Empresarial2\\app\\View\\Financeirocentrocustos\\index.ctp',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-17 03:11:58 Error: [MissingActionException] Action FinanceirocentrocustosController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceirocentrocustosController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:12:02 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:12:05 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:12:05 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:12:06 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:39:23 Error: [MissingActionException] Action FinanceirocentrocustosController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceirocentrocustosController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:39:26 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:47:13 Error: [MissingActionException] Action FinanceirocentrocustosController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceirocentrocustosController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:47:14 Error: [MissingActionException] Action FinanceirocentrocustosController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceirocentrocustosController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 03:47:19 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-17 04:01:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'financeirocentrocustos.finccregistro' in 'where clause'
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeirocentrocusto), Array)
+#5 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Financeirocentr...', Array, Array)
+#7 D:\PHP\Xampp\htdocs\Empresarial2\app\Controller\FinanceirocentrocustosController.php(33): Controller->paginate('Financeirocentr...')
+#8 [internal function]: FinanceirocentrocustosController->financeiro('1')
+#9 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirocentrocustosController), Array)
+#10 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-07-17 04:02:22 Error: [MissingViewException] View file "D:\PHP\Xampp\htdocs\Empresarial2\app\View\Financeirocentrocustos\financeiro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\Xampp\\htdocs\\Empresarial2\\app\\View\\Financeirocentrocustos\\financeiro.ctp',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-17 04:49:28 Error: [MissingViewException] View file "D:\PHP\Xampp\htdocs\Empresarial2\app\View\Financeirocentrocustos\financeiro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\Xampp\\htdocs\\Empresarial2\\app\\View\\Financeirocentrocustos\\financeiro.ctp',
+)
+Request URL: /Empresarial2/Financeirocentrocustos/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirocentrocustosController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-17 04:49:31 Error: [MissingActionException] Action FinanceiroplanocontasController::financeiro() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinanceiroplanocontasController',
+  'action' => 'financeiro',
+)
+Request URL: /Empresarial2/Financeiroplanocontas/financeiro/1
+Stack Trace:
+#0 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

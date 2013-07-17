@@ -41,6 +41,12 @@ class FinanceirosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Financeiro->create();
 			debug($this->request->data); 
+			if ($this->request->data['Financeiro']['findcto2'] > 0)
+			    $this->request->data['Financeiro']['finold'] = '1';
+			else
+			    $this->request->data['Financeiro']['finold'] = '2';
+			
+			$this->request->data['Financeiro']['finsituacao'] = '1';
 			if ($this->Financeiro->save($this->request->data)) {
 				$id = $this->Financeiro->getLastInsertId(); 
 				if (isset($this->request->data['CentroCusto'])) {

@@ -320,7 +320,7 @@ class Financeiro extends AppModel {
 		),
 		'FinanceiroPlanoConta' => array(
 			'className'     => 'Financeiroplanoconta',
-			'foreignKey'    => 'finccregistro',
+			'foreignKey'    => 'finpcregistro',
 			//'conditions'    => array('Comment.status' => '1'),
 			//'order'         => 'Comment.created DESC',
 			//'limit'         => '5',

@@ -1,8 +1,11 @@
 <div class="financeiros index">
 	<h2><?php echo __('Financeiro'); ?></h2>
+	<?php echo $this->html->script("jquery", array('inline'=>false)); ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('finregistro', 'Registro'); ?></th>
+			<th>CC</th>
+			<th>PC</th>
 			<th><?php echo $this->Paginator->sort('fintipo', 'Tipo'); ?></th>
 			<th><?php echo $this->Paginator->sort('finempresa', 'Empresa'); ?></th>
 			<th><?php echo $this->Paginator->sort('fincliente', 'Cliente'); ?></th>
@@ -31,6 +34,26 @@
 	<?php foreach ($financeiros as $financeiro): ?>
 	<tr>
 		<td><?php echo h($financeiro['Financeiro']['finregistro']); ?>&nbsp;</td>
+		<td>
+		    <h6>
+			<?php echo $this->Ajax->link('CC', array('controller' => 'Financeirocentrocustos', 'action' => 'financeiro', $financeiro['Financeiro']['finregistro']), 
+			array('update' => 'cc' . $financeiro['Financeiro']['finregistro'], 'indicator' => 'loadingC' . $financeiro['Financeiro']['finregistro']));?>
+			<a href="#" onclick="showHide('cc<?php echo h($financeiro['Financeiro']['finregistro']);?>')"><?php echo $this->Html->image('close.png', array('alt' => 'Esconder')); ?></a>
+		    </h6>
+		    <?php echo $this->Html->image('load.gif', array('id' => 'loadingC' . h($financeiro['Financeiro']['finregistro']), 'style'=> 'display:none')); ?>
+		    <p id="cc<?php echo h($financeiro['Financeiro']['finregistro']);?>">
+		    </p>
+		</td>
+		<td>
+		    <h6>
+			<?php echo $this->Ajax->link('PC', array('controller' => 'Financeiroplanocontas', 'action' => 'financeiro', $financeiro['Financeiro']['finregistro']), 
+			array( 'update' => 'pc' . $financeiro['Financeiro']['finregistro'], 'indicator' => 'loadingP' . $financeiro['Financeiro']['finregistro']));?>
+			<a href="#" onclick="showHide('pc<?php echo h($financeiro['Financeiro']['finregistro']);?>')"><?php echo $this->Html->image('close.png', array('alt' => 'Esconder')); ?></a>
+		    </h6>
+		    <?php echo $this->Html->image('load.gif', array('id' => 'loadingP' . h($financeiro['Financeiro']['finregistro']), 'style'=> 'display:none')); ?>
+		    <p id="pc<?php echo h($financeiro['Financeiro']['finregistro']);?>">
+		    </p>
+		</td>		
 		<td><?php echo h($financeiro['Financeiro']['fintipo']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($financeiro['Empresa']['empnome'], array('controller' => 'empresas', 'action' => 'view', $financeiro['Empresa']['empcodigo'])); ?>
@@ -98,3 +121,13 @@
 		<li><?php echo $this->Html->link(__('New Subgrupo Fin.'), array('controller' => 'subgrupofins', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+<script language="Javascript" type="text/javascript">
+function showHide (ID) {
+    if (document.getElementById(ID).style.display == "none") {
+	document.getElementById(ID).style.display= "";
+    }
+    else {
+	document.getElementById(ID).innerHTML = "";
+    }
+}
+</script>
