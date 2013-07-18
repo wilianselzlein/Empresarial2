@@ -65,7 +65,7 @@ class Financeirocentrocusto extends AppModel {
  */
 	public $belongsTo = array(
 		'CentroCusto' => array(
-			'className' => 'CentroCusto',
+			'className' => 'Centrocusto',
 			'foreignKey' => 'fincccentrocusto',
 			'conditions' => '',
 			'fields' => '',

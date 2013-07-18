@@ -1,4 +1,4 @@
-<?php include DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
+<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
 <div class="financeiros form">
 <?php echo $this->Form->create('Financeiro'); ?>
 	<fieldset>
