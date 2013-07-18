@@ -7,6 +7,21 @@ App::uses('AppController', 'Controller');
  */
 class BancosController extends AppController {
 
+	function edit2() {
+		if (!empty($this->request->data)) {
+			$this->request->data[$this->request->data['id']] = $this->request->data['value'];
+			if ($this->Banco->save($this->request->data)) {
+				$thisId=$this->Banco->id;
+				$this->header("Content-Type: application/json");
+				echo $this->request->data['value'];
+				exit;
+			} else {
+				return 'Fail';
+			}
+		}
+		$this->Autorender = FALSE;
+		exit;
+	}
 /**
  * index method
  *

@@ -1,4 +1,6 @@
 <div class="bancos view">
+<?php echo $this->html->script("jquery", array('inline'=>false)); ?>
+<?php echo $this->Javascript->link('jquery.jeditable.mini'); ?>
 <h2><?php  echo __('Banco'); ?></h2>
 	<dl>
 		<dt><?php echo __('Código'); ?></dt>
@@ -8,9 +10,25 @@
 		</dd>
 		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
-			<?php echo h($banco['Banco']['bannome']); ?>
-			&nbsp;
+			<div class="edit" id="bannome"><?php echo h($banco['Banco']['bannome']); ?></div>
+			<?php
+			echo $this->Ajax->editor(
+			    "bannome", 
+			    array( 
+				'controller' => 'Bancos', 
+				'action' => 'edit2',
+			    ), 
+			    array(
+				'indicator' => '<img src="/empresarial2/img/load.gif">',
+				'submit' => '<img src="/empresarial2/img/bullet_disk.png">',
+				'style' => 'inherit',
+				'submitdata' => array('bancodigo'=> h($banco['Banco']['bancodigo'])),
+				'tooltip'   => 'Clique para editar'
+				)
+			);
+			?> 			
 		</dd>
+
 	</dl>
 </div>
 <div class="actions">
