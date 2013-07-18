@@ -721,3 +721,139 @@ Stack Trace:
 #1 D:\PHP\Xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceiroplanocontasController), Object(CakeRequest), Object(CakeResponse))
 #2 D:\PHP\Xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-07-18 14:22:25 Error: [MissingControllerException] Controller class PlanocontasController could not be found.
+Exception Attributes: array (
+  'class' => 'PlanocontasController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/planocontas/view/1
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:22:33 Error: [MissingControllerException] Controller class PlanocontasController could not be found.
+Exception Attributes: array (
+  'class' => 'PlanocontasController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/planocontas/view/1
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:35:53 Error: Fatal Error (1): Call to a member function editor() on a non-object in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Bancos\view.ctp, line 16]
+2013-07-18 14:35:53 Error: [FatalErrorException] Call to a member function editor() on a non-object
+Request URL: /Empresarial2/bancos/view/1
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 16, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 16, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-18 14:44:57 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:57:43 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:57:45 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:57:59 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:58:01 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:58:03 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:58:05 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 14:58:30 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 15:06:07 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 15:17:38 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 15:17:48 Error: [MissingControllerException] Controller class AjaxController could not be found.
+Exception Attributes: array (
+  'class' => 'AjaxController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/ajax/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-18 15:23:38 Error: [MissingControllerException] Controller class BancoController could not be found.
+Exception Attributes: array (
+  'class' => 'BancoController',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/banco/edit2
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
