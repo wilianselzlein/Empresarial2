@@ -4,7 +4,8 @@
 		<legend><?php echo __('Add Tipo de Cobrança'); ?></legend>
 	<?php
 		echo $this->Form->input('tipcobnome', array('label' => 'Nome'));
-		echo $this->Form->input('tipcobsituacao', array('label' => 'Situação (A)tivo - (I)nativo'));
+		$sit = array('A' => 'Ativo', 'I' => 'Inativo');	
+		echo $this->Form->input('tipcobsituacao', array('type' => 'select', 'label' => 'Situação', 'options' => $sit));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

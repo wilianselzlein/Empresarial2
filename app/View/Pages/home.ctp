@@ -36,6 +36,12 @@ App::uses('Debugger', 'Utility');
 		<li><?php echo $this->Html->link(__('Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 	</ul>
 	<br/>
+	<h4><?php echo __('Clientes'); ?></h4>
+	<ul>
+		<li><?php echo $this->Html->link(__('Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Grupos de Clientes'), array('controller' => 'grupoclientes', 'action' => 'index')); ?> </li>
+	</ul>
+        <br/>
 	<h4><?php echo __('Financeiro'); ?></h4>
 	<ul>
 		<li><?php echo $this->Html->link(__('Financeiro'), array('controller' => 'financeiros', 'action' => 'index')); ?> </li>	
@@ -46,11 +52,5 @@ App::uses('Debugger', 'Utility');
 		<li><?php echo $this->Html->link(__('Grupos Financeiros'), array('controller' => 'grupofins', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Subgrupos Financeiros'), array('controller' => 'subgrupofins', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
-	</ul>
-	<br/>
-	<h4><?php echo __('Clientes'); ?></h4>
-	<ul>
-		<li><?php echo $this->Html->link(__('Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Grupos de Clientes'), array('controller' => 'grupoclientes', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

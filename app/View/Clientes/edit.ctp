@@ -6,7 +6,8 @@
 	<?php
 		echo $this->Form->input('clicodigo');
 		//echo $this->Form->input('clidatacad');
-		echo $this->Form->input('clipessoa', array('label' => 'Pessoa F/J'));
+		$tipo = array('F' => 'Física', 'J' => 'Jurídica');	
+		echo $this->Form->input('clipessoa', array('type' => 'select', 'label' => 'Pessoa F/J', 'options' => $tipo));
 		echo $this->Form->input('clirazao', array('label' => 'Razao Social'));
 		echo $this->Form->input('clifantasia', array('label' => 'Fantaisa'));
 		echo $this->Form->input('cliendereco', array('label' => 'Endereço'));
@@ -27,13 +28,14 @@
 		echo $this->Form->input('clicpf', array('label' => 'CPF', 'id' => 'cpf'));
 		echo $this->Form->input('cliie', array('label' => 'Inscrição Estadual'));
 		echo $this->Form->input('cligrupo' ,array('type' => 'select', 'label' => 'Grupo','options'=>$grupos));
-		echo $this->Form->input('clisituacao', array('label' => 'Situação (A)tivo = (I)nativo'));
-		echo $this->Form->input('clidatanasc', array('label' => 'Data Nascimento', 'dateFormat' => 'DMY'));
+		$sit = array('A' => 'Ativo', 'I' => 'Inativo');	
+		echo $this->Form->input('clisituacao', array('type' => 'select', 'label' => 'Situação', 'options' => $sit));
+                echo $this->Form->input('clidatanasc', array('label' => 'Data Nascimento', 'dateFormat' => 'DMY'));
 		echo $this->Form->input('clinaturalidade' ,array('type' => 'select', 'label' => 'Naturalidade','options'=>$naturalidades));
 		echo $this->Form->input('clipai', array('label' => 'Nome do Pai'));
 		echo $this->Form->input('climae', array('label' => 'Nome da Mãe'));
 		echo $this->Form->input('clirg', array('label' => 'RG'));
-		echo $this->Form->input('cliorgaoexprg', array('label' => 'Orgão Expedidot'));
+		echo $this->Form->input('cliorgaoexprg', array('label' => 'Orgão Expedidor'));
 		echo $this->Form->input('clidataexprg', array('label' => 'Data Experdição', 'dateFormat' => 'DMY'));
 		echo $this->Form->input('cliobs', array('label' => 'Observação'));
 		echo $this->Form->input('cliformapgto' ,array('type' => 'select', 'label' => 'Forma de Pagamento','options'=>$formapgtos));

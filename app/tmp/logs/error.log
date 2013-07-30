@@ -953,3 +953,17 @@ Stack Trace:
 #10 /var/www/Empresarial2/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #11 /var/www/Empresarial2/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2013-07-29 21:43:45 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'clidiafatura' cannot be null
+Request URL: /Empresarial2/clientes/add
+Stack Trace:
+#0 /var/www/Empresarial2/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/Empresarial2/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `em...', Array)
+#2 /var/www/Empresarial2/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `em...')
+#3 /var/www/Empresarial2/lib/Cake/Model/Model.php(1744): DboSource->create(Object(Cliente), Array, Array)
+#4 /var/www/Empresarial2/app/Controller/ClientesController.php(43): Model->save(Array)
+#5 [internal function]: ClientesController->add()
+#6 /var/www/Empresarial2/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(ClientesController), Array)
+#7 /var/www/Empresarial2/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/Empresarial2/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/Empresarial2/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
