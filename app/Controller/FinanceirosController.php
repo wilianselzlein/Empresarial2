@@ -93,6 +93,7 @@ class FinanceirosController extends AppController {
 			throw new NotFoundException(__('Invalid financeiro'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+                    debug($this->request->data); die;
 			if ($this->Financeiro->save($this->request->data)) {
 				$this->Session->setFlash(__('The financeiro has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -107,7 +108,11 @@ class FinanceirosController extends AppController {
 		$clientes = $this->Financeiro->Cliente->find('list');
 		$tipocobs = $this->Financeiro->Tipocob->find('list');
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
-		$this->set(compact('empresas', 'clientes', 'tipocobs', 'subgrupofins'));
+		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
+		$planocontas = $this->Financeiro->FinanceiroPlanoConta->PlanoConta->find('list');
+                $financeirocentrocustos = $this->Financeiro->FinanceiroCentroCusto->find('all', array('conditions' => array('FinanceiroCentroCusto.finccregistro' => $id)));
+                $financeiroplanocontas = $this->Financeiro->FinanceiroPlanoConta->find('all', array('conditions' => array('FinanceiroPlanoConta.finpcregistro' => $id)));
+		$this->set(compact('empresas', 'clientes', 'tipocobs', 'subgrupofins', 'centrocustos', 'planocontas', 'financeirocentrocustos', 'financeiroplanocontas'));
 	}
 
 /**
