@@ -1,2 +1,2 @@
-1377458808
+1378219917
 a:5:{s:7:"finccid";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:13:"finccregistro";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;}s:16:"fincccentrocusto";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;}s:10:"finccvalor";a:4:{s:4:"type";s:5:"float";s:4:"null";b:0;s:7:"default";N;s:6:"length";N;}s:15:"finccpercentual";a:4:{s:4:"type";s:5:"float";s:4:"null";b:0;s:7:"default";N;s:6:"length";N;}}

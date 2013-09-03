@@ -992,3 +992,28 @@ Stack Trace:
 #3 /var/www/Empresarial2/lib/Cake/Core/App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-09-02 14:38:23 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /Empresarial2/users/login
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\Helper\FormHelper.php(456): FormHelper->_introspectModel('User', 'fields')
+#8 D:\PHP\xampp\htdocs\Empresarial2\app\View\Users\login.ctp(3): FormHelper->create('User')
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#12 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}

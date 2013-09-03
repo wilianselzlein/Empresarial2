@@ -1,3 +1,4 @@
+
 -- phpMyAdmin SQL Dump
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
@@ -31,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `tbanco` (
 --
 
 INSERT INTO `tbanco` (`bancodigo`, `bannome`) VALUES
-(1, 'Caixa - CEF');
+(1, 'Caixa CEF;;;PKJIO');
 
 -- --------------------------------------------------------
 
@@ -45,14 +46,16 @@ CREATE TABLE IF NOT EXISTS `tcentrocusto` (
   `cencusnome` varchar(100) NOT NULL,
   `cencusempresa` int(11) NOT NULL,
   PRIMARY KEY (`cencuscodigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `tcentrocusto`
 --
 
 INSERT INTO `tcentrocusto` (`cencuscodigo`, `cencusanalitico`, `cencusnome`, `cencusempresa`) VALUES
-(1, '1.00.000.000', 'Obra', 1);
+(1, '01.000.000', 'Obra', 1),
+(2, '01.001.000', 'Piso', 1),
+(3, '01.001.001', 'Concreto', 1);
 
 -- --------------------------------------------------------
 
@@ -67,14 +70,15 @@ CREATE TABLE IF NOT EXISTS `tcidade` (
   `cidcep` varchar(15) NOT NULL,
   `cidcodigonfe` int(11) NOT NULL,
   PRIMARY KEY (`cidcodigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `tcidade`
 --
 
 INSERT INTO `tcidade` (`cidcodigo`, `cidnome`, `cidestado`, `cidcep`, `cidcodigonfe`) VALUES
-(1, 'Vacaria', 1, '95200-000', 10);
+(1, 'Vacaria', 1, '95200-000', 10),
+(2, 'Caxias do Sul', 1, '95200-000', 10);
 
 -- --------------------------------------------------------
 
@@ -120,7 +124,14 @@ CREATE TABLE IF NOT EXISTS `tcliente` (
   `clitipcob` int(11) NOT NULL,
   `cliopcaocad` int(11) NOT NULL,
   PRIMARY KEY (`clicodigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `tcliente`
+--
+
+INSERT INTO `tcliente` (`clicodigo`, `clipessoa`, `clirazao`, `clifantasia`, `cliendereco`, `clibairro`, `clicomplemento`, `clinumero`, `clicidade`, `clicep`, `clicxpostal`, `clifone`, `clifax`, `clicelular`, `cliemail`, `cliemailalt`, `clihomepage`, `clicontatofin`, `clicnpj`, `clicpf`, `cliie`, `cligrupo`, `clisituacao`, `clidatanasc`, `clinaturalidade`, `clipai`, `climae`, `clirg`, `cliorgaoexprg`, `clidataexprg`, `cliobs`, `cliformapgto`, `clidiafatura`, `cliim`, `clitipcob`, `cliopcaocad`) VALUES
+(1, 'F', 'Wilian', '', '', '', '', '', 1, '', '', '', '', '', '', '', '', '', '', '', '', 0, 'A', '2013-07-09', 1, '', '', '', '', '2013-07-09', '', 1, 10, '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -163,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `tempresa` (
 --
 
 INSERT INTO `tempresa` (`empcodigo`, `empnome`, `empendereco`, `empbairro`, `empcidade`, `empcep`, `empfone`, `empfax`, `empemail`, `emphomepage`, `empcnpj`, `empcpf`, `empie`, `empim`, `emprg`, `emporgaoexprg`, `empdataemprg`, `empcontato`, `empcontador`, `empcrccontador`, `emptitular`, `empcargotitular`, `empcpftitular`, `empregjunta`, `empdataregjunta`, `empobs`) VALUES
-(1, 'Suzin Eng', 'XV Novembro', 'Centro', 1, '95200-000', '54 99542451', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '0000-00-00', '');
+(1, 'Suzin Eng', 'XV Novembro', 'Centro', 2, '95200-000', '54 99542451', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '0000-00-00', '');
 
 -- --------------------------------------------------------
 
@@ -221,7 +232,32 @@ CREATE TABLE IF NOT EXISTS `tfinanceiro` (
   `findataprotesto` date NOT NULL,
   `finobs2` text NOT NULL,
   PRIMARY KEY (`finregistro`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+
+--
+-- Extraindo dados da tabela `tfinanceiro`
+--
+
+INSERT INTO `tfinanceiro` (`finregistro`, `fintipo`, `finempresa`, `finold`, `fincliente`, `findcto1`, `findcto2`, `finparcela`, `finemissao`, `finvcto`, `finprevvcto`, `finvalor`, `findesccomercial`, `fintipocob`, `finsubgrupofin`, `finconta`, `finnossonum`, `finsituacao`, `finvalorpago`, `findesconto`, `finacrescimo`, `fintaxa`, `finliquido`, `finobs`, `finfaturamento`, `findataprotesto`, `finobs2`) VALUES
+(1, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 11, 1, 1, 1, 0, '', '00', 1, 0, 10, 10, 10, '', '2013-07-09', '2013-07-09', ''),
+(2, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 11, 1, 1, 1, 0, '', '00', 1, 0, 10, 10, 10, '', '2013-07-09', '2013-07-09', ''),
+(3, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 11, 1, 1, 1, 0, '', '00', 1, 0, 10, 10, 10, '', '2013-07-09', '2013-07-09', ''),
+(4, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 11, 1, 1, 1, 0, '', '00', 1, 0, 10, 10, 10, '', '2013-07-09', '2013-07-09', ''),
+(5, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 11, 1, 1, 1, 0, '', '00', 1, 0, 10, 10, 10, '', '2013-07-09', '2013-07-09', ''),
+(6, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 11, 1, 1, 1, 0, '', '00', 1, 0, 10, 10, 10, '', '2013-07-09', '2013-07-09', ''),
+(7, '1', 1, '', 1, 1, '2', 3, '2013-07-09', '2013-07-09', '2013-07-09', 4, 5, 1, 1, 0, '', '00', 6, 7, 8, 9, 10, '', '2013-07-09', '2013-07-09', ''),
+(8, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(9, '0', 1, '', 1, 1, '1', 2, '2013-07-09', '2013-07-09', '2013-07-09', 8999, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(10, '0', 1, '', 1, 1, '1', 2, '2013-07-09', '2013-07-09', '2013-07-09', 8999, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(11, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(12, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(13, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(14, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(15, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(16, '0', 1, '', 1, 1, '1', 1, '2013-07-09', '2013-07-09', '2013-07-09', 1, 1, 1, 1, 0, '', '1', 1, 1, 1, 1, 1, '', '2013-07-09', '2013-07-09', ''),
+(17, '1', 1, '2', 1, 1, '-', 1, '2013-07-17', '2013-07-17', '2013-07-17', 0, 0, 1, 1, 0, '', '1', 0, 0, 0, 0, 0, '', '2013-07-17', '2013-07-17', ''),
+(18, '1', 1, '2', 1, 1, '0', 1, '2013-07-17', '2013-07-17', '2013-07-17', 1222, 0, 1, 1, 0, '', '1', 0, 0, 0, 0, 0, '', '2013-07-17', '2013-07-17', ''),
+(19, '1', 1, '1', 1, 1, '1', 1, '2013-07-18', '2013-07-18', '2013-07-18', 122, 0, 1, 1, 0, '', '1', 0, 0, 0, 0, 0, '', '2013-07-18', '2013-07-18', '');
 
 -- --------------------------------------------------------
 
@@ -230,13 +266,21 @@ CREATE TABLE IF NOT EXISTS `tfinanceiro` (
 --
 
 CREATE TABLE IF NOT EXISTS `tfinanceirocentrocusto` (
-  `finccregistroid` int(11) NOT NULL AUTO_INCREMENT,
+  `finccid` int(11) NOT NULL AUTO_INCREMENT,
   `finccregistro` int(11) NOT NULL,
   `fincccentrocusto` int(11) NOT NULL,
   `finccvalor` double NOT NULL,
   `finccpercentual` double NOT NULL,
-  PRIMARY KEY (`finccregistroid`,`finccregistro`,`fincccentrocusto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`finccid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `tfinanceirocentrocusto`
+--
+
+INSERT INTO `tfinanceirocentrocusto` (`finccid`, `finccregistro`, `fincccentrocusto`, `finccvalor`, `finccpercentual`) VALUES
+(1, 1, 1, 1, 1),
+(2, 1, 2, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -245,7 +289,7 @@ CREATE TABLE IF NOT EXISTS `tfinanceirocentrocusto` (
 --
 
 CREATE TABLE IF NOT EXISTS `tfinanceiropgto` (
-  `finpgregistroid` int(11) NOT NULL AUTO_INCREMENT,
+  `finpgid` int(11) NOT NULL AUTO_INCREMENT,
   `finpgregistro` int(11) NOT NULL,
   `finpgpgto` int(11) NOT NULL,
   `finpgtipo` varchar(1) NOT NULL,
@@ -265,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `tfinanceiropgto` (
   `finpglctocx05` int(11) NOT NULL,
   `finpgchequepre` varchar(1) NOT NULL,
   `finpgnumerorec` varchar(20) NOT NULL,
-  PRIMARY KEY (`finpgregistroid`)
+  PRIMARY KEY (`finpgid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -275,13 +319,21 @@ CREATE TABLE IF NOT EXISTS `tfinanceiropgto` (
 --
 
 CREATE TABLE IF NOT EXISTS `tfinanceiroplanoconta` (
-  `finpcregistroid` int(11) NOT NULL AUTO_INCREMENT,
+  `finpcid` int(11) NOT NULL AUTO_INCREMENT,
   `finpcregistro` int(11) NOT NULL,
   `finpcplanoconta` int(11) NOT NULL,
   `finpcvalor` double NOT NULL,
   `finpcpercentual` double NOT NULL,
-  PRIMARY KEY (`finpcregistroid`,`finpcregistro`,`finpcplanoconta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`finpcid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `tfinanceiroplanoconta`
+--
+
+INSERT INTO `tfinanceiroplanoconta` (`finpcid`, `finpcregistro`, `finpcplanoconta`, `finpcvalor`, `finpcpercentual`) VALUES
+(1, 19, 1, 1, 0),
+(2, 19, 2, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -330,7 +382,14 @@ CREATE TABLE IF NOT EXISTS `tgrupofin` (
   `grufincodigo` int(11) NOT NULL AUTO_INCREMENT,
   `grufinnome` varchar(50) NOT NULL,
   PRIMARY KEY (`grufincodigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `tgrupofin`
+--
+
+INSERT INTO `tgrupofin` (`grufincodigo`, `grufinnome`) VALUES
+(1, 'Obras');
 
 -- --------------------------------------------------------
 
@@ -365,7 +424,15 @@ CREATE TABLE IF NOT EXISTS `tplanoconta` (
   `plaempresa` int(11) NOT NULL,
   `plaanalitico` varchar(20) NOT NULL,
   PRIMARY KEY (`placodigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `tplanoconta`
+--
+
+INSERT INTO `tplanoconta` (`placodigo`, `planome`, `plaempresa`, `plaanalitico`) VALUES
+(1, 'Ativo', 1, '01.000.000'),
+(2, 'Passivo', 1, '02.000.000');
 
 -- --------------------------------------------------------
 
@@ -378,7 +445,14 @@ CREATE TABLE IF NOT EXISTS `tsubgrupofin` (
   `subgfnome` varchar(50) NOT NULL,
   `subgfgrupo` int(11) NOT NULL,
   PRIMARY KEY (`subgfcodigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `tsubgrupofin`
+--
+
+INSERT INTO `tsubgrupofin` (`subgfcodigo`, `subgfnome`, `subgfgrupo`) VALUES
+(1, 'Piso', 1);
 
 -- --------------------------------------------------------
 
@@ -391,7 +465,14 @@ CREATE TABLE IF NOT EXISTS `ttipocob` (
   `tipcobnome` varchar(50) NOT NULL,
   `tipcobsituacao` varchar(1) NOT NULL,
   PRIMARY KEY (`tipcobcodigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `ttipocob`
+--
+
+INSERT INTO `ttipocob` (`tipcobcodigo`, `tipcobnome`, `tipcobsituacao`) VALUES
+(1, 'Ã€ Vista', 'A');
 
 -- --------------------------------------------------------
 
@@ -407,12 +488,12 @@ CREATE TABLE IF NOT EXISTS `tusers` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Extraindo dados da tabela `tusers`
 --
 
 INSERT INTO `tusers` (`id`, `username`, `password`, `role`, `created`, `modified`) VALUES
-(6, 'PERF', 'd742316777364bb6b1667475c6b36a9ec71f5e03', NULL, '2013-07-01 16:27:30', '2013-07-01 16:27:30');
-
+(6, 'PERF', 'd742316777364bb6b1667475c6b36a9ec71f5e03', NULL, '2013-07-01 16:27:30', '2013-07-01 16:27:30'),
+(8, 'PERF', 'c55f3a636eb88d28a6cb9060910cf7064a17099f', NULL, '2013-07-01 22:07:54', '2013-07-01 22:07:54');
