@@ -107,3 +107,11 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+CakePlugin::load('FilterResults');
+
+CakePlugin::load('Locale');
+
+Configure::write('Language.default', 'pt-br');
+
+setlocale(LC_ALL, 'pt_BR.utf-8', 'pt_BR', 'pt-br');

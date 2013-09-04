@@ -14,7 +14,6 @@
 			<th><?php echo $this->Paginator->sort('finparcela', 'Parcela'); ?></th>
 			<th><?php echo $this->Paginator->sort('finemissao', 'Emissão'); ?></th>
 			<th><?php echo $this->Paginator->sort('finvcto', 'Vencimento'); ?></th>
-			<th><?php echo $this->Paginator->sort('finprevvcto', 'Prev. Vcto'); ?></th>
 			<th><?php echo $this->Paginator->sort('finvalor', 'Valor'); ?></th>
 			<th><?php echo $this->Paginator->sort('findesccomercial', 'Desc Comercial'); ?></th>
 			<th><?php echo $this->Paginator->sort('fintipocob', 'Tipo Cob.'); ?></th>
@@ -27,9 +26,7 @@
 			<th><?php echo $this->Paginator->sort('fintaxa', 'Taxa'); ?></th>
 			<th><?php echo $this->Paginator->sort('finliquido', 'Líquido'); ?></th>
 			<th><?php echo $this->Paginator->sort('finobs', 'Obs'); ?></th>
-			<th><?php echo $this->Paginator->sort('finfaturamento', 'Faturamento'); ?></th>
-			<th><?php echo $this->Paginator->sort('findataprotesto', 'Protesto'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Menu'); ?></th>
 	</tr>
 	<?php foreach ($financeiros as $financeiro): ?>
 	<tr>
@@ -64,11 +61,10 @@
 		<td><?php echo h($financeiro['Financeiro']['findcto1']); ?>&nbsp;</td>
 		<td><?php echo h($financeiro['Financeiro']['findcto2']); ?>&nbsp;</td>
 		<td><?php echo h($financeiro['Financeiro']['finparcela']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finemissao']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finvcto']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finprevvcto']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finvalor']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['findesccomercial']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->date($financeiro['Financeiro']['finemissao']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->date($financeiro['Financeiro']['finvcto']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['finvalor'], true); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['findesccomercial']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($financeiro['Tipocob']['tipcobnome'], array('controller' => 'tipocobs', 'action' => 'view', $financeiro['Tipocob']['tipcobcodigo'])); ?>
 		</td>
@@ -76,19 +72,17 @@
 			<?php echo $this->Html->link($financeiro['Subgrupofin']['subgfnome'], array('controller' => 'subgrupofins', 'action' => 'view', $financeiro['Subgrupofin']['subgfcodigo'])); ?>
 		</td>
 		<td><?php echo h($financeiro['Financeiro']['finnossonum']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finsituacao']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finvalorpago']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['findesconto']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finacrescimo']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['fintaxa']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finliquido']); ?>&nbsp;</td>
+		<td><?php if ($financeiro['Financeiro']['finsituacao'] == 0) echo 'Aberto'; else echo 'Fechado'; ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['finvalorpago']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['findesconto']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['finacrescimo']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['fintaxa']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['finliquido']); ?>&nbsp;</td>
 		<td><?php echo h($financeiro['Financeiro']['finobs']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['finfaturamento']); ?>&nbsp;</td>
-		<td><?php echo h($financeiro['Financeiro']['findataprotesto']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $financeiro['Financeiro']['finregistro'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $financeiro['Financeiro']['finregistro'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $financeiro['Financeiro']['finregistro']), null, __('Are you sure you want to delete # %s?', $financeiro['Financeiro']['finregistro'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $financeiro['Financeiro']['finregistro'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $financeiro['Financeiro']['finregistro'])); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $financeiro['Financeiro']['finregistro']), null, __('Deseja excluir# %s?', $financeiro['Financeiro']['finregistro'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -96,29 +90,29 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, mostrando {:current} registros de {:count} total, iniciando no registro {:start}, finalizando em {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Proximo') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Empresa'), array('controller' => 'empresas', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cliente'), array('controller' => 'clientes', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Tipos de Cob.'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Tipo de Cob.'), array('controller' => 'tipocobs', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Subgrupo Fin.'), array('controller' => 'subgrupofins', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Subgrupo Fin.'), array('controller' => 'subgrupofins', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Empresa'), array('controller' => 'empresas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Cliente'), array('controller' => 'clientes', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Tipos de Cob.'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Tipo de Cob.'), array('controller' => 'tipocobs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Subgrupo Fin.'), array('controller' => 'subgrupofins', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Subgrupo Fin.'), array('controller' => 'subgrupofins', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <script language="Javascript" type="text/javascript">

@@ -39,7 +39,7 @@
 			<th><?php echo $this->Paginator->sort('cliim', 'IM'); ?></th>
 			<th><?php echo $this->Paginator->sort('clitipcob', 'Tipo Cob.'); ?></th>
 			<!--<th><?php //echo $this->Paginator->sort('cliopcaocad', 'Opção Cad.'); ?></th>-->
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Menu'); ?></th>
 	</tr>
 	<?php foreach ($clientes as $cliente): ?>
 	<tr>
@@ -80,7 +80,7 @@
 			<?php echo $this->Html->link($cliente['Grupocliente']['gruclinome'], array('controller' => 'grupoclientes', 'action' => 'view', $cliente['Cliente']['cligrupo'])); ?>
 		</td>
 		<td><?php echo h($cliente['Cliente']['clisituacao']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['clidatanasc']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->date($cliente['Cliente']['clidatanasc']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($cliente['Naturalidade']['cidnome'], array('controller' => 'cidades', 'action' => 'view', $cliente['Naturalidade']['cidcodigo'])); ?>
 		</td>
@@ -88,7 +88,7 @@
 		<td><?php echo h($cliente['Cliente']['climae']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['clirg']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['cliorgaoexprg']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['clidataexprg']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->date($cliente['Cliente']['clidataexprg']); ?>&nbsp;</td>
 		<td><?php echo h($cliente['Cliente']['cliobs']); ?>&nbsp;</td>
 
 		<td>
@@ -101,9 +101,9 @@
 		</td>
 		<!--<td><?php //echo h($cliente['Cliente']['cliopcaocad']); ?>&nbsp;</td>-->
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cliente['Cliente']['clicodigo'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cliente['Cliente']['clicodigo'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cliente['Cliente']['clicodigo']), null, __('Are you sure you want to delete # %s?', $cliente['Cliente']['clicodigo'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $cliente['Cliente']['clicodigo'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $cliente['Cliente']['clicodigo'])); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $cliente['Cliente']['clicodigo']), null, __('Deseja excluir# %s?', $cliente['Cliente']['clicodigo'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -111,22 +111,22 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, mostrando {:current} registros de {:count} total, iniciando no registro {:start}, finalizando em {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Proximo') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Cidade'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Cidade'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

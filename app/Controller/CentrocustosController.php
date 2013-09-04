@@ -26,7 +26,7 @@ class CentrocustosController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Centrocusto->exists($id)) {
-			throw new NotFoundException(__('Invalid centrocusto'));
+			throw new NotFoundException(__('Invalid centro de custo'));
 		}
 		$options = array('conditions' => array('Centrocusto.' . $this->Centrocusto->primaryKey => $id));
 		$this->set('centrocusto', $this->Centrocusto->find('first', $options));
@@ -41,10 +41,10 @@ class CentrocustosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Centrocusto->create();
 			if ($this->Centrocusto->save($this->request->data)) {
-				$this->Session->setFlash(__('The centrocusto has been saved'));
+				$this->Session->setFlash(__('O Centro Custo foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The centrocusto could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O Centro de Custo nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$empresa = $this->Centrocusto->Empresa->find('list', array('fields' => array('Empresa.empcodigo', 'Empresa.empnome')));
@@ -60,14 +60,14 @@ class CentrocustosController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Centrocusto->exists($id)) {
-			throw new NotFoundException(__('Invalid centrocusto'));
+			throw new NotFoundException(__('Invalid centro de custo'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Centrocusto->save($this->request->data)) {
-				$this->Session->setFlash(__('The centrocusto has been saved'));
+				$this->Session->setFlash(__('O Centro de Custo foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The centrocusto could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O Centro de Custo nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Centrocusto.' . $this->Centrocusto->primaryKey => $id));
@@ -91,10 +91,10 @@ class CentrocustosController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Centrocusto->delete()) {
-			$this->Session->setFlash(__('Centrocusto deleted'));
+			$this->Session->setFlash(__('Centro de Custo deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Centrocusto was not deleted'));
+		$this->Session->setFlash(__('Centrocusto nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

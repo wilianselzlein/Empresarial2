@@ -41,10 +41,10 @@ class EmpresasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Empresa->create();
 			if ($this->Empresa->save($this->request->data)) {
-				$this->Session->setFlash(__('The empresa has been saved'));
+				$this->Session->setFlash(__('Empresa foi salva.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The empresa could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Empresa nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$cidades = $this->Empresa->Cidade->find('list');
@@ -64,10 +64,10 @@ class EmpresasController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Empresa->save($this->request->data)) {
-				$this->Session->setFlash(__('The empresa has been saved'));
+				$this->Session->setFlash(__('Empresa salva.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The empresa could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('A empresa nao pode ser salva. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Empresa.' . $this->Empresa->primaryKey => $id));
@@ -91,10 +91,10 @@ class EmpresasController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Empresa->delete()) {
-			$this->Session->setFlash(__('Empresa deleted'));
+			$this->Session->setFlash(__('Empresa deletada'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Empresa was not deleted'));
+		$this->Session->setFlash(__('Empresa nao deletada'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

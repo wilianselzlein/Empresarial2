@@ -73,7 +73,7 @@ class Debugger {
 			'escapeContext' => true,
 		),
 		'txt' => array(
-			'error' => "{:error}: {:code} :: {:description} on line {:line} of {:path}\n{:info}",
+			'error' => "{:error}: {:code} :: {:description} on line {:line} de {:path}\n{:info}",
 			'code' => '',
 			'info' => ''
 		),

@@ -6,11 +6,11 @@
 			<?php echo h($centrocusto['Centrocusto']['cencuscodigo']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Analítico'); ?></dt>
+		<?php /*<dt><?php echo __('Analítico'); ?></dt>
 		<dd>
 			<?php echo h($centrocusto['Centrocusto']['cencusanalitico']); ?>
 			&nbsp;
-		</dd>
+		</dd>*/?>
 		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
 			<?php echo h($centrocusto['Centrocusto']['cencusnome']); ?>
@@ -24,11 +24,11 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $centrocusto['Centrocusto']['cencuscodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $centrocusto['Centrocusto']['cencuscodigo']), null, __('Are you sure you want to delete # %s?', $centrocusto['Centrocusto']['cencuscodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $centrocusto['Centrocusto']['cencuscodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $centrocusto['Centrocusto']['cencuscodigo']), null, __('Deseja excluir# %s?', $centrocusto['Centrocusto']['cencuscodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>

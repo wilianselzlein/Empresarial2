@@ -44,11 +44,11 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $formapgto['Formapgto']['forcodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $formapgto['Formapgto']['forcodigo']), null, __('Are you sure you want to delete # %s?', $formapgto['Formapgto']['forcodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $formapgto['Formapgto']['forcodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $formapgto['Formapgto']['forcodigo']), null, __('Deseja excluir# %s?', $formapgto['Formapgto']['forcodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>

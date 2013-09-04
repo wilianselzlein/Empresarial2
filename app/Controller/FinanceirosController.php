@@ -69,7 +69,7 @@ class FinanceirosController extends AppController {
 				$this->Session->setFlash(__('Documento  ' . $this->request->data['Financeiro']['findcto1'] . ' salvo. Id ' . $id));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The financeiro could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Documento nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$empresas = $this->Financeiro->Empresa->find('list');
@@ -95,10 +95,10 @@ class FinanceirosController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
                     debug($this->request->data); die;
 			if ($this->Financeiro->save($this->request->data)) {
-				$this->Session->setFlash(__('The financeiro has been saved'));
+				$this->Session->setFlash(__('Documento salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The financeiro could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Documento nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Financeiro.' . $this->Financeiro->primaryKey => $id));
@@ -129,10 +129,10 @@ class FinanceirosController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Financeiro->delete()) {
-			$this->Session->setFlash(__('Financeiro deleted'));
+			$this->Session->setFlash(__('Documento deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Financeiro was not deleted'));
+		$this->Session->setFlash(__('Documento nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

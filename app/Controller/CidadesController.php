@@ -13,6 +13,20 @@ class CidadesController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Cidade.cidcodigo' => array('operator' => 'LIKE'),
+				'Cidade.cidnome' => array('operator' => 'LIKE'),
+				'Estado.estsigla'   => array('operator' => 'LIKE'),
+				'Estado.estnome'   => array('operator' => 'LIKE')
+				)
+			)
+			)
+		);
+		$this->Filter->setPaginate('order', 'Cidade.cidnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Cidade->recursive = 0;
 		$this->set('cidades', $this->paginate());
 	}
@@ -41,10 +55,10 @@ class CidadesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Cidade->create();
 			if ($this->Cidade->save($this->request->data)) {
-				$this->Session->setFlash(__('The cidade has been saved'));
+				$this->Session->setFlash(__('A cidade foi salva.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The cidade could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('A cidade nao pode ser salva. Tente novamente.'));
 			}
 		}
 		$estados = $this->Cidade->Estado->find('list');
@@ -64,10 +78,10 @@ class CidadesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Cidade->save($this->request->data)) {
-				$this->Session->setFlash(__('The cidade has been saved'));
+				$this->Session->setFlash(__('A cidade foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The cidade could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('A cidade nao pode ser salva. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Cidade.' . $this->Cidade->primaryKey => $id));
@@ -91,10 +105,10 @@ class CidadesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Cidade->delete()) {
-			$this->Session->setFlash(__('Cidade deleted'));
+			$this->Session->setFlash(__('Cidade deletada'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Cidade was not deleted'));
+		$this->Session->setFlash(__('Cidade nao deletada'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

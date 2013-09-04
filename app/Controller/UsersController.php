@@ -72,10 +72,10 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Usuário inválido!'));
         }
         if ($this->User->delete()) {
-            $this->Session->setFlash(__('Usuário deletado'));
+            $this->Session->setFlash(__('Usuário  deletado'));
             $this->redirect(array('action' => 'index'));
         }
-        $this->Session->setFlash(__('Usuário não pode ser deletado'));
+        $this->Session->setFlash(__('Usuário não pode ser  deletado'));
         $this->redirect(array('action' => 'index'));
     }
 

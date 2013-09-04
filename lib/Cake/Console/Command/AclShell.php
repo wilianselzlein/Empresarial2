@@ -156,7 +156,7 @@ class AclShell extends AppShell {
 		$nodeId = $this->_getNodeId($class, $identifier);
 
 		if (!$this->Acl->{$class}->delete($nodeId)) {
-			$this->error(__d('cake_console', 'Node Not Deleted') . __d('cake_console', 'There was an error deleting the %s. Check that the node exists.', $class) . "\n");
+			$this->error(__d('cake_console', 'Node Not deletado') . __d('cake_console', 'There was an error deleting the %s. Check that the node exists.', $class) . "\n");
 		}
 		$this->out(__d('cake_console', '<success>%s deleted.</success>', $class), 2);
 	}

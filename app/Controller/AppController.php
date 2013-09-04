@@ -40,7 +40,7 @@ class AppController extends Controller {
         'Auth' => array(
             'loginRedirect' => array('controller' => 'cidades', 'action' => 'index'),
             'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
-        )/*,
+        ),
         'FilterResults.Filter' => array(
             'auto' => array(
                 'paginate' => false,
@@ -50,15 +50,15 @@ class AppController extends Controller {
                 'character'   => ' ',
                 'concatenate' => 'AND',
             )
-        )*/
+        )
     );
 
     public $helpers = array(
         'Session',
-        //'Locale.Locale',
+        'Locale.Locale',
         'Html',
         'Form',
-        'Js'/*,
+        'Js',
         'FilterResults.Search' => array(
             'operators' => array(
                 'LIKE'       => 'containing',
@@ -72,7 +72,7 @@ class AppController extends Controller {
                 '<'  => 'less than',
                 '<=' => 'less or equal to'
             )
-        )*/
+        )
     );
     
     /*function beforeFilter() {

@@ -55,14 +55,14 @@
 			$this-><?php echo $currentModelName; ?>->create();
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 <?php else: ?>
 				$this->flash(__('<?php echo ucfirst(strtolower($currentModelName)); ?> saved.'), array('action' => 'index'));
 <?php endif; ?>
 			} else {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> não pode ser salvo. Tente novamente.'));
 <?php endif; ?>
 			}
 		}
@@ -98,14 +98,14 @@
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 <?php else: ?>
-				$this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index'));
+				$this->flash(__('The <?php echo strtolower($singularHumanName); ?> foi salvo..'), array('action' => 'index'));
 <?php endif; ?>
 			} else {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> não pode ser salvo. Tente novamente.'));
 <?php endif; ?>
 			}
 		} else {
@@ -144,16 +144,16 @@
 		$this->request->onlyAllow('post', 'delete');
 		if ($this-><?php echo $currentModelName; ?>->delete()) {
 <?php if ($wannaUseSession): ?>
-			$this->Session->setFlash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> deleted'));
+			$this->Session->setFlash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> deletado'));
 			$this->redirect(array('action' => 'index'));
 <?php else: ?>
-			$this->flash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> deleted'), array('action' => 'index'));
+			$this->flash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> deletado'), array('action' => 'index'));
 <?php endif; ?>
 		}
 <?php if ($wannaUseSession): ?>
-		$this->Session->setFlash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> was not deleted'));
+		$this->Session->setFlash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> não deletado'));
 <?php else: ?>
-		$this->flash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> was not deleted'), array('action' => 'index'));
+		$this->flash(__('<?php echo ucfirst(strtolower($singularHumanName)); ?> não deletado'), array('action' => 'index'));
 <?php endif; ?>
 		$this->redirect(array('action' => 'index'));
 	}

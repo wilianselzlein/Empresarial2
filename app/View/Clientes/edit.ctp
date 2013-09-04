@@ -2,7 +2,7 @@
 <div class="clientes form">
 <?php echo $this->Form->create('Cliente'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Cliente'); ?></legend>
+		<legend><?php echo __('Editar Cliente'); ?></legend>
 	<?php
 		echo $this->Form->input('clicodigo');
 		//echo $this->Form->input('clidatacad');
@@ -45,15 +45,15 @@
 		//echo $this->Form->input('cliopcaocad', array('label' => ''));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Salvar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Cliente.clicodigo')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Cliente.clicodigo'))); ?></li>
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $this->Form->value('Cliente.clicodigo')), null, __('Deseja excluir# %s?', $this->Form->value('Cliente.clicodigo'))); ?></li>
+		<li><?php echo $this->Html->link(__('Listar'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

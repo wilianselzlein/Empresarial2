@@ -41,10 +41,10 @@ class FormapgtosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Formapgto->create();
 			if ($this->Formapgto->save($this->request->data)) {
-				$this->Session->setFlash(__('The formapgto has been saved'));
+				$this->Session->setFlash(__('Forma de Pgto salva.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The formapgto could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Forma de Pgto nao pode ser salva. Tente novamente.'));
 			}
 		}
 	}
@@ -62,10 +62,10 @@ class FormapgtosController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Formapgto->save($this->request->data)) {
-				$this->Session->setFlash(__('The formapgto has been saved'));
+				$this->Session->setFlash(__('Forma de Pgto salva.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The formapgto could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('FOrma de Pgto nao pode ser salva. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Formapgto.' . $this->Formapgto->primaryKey => $id));
@@ -87,10 +87,10 @@ class FormapgtosController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Formapgto->delete()) {
-			$this->Session->setFlash(__('Formapgto deleted'));
+			$this->Session->setFlash(__('Forma de Pgto deletada'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Formapgto was not deleted'));
+		$this->Session->setFlash(__('Forma de Pgto nao deletada'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

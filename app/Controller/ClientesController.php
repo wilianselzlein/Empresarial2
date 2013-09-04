@@ -41,10 +41,10 @@ class ClientesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Cliente->create();
 			if ($this->Cliente->save($this->request->data)) {
-				$this->Session->setFlash(__('The cliente has been saved'));
+				$this->Session->setFlash(__('O cliente foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The cliente could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O cliente nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$grupos = $this->Cliente->Grupocliente->find('list');
@@ -68,10 +68,10 @@ class ClientesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Cliente->save($this->request->data)) {
-				$this->Session->setFlash(__('The cliente has been saved'));
+				$this->Session->setFlash(__('O cliente foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The cliente could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O cliente nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Cliente.' . $this->Cliente->primaryKey => $id));
@@ -99,10 +99,10 @@ class ClientesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Cliente->delete()) {
-			$this->Session->setFlash(__('Cliente deleted'));
+			$this->Session->setFlash(__('Cliente deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Cliente was not deleted'));
+		$this->Session->setFlash(__('Cliente nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

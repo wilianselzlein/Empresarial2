@@ -41,10 +41,10 @@ class SubgrupofinsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Subgrupofin->create();
 			if ($this->Subgrupofin->save($this->request->data)) {
-				$this->Session->setFlash(__('The subgrupofin has been saved'));
+				$this->Session->setFlash(__('Subgrupo Fin. foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The subgrupofin could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Subgrupo Fin. nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$grupofins = $this->Subgrupofin->Grupofin->find('list');
@@ -64,10 +64,10 @@ class SubgrupofinsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Subgrupofin->save($this->request->data)) {
-				$this->Session->setFlash(__('The subgrupofin has been saved'));
+				$this->Session->setFlash(__('Subgrupo Fin. foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The subgrupofin could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Subgrupo Fin. nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Subgrupofin.' . $this->Subgrupofin->primaryKey => $id));
@@ -91,10 +91,10 @@ class SubgrupofinsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Subgrupofin->delete()) {
-			$this->Session->setFlash(__('Subgrupofin deleted'));
+			$this->Session->setFlash(__('Subgrupo Fin. deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Subgrupofin was not deleted'));
+		$this->Session->setFlash(__('Subgrupo Fin. nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

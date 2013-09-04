@@ -41,10 +41,10 @@ class PlanocontaController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Planocontum->create();
 			if ($this->Planocontum->save($this->request->data)) {
-				$this->Session->setFlash(__('The planocontum has been saved'));
+				$this->Session->setFlash(__('Plano de Conta salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The planocontum could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Plano de Conta nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$empresa = $this->Planocontum->Empresa->find('list');
@@ -64,10 +64,10 @@ class PlanocontaController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Planocontum->save($this->request->data)) {
-				$this->Session->setFlash(__('The planocontum has been saved'));
+				$this->Session->setFlash(__('Plano de Conta foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The planocontum could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Plano de Conta nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Planocontum.' . $this->Planocontum->primaryKey => $id));
@@ -91,10 +91,10 @@ class PlanocontaController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Planocontum->delete()) {
-			$this->Session->setFlash(__('Planocontum deleted'));
+			$this->Session->setFlash(__('Plano de Conta deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Planocontum was not deleted'));
+		$this->Session->setFlash(__('Plano de Conta nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

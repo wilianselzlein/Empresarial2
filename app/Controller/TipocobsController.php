@@ -26,7 +26,7 @@ class TipocobsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Tipocob->exists($id)) {
-			throw new NotFoundException(__('Invalid tipocob'));
+			throw new NotFoundException(__('Invalid Tipo de Cob.'));
 		}
 		$options = array('conditions' => array('Tipocob.' . $this->Tipocob->primaryKey => $id));
 		$this->set('tipocob', $this->Tipocob->find('first', $options));
@@ -41,10 +41,10 @@ class TipocobsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Tipocob->create();
 			if ($this->Tipocob->save($this->request->data)) {
-				$this->Session->setFlash(__('The tipocob has been saved'));
+				$this->Session->setFlash(__('Tipo de Cob. salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The tipocob could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Tipo de Cob. nao pode ser salvo. Tente novamente.'));
 			}
 		}
 	}
@@ -62,10 +62,10 @@ class TipocobsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Tipocob->save($this->request->data)) {
-				$this->Session->setFlash(__('The tipocob has been saved'));
+				$this->Session->setFlash(__('Tipo de Cob. salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The tipocob could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Tipo de Cob. nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Tipocob.' . $this->Tipocob->primaryKey => $id));
@@ -87,10 +87,10 @@ class TipocobsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Tipocob->delete()) {
-			$this->Session->setFlash(__('Tipocob deleted'));
+			$this->Session->setFlash(__('Tipo de Cob. deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Tipocob was not deleted'));
+		$this->Session->setFlash(__('Tipo de Cob. nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

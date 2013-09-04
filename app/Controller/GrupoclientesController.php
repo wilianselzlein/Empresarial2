@@ -41,10 +41,10 @@ class GrupoclientesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Grupocliente->create();
 			if ($this->Grupocliente->save($this->request->data)) {
-				$this->Session->setFlash(__('The grupocliente has been saved'));
+				$this->Session->setFlash(__('Grupo de Cliente foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The grupocliente could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Grupo de Cliente nao pode ser salvo. Tente novamente.'));
 			}
 		}
 	}
@@ -62,10 +62,10 @@ class GrupoclientesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Grupocliente->save($this->request->data)) {
-				$this->Session->setFlash(__('The grupocliente has been saved'));
+				$this->Session->setFlash(__('Grupo de Cliente foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The grupocliente could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Grupo de Cliente nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Grupocliente.' . $this->Grupocliente->primaryKey => $id));
@@ -87,10 +87,10 @@ class GrupoclientesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Grupocliente->delete()) {
-			$this->Session->setFlash(__('Grupocliente deleted'));
+			$this->Session->setFlash(__('Grupo de Cliente deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Grupocliente was not deleted'));
+		$this->Session->setFlash(__('Grupo de Cliente nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

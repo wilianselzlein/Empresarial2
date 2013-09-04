@@ -24,11 +24,11 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $planocontum['Planocontum']['placodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $planocontum['Planocontum']['placodigo']), null, __('Are you sure you want to delete # %s?', $planocontum['Planocontum']['placodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $planocontum['Planocontum']['placodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $planocontum['Planocontum']['placodigo']), null, __('Deseja excluir# %s?', $planocontum['Planocontum']['placodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>

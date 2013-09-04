@@ -6,7 +6,7 @@
 			<th><?php echo $this->Paginator->sort('estnome', 'Nome'); ?></th>
 			<th><?php echo $this->Paginator->sort('estsigla', 'Sigla'); ?></th>
 			<th><?php echo $this->Paginator->sort('estpais', 'País'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Menu'); ?></th>
 	</tr>
 	<?php foreach ($estados as $estado): ?>
 	<tr>
@@ -17,9 +17,9 @@
 			<?php echo $this->Html->link($estado['Pais']['painome'], array('controller' => 'pais', 'action' => 'view', $estado['Estado']['estpais'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $estado['Estado']['estcodigo'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $estado['Estado']['estcodigo'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $estado['Estado']['estcodigo']), null, __('Are you sure you want to delete # %s?', $estado['Estado']['estcodigo'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $estado['Estado']['estcodigo'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $estado['Estado']['estcodigo'])); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $estado['Estado']['estcodigo']), null, __('Deseja excluir# %s?', $estado['Estado']['estcodigo'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -27,22 +27,22 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, mostrando {:current} registros de {:count} total, iniciando no registro {:start}, finalizando em {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Proximo') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Países'), array('controller' => 'pais', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New País'), array('controller' => 'pais', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Países'), array('controller' => 'pais', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo País'), array('controller' => 'pais', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

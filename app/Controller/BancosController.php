@@ -56,10 +56,10 @@ class BancosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Banco->create();
 			if ($this->Banco->save($this->request->data)) {
-				$this->Session->setFlash(__('The banco has been saved'));
+				$this->Session->setFlash(__('O banco foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The banco could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O banco nao pode ser salvo. Tente novamente.'));
 			}
 		}
 	}
@@ -77,10 +77,10 @@ class BancosController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Banco->save($this->request->data)) {
-				$this->Session->setFlash(__('The banco has been saved'));
+				$this->Session->setFlash(__('O banco foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The banco could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O banco no pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Banco.' . $this->Banco->primaryKey => $id));
@@ -102,10 +102,10 @@ class BancosController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Banco->delete()) {
-			$this->Session->setFlash(__('Banco deleted'));
+			$this->Session->setFlash(__('Banco deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Banco was not deleted'));
+		$this->Session->setFlash(__('Banco nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

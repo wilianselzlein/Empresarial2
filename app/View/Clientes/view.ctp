@@ -123,7 +123,7 @@
 		</dd>
 		<dt><?php echo __('Data Nasc'); ?></dt>
 		<dd>
-			<?php echo h($cliente['Cliente']['clidatanasc']); ?>
+			<?php echo $this->Locale->date($cliente['Cliente']['clidatanasc']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Naturalidade'); ?></dt>
@@ -153,7 +153,7 @@
 		</dd>
 		<dt><?php echo __('Data Exp.'); ?></dt>
 		<dd>
-			<?php echo h($cliente['Cliente']['clidataexprg']); ?>
+			<?php echo $this->Locale->date($cliente['Cliente']['clidataexprg']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Observação'); ?></dt>
@@ -189,13 +189,13 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cliente['Cliente']['clicodigo'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cliente['Cliente']['clicodigo']), null, __('Are you sure you want to delete # %s?', $cliente['Cliente']['clicodigo'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $cliente['Cliente']['clicodigo'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $cliente['Cliente']['clicodigo']), null, __('Deseja excluir# %s?', $cliente['Cliente']['clicodigo'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

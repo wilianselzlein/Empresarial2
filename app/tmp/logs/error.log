@@ -1017,3 +1017,189 @@ Stack Trace:
 #14 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #15 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2013-09-04 14:21:24 Error: [MissingHelperException] Helper class LocaleHelper could not be found.
+Exception Attributes: array (
+  'class' => 'LocaleHelper',
+  'plugin' => false,
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(835): HelperCollection->__isset('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\app\View\Financeiros\view.ctp(41): View->__get('Locale')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-09-04 14:31:04 Error: [MissingHelperException] Helper class LocaleHelper could not be found.
+Exception Attributes: array (
+  'class' => 'LocaleHelper',
+  'plugin' => false,
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(835): HelperCollection->__isset('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\app\View\Financeiros\view.ctp(41): View->__get('Locale')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-09-04 14:31:05 Error: [MissingHelperException] Helper class LocaleHelper could not be found.
+Exception Attributes: array (
+  'class' => 'LocaleHelper',
+  'plugin' => false,
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(835): HelperCollection->__isset('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\app\View\Financeiros\view.ctp(41): View->__get('Locale')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-09-04 14:31:40 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(367): CakePlugin::path('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(228): App::pluginPath('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(545): App::path('View/Helper', 'Locale')
+#3 [internal function]: App::load('LocaleHelper')
+#4 [internal function]: spl_autoload_call('LocaleHelper')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(130): class_exists('LocaleHelper')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(884): HelperCollection->load('Locale.Locale', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(464): View->loadHelpers()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-04 14:31:43 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(367): CakePlugin::path('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(228): App::pluginPath('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(545): App::path('View/Helper', 'Locale')
+#3 [internal function]: App::load('LocaleHelper')
+#4 [internal function]: spl_autoload_call('LocaleHelper')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(130): class_exists('LocaleHelper')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(884): HelperCollection->load('Locale.Locale', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(464): View->loadHelpers()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-04 14:32:04 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(367): CakePlugin::path('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(228): App::pluginPath('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(545): App::path('View/Helper', 'Locale')
+#3 [internal function]: App::load('LocaleHelper')
+#4 [internal function]: spl_autoload_call('LocaleHelper')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(130): class_exists('LocaleHelper')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(884): HelperCollection->load('Locale.Locale', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(464): View->loadHelpers()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-04 14:32:05 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(367): CakePlugin::path('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(228): App::pluginPath('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(545): App::path('View/Helper', 'Locale')
+#3 [internal function]: App::load('LocaleHelper')
+#4 [internal function]: spl_autoload_call('LocaleHelper')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(130): class_exists('LocaleHelper')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(884): HelperCollection->load('Locale.Locale', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(464): View->loadHelpers()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-04 14:32:09 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Request URL: /Empresarial2/financeiros/view/3
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(367): CakePlugin::path('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(228): App::pluginPath('Locale')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(545): App::path('View/Helper', 'Locale')
+#3 [internal function]: App::load('LocaleHelper')
+#4 [internal function]: spl_autoload_call('LocaleHelper')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(130): class_exists('LocaleHelper')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(884): HelperCollection->load('Locale.Locale', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(464): View->loadHelpers()
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-04 14:33:35 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\Config\bootstrap.php(111): CakePlugin::load('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\Configure.php(94): include('D:\PHP\xampp\ht...')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\bootstrap.php(171): Configure::bootstrap(true)
+#3 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(92): include('D:\PHP\xampp\ht...')
+#4 {main}
+2013-09-04 14:33:36 Error: [MissingPluginException] Plugin Locale could not be found.
+Exception Attributes: array (
+  'plugin' => 'Locale',
+)
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\Config\bootstrap.php(111): CakePlugin::load('Locale')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\Configure.php(94): include('D:\PHP\xampp\ht...')
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\bootstrap.php(171): Configure::bootstrap(true)
+#3 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(92): include('D:\PHP\xampp\ht...')
+#4 {main}
+2013-09-04 20:04:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cidade.ciduf' in 'where clause'
+Request URL: /Empresarial2/cidades/index/Wm1sc2RHVnlMbVpwYkhSbGNqRT0=:Vm1Gag%3D%3D
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Cidade`...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Cidade`...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Cidade`...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Cidade), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\CidadesController.php(30): Controller->paginate()
+#8 [internal function]: CidadesController->index()
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CidadesController), Array)
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CidadesController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

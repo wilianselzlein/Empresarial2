@@ -16,10 +16,10 @@ foreach ($users as $user): ?>
 <td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 <td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 <td><?php echo h($user['User']['password']); ?>&nbsp;</td>
-<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
-<td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
+<td><?php echo $this->Locale->dateTime($user['User']['created']); ?>&nbsp;</td>
+<td><?php echo $this->Locale->dateTime($user['User']['modified']); ?>&nbsp;</td>
 <td class="actions">
-<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $user['User']['id']), null, __('Deseja excluir# %s?', $user['User']['id'])); ?>
 </td>
 </tr>
 <?php endforeach; ?>

@@ -41,10 +41,10 @@ class GrupofinsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Grupofin->create();
 			if ($this->Grupofin->save($this->request->data)) {
-				$this->Session->setFlash(__('The grupofin has been saved'));
+				$this->Session->setFlash(__('Grupo Fin. foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The grupofin could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Grupo Fin. nao pode ser salvo. Tente novamente.'));
 			}
 		}
 	}
@@ -62,10 +62,10 @@ class GrupofinsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Grupofin->save($this->request->data)) {
-				$this->Session->setFlash(__('The grupofin has been saved'));
+				$this->Session->setFlash(__('Grupo Fin. foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The grupofin could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Grupo Fin. nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Grupofin.' . $this->Grupofin->primaryKey => $id));
@@ -87,10 +87,10 @@ class GrupofinsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Grupofin->delete()) {
-			$this->Session->setFlash(__('Grupofin deleted'));
+			$this->Session->setFlash(__('Grupo Fin. deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Grupofin was not deleted'));
+		$this->Session->setFlash(__('Grupo Fin. nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

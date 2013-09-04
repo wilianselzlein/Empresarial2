@@ -28,7 +28,7 @@
 			<th><?php echo $this->Paginator->sort('empregjunta', 'Reg Junta'); ?></th>
 			<th><?php echo $this->Paginator->sort('empdataregjunta', 'Data Reg Junta'); ?></th>
 			<th class="inv"><?php echo $this->Paginator->sort('empobs', 'Obs'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Menu'); ?></th>
 	</tr>
 	<?php foreach ($empresas as $empresa): ?>
 	<tr>
@@ -50,7 +50,7 @@
 		<td><?php echo h($empresa['Empresa']['empim']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['emprg']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['emporgaoexprg']); ?>&nbsp;</td>
-		<td><?php echo h($empresa['Empresa']['empdataemprg']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->date($empresa['Empresa']['empdataemprg']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empcontato']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empcontador']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empcrccontador']); ?>&nbsp;</td>
@@ -58,12 +58,12 @@
 		<td><?php echo h($empresa['Empresa']['empcargotitular']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empcpftitular']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['empregjunta']); ?>&nbsp;</td>
-		<td><?php echo h($empresa['Empresa']['empdataregjunta']); ?>&nbsp;</td>
+		<td><?php echo $this->Locale->date($empresa['Empresa']['empdataregjunta']); ?>&nbsp;</td>
 		<td class="inv"><?php echo h($empresa['Empresa']['empobs']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $empresa['Empresa']['empcodigo'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $empresa['Empresa']['empcodigo'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $empresa['Empresa']['empcodigo']), null, __('Are you sure you want to delete # %s?', $empresa['Empresa']['empcodigo'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $empresa['Empresa']['empcodigo'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $empresa['Empresa']['empcodigo'])); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $empresa['Empresa']['empcodigo']), null, __('Deseja excluir# %s?', $empresa['Empresa']['empcodigo'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -71,22 +71,22 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, mostrando {:current} registros de {:count} total, iniciando no registro {:start}, finalizando em {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Proximo') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

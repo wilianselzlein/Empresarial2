@@ -2,7 +2,7 @@
 <div class="empresas form">
 <?php echo $this->Form->create('Empresa'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Empresa'); ?></legend>
+		<legend><?php echo __('Novo Empresa'); ?></legend>
 	<?php
 		echo $this->Form->input('empcodigo', array('label' => 'Código'));
 		echo $this->Form->input('empnome', array('label' => 'Nome'));
@@ -32,14 +32,14 @@
 		echo $this->Form->input('empobs', array('label' => 'Observação'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Salvar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

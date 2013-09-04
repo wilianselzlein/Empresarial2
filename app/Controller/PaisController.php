@@ -26,7 +26,7 @@ class PaisController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Pai->exists($id)) {
-			throw new NotFoundException(__('Invalid pai'));
+			throw new NotFoundException(__('Invalid pais'));
 		}
 		$options = array('conditions' => array('Pai.' . $this->Pai->primaryKey => $id));
 		$this->set('pai', $this->Pai->find('first', $options));
@@ -41,10 +41,10 @@ class PaisController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Pai->create();
 			if ($this->Pai->save($this->request->data)) {
-				$this->Session->setFlash(__('The pai has been saved'));
+				$this->Session->setFlash(__('Pais salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The pai could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Pais nao pode ser salvo. Tente novamente.'));
 			}
 		}
 	}
@@ -62,10 +62,10 @@ class PaisController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Pai->save($this->request->data)) {
-				$this->Session->setFlash(__('The pai has been saved'));
+				$this->Session->setFlash(__('Pais foi salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The pai could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Pais nao pode ser salvo. Tente novamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Pai.' . $this->Pai->primaryKey => $id));
@@ -87,10 +87,10 @@ class PaisController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Pai->delete()) {
-			$this->Session->setFlash(__('Pai deleted'));
+			$this->Session->setFlash(__('Pais deletado'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Pai was not deleted'));
+		$this->Session->setFlash(__('Pais nao deletado'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

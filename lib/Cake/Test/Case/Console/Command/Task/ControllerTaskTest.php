@@ -360,14 +360,14 @@ class ControllerTaskTest extends CakeTestCase {
 		$this->assertContains('function add()', $result);
 		$this->assertContains("if (\$this->request->is('post'))", $result);
 		$this->assertContains('if ($this->BakeArticle->save($this->request->data))', $result);
-		$this->assertContains("\$this->Session->setFlash(__('The bake article has been saved'));", $result);
+		$this->assertContains("\$this->Session->setFlash(__('The bake article foi salvo.'));", $result);
 
 		$this->assertContains('function edit($id = null)', $result);
-		$this->assertContains("\$this->Session->setFlash(__('The bake article could not be saved. Please, try again.'));", $result);
+		$this->assertContains("\$this->Session->setFlash(__('The bake article não pode ser salvo. Tente novamente.'));", $result);
 
 		$this->assertContains('function delete($id = null)', $result);
 		$this->assertContains('if ($this->BakeArticle->delete())', $result);
-		$this->assertContains("\$this->Session->setFlash(__('Bake article deleted'));", $result);
+		$this->assertContains("\$this->Session->setFlash(__('Bake article deletado'));", $result);
 
 		$result = $this->Task->bakeActions('BakeArticles', 'admin_', true);
 
@@ -398,7 +398,7 @@ class ControllerTaskTest extends CakeTestCase {
 		$this->assertContains("if (\$this->request->is('post'))", $result);
 		$this->assertContains('if ($this->BakeArticle->save($this->request->data))', $result);
 
-		$this->assertContains("\$this->flash(__('The bake article has been saved.'), array('action' => 'index'))", $result);
+		$this->assertContains("\$this->flash(__('The bake article foi salvo..'), array('action' => 'index'))", $result);
 
 		$this->assertContains('function edit($id = null)', $result);
 		$this->assertContains("\$this->BakeArticle->BakeTag->find('list')", $result);
@@ -407,7 +407,7 @@ class ControllerTaskTest extends CakeTestCase {
 		$this->assertContains('function delete($id = null)', $result);
 		$this->assertContains("\$this->request->onlyAllow('post', 'delete')", $result);
 		$this->assertContains('if ($this->BakeArticle->delete())', $result);
-		$this->assertContains("\$this->flash(__('Bake article deleted'), array('action' => 'index'))", $result);
+		$this->assertContains("\$this->flash(__('Bake article deletado'), array('action' => 'index'))", $result);
 	}
 
 /**
