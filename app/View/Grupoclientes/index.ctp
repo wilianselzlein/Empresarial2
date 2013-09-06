@@ -1,5 +1,6 @@
 <div class="grupoclientes index">
 	<h2><?php echo __('Grupos de Clientes'); ?></h2>
+        <?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'filtros.php'; ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('gruclicodigo', 'Código'); ?></th>

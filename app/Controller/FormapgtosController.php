@@ -13,6 +13,24 @@ class FormapgtosController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Formapgto.forcodigo' => array('operator' => 'LIKE'),
+				'Formapgto.fornome' => array('operator' => 'LIKE'),
+				'Formapgto.fortipo' => array('operator' => 'LIKE'),
+				'Formapgto.formesdia' => array('operator' => 'LIKE'),
+				'Formapgto.forprazofixo' => array('operator' => 'LIKE'),
+				'Formapgto.forsigla' => array('operator' => 'LIKE'),
+				'Formapgto.forsituacao' => array('operator' => 'LIKE'),
+				'Formapgto.forcontabil' => array('operator' => 'LIKE')
+				)
+			)
+			)
+		);
+		$this->Filter->setPaginate('order', 'Formapgto.fornome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+                
 		$this->Formapgto->recursive = 0;
 		$this->set('formapgtos', $this->paginate());
 	}

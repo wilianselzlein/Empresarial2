@@ -13,6 +13,19 @@ class TipocobsController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Tipocob.tipcobcodigo' => array('operator' => 'LIKE'),
+                                'Tipocob.tipcobnome' => array('operator' => 'LIKE'),
+				'Tipocob.tipcobsituacao' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Tipocob.tipcobnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Tipocob->recursive = 0;
 		$this->set('tipocobs', $this->paginate());
 	}

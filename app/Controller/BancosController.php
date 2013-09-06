@@ -28,6 +28,18 @@ class BancosController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Banco.bancodigo' => array('operator' => 'LIKE'),
+				'Banco.bannome' => array('operator' => 'LIKE')
+				)
+			)
+			)
+		);
+		$this->Filter->setPaginate('order', 'Banco.bannome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Banco->recursive = 0;
 		$this->set('bancos', $this->paginate());
 	}

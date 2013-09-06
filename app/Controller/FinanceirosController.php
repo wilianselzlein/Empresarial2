@@ -13,6 +13,48 @@ class FinanceirosController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Financeiro.finregistro' => array('operator' => 'LIKE'),
+				'Financeiro.fintipo' => array('operator' => 'LIKE'),
+				'Financeiro.finempresa' => array('operator' => 'LIKE'),
+				'Financeiro.finold' => array('operator' => 'LIKE'),
+				'Financeiro.fincliente' => array('operator' => 'LIKE'),
+				'Financeiro.findcto1' => array('operator' => 'LIKE'),
+				'Financeiro.findcto2' => array('operator' => 'LIKE'),
+				'Financeiro.finparcela' => array('operator' => 'LIKE'),
+				'Financeiro.finemissao' => array('operator' => 'LIKE'),
+				'Financeiro.finvcto' => array('operator' => 'LIKE'),
+				'Financeiro.finprevvcto' => array('operator' => 'LIKE'),
+				'Financeiro.finvalor' => array('operator' => 'LIKE'),
+				'Financeiro.findesccomercial' => array('operator' => 'LIKE'),
+				'Financeiro.fintipocob' => array('operator' => 'LIKE'),
+				'Financeiro.finsubgrupofin' => array('operator' => 'LIKE'),
+				'Financeiro.finconta' => array('operator' => 'LIKE'),
+				'Financeiro.finnossonum' => array('operator' => 'LIKE'),
+				'Financeiro.finsituacao' => array('operator' => 'LIKE'),
+				'Financeiro.finvalorpago' => array('operator' => 'LIKE'),
+				'Financeiro.findesconto' => array('operator' => 'LIKE'),
+				'Financeiro.finacrescimo' => array('operator' => 'LIKE'),
+				'Financeiro.fintaxa' => array('operator' => 'LIKE'),
+				'Financeiro.finliquido' => array('operator' => 'LIKE'),
+				'Financeiro.finobs' => array('operator' => 'LIKE'),
+				'Financeiro.finfaturamento' => array('operator' => 'LIKE'),
+				'Financeiro.findataprotesto' => array('operator' => 'LIKE'),
+				'Empresa.empcodigo' => array('operator' => 'LIKE'),
+				'Empresa.empnome' => array('operator' => 'LIKE'),
+				'Cliente.clirazao' => array('operator' => 'LIKE'),
+				'Cliente.clifantasia' => array('operator' => 'LIKE'),
+				'Tipocob.tipcobnome' => array('operator' => 'LIKE'),
+				'Subgrupofin.subgfnome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Empresa.empnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+                
 		$this->Financeiro->recursive = 0;
 		$this->set('financeiros', $this->paginate());
 	}

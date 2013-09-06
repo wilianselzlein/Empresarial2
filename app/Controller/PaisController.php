@@ -13,6 +13,18 @@ class PaisController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Pai.paicodigo' => array('operator' => 'LIKE'),
+				'Pai.painome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Pai.painome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Pai->recursive = 0;
 		$this->set('pais', $this->paginate());
 	}

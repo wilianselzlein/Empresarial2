@@ -1,5 +1,6 @@
 <div class="centrocustos index">
 	<h2><?php echo __('Centros de Custos'); ?></h2>
+        <?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'filtros.php'; ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('cencuscodigo', 'Código'); ?></th>

@@ -13,6 +13,19 @@ class PlanocontaController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Planocontum.placodigo' => array('operator' => 'LIKE'),
+                                'Planocontum.plaanalitico' => array('operator' => 'LIKE'),
+				'Planocontum.planome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Planocontum.planome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Planocontum->recursive = 0;
 		$this->set('planoconta', $this->paginate());
 	}

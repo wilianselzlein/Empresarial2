@@ -1,5 +1,6 @@
 <div class="financeiros index">
 	<h2><?php echo __('Financeiro'); ?></h2>
+        <?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'filtros.php'; ?>
 	<?php echo $this->html->script("jquery", array('inline'=>false)); ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>

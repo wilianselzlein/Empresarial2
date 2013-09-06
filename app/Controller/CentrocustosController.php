@@ -13,6 +13,19 @@ class CentrocustosController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Centrocusto.cencuscodigo' => array('operator' => 'LIKE'),
+                                'Centrocusto.cencusanalitico' => array('operator' => 'LIKE'),
+                                'Centrocusto.cencusnome' => array('operator' => 'LIKE')
+				)
+			)
+			)
+		);
+		$this->Filter->setPaginate('order', 'Centrocusto.cencusnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Centrocusto->recursive = 0;
 		$this->set('centrocustos', $this->paginate());
 	}

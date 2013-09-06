@@ -13,6 +13,18 @@ class GrupofinsController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Grupofin.grufincodigo' => array('operator' => 'LIKE'),
+				'Grupofin.grufinnome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Grupofin.grufinnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Grupofin->recursive = 0;
 		$this->set('grupofins', $this->paginate());
 	}

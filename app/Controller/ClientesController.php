@@ -13,6 +13,54 @@ class ClientesController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Cliente.clicodigo' => array('operator' => 'LIKE'),
+				'Cliente.clipessoa' => array('operator' => 'LIKE'),
+				'Cliente.clirazao' => array('operator' => 'LIKE'),
+				'Cliente.clifantasia' => array('operator' => 'LIKE'),
+				'Cliente.cliendereco' => array('operator' => 'LIKE'),
+				'Cliente.clibairro' => array('operator' => 'LIKE'),
+				'Cliente.clicomplemento' => array('operator' => 'LIKE'),
+				'Cliente.clinumero' => array('operator' => 'LIKE'),
+				'Cliente.clicidade' => array('operator' => 'LIKE'),
+				'Cliente.clicep' => array('operator' => 'LIKE'),
+				'Cliente.clicxpostal' => array('operator' => 'LIKE'),
+				'Cliente.clifone' => array('operator' => 'LIKE'),
+				'Cliente.clifax' => array('operator' => 'LIKE'),
+				'Cliente.clicelular' => array('operator' => 'LIKE'),
+				'Cliente.cliemail' => array('operator' => 'LIKE'),
+				'Cliente.cliemailalt' => array('operator' => 'LIKE'),
+				'Cliente.clihomepage' => array('operator' => 'LIKE'),
+				'Cliente.clicontatofin' => array('operator' => 'LIKE'),
+				'Cliente.clicnpj' => array('operator' => 'LIKE'),
+				'Cliente.clicpf' => array('operator' => 'LIKE'),
+				'Cliente.cliie' => array('operator' => 'LIKE'),
+				'Cliente.cligrupo' => array('operator' => 'LIKE'),
+				'Cliente.clisituacao' => array('operator' => 'LIKE'),
+				'Cliente.clidatanasc' => array('operator' => 'LIKE'),
+				'Cliente.clinaturalidade' => array('operator' => 'LIKE'),
+				'Cliente.clipai' => array('operator' => 'LIKE'),
+				'Cliente.climae ' => array('operator' => 'LIKE'),
+				'Cliente.clirg ' => array('operator' => 'LIKE'),
+				'Cliente.cliorgaoexprg' => array('operator' => 'LIKE'),
+				'Cliente.clidataexprg' => array('operator' => 'LIKE'),
+				'Cliente.cliformapgto' => array('operator' => 'LIKE'),
+				'Cliente.clidiafatura' => array('operator' => 'LIKE'),
+				'Cliente.cliim' => array('operator' => 'LIKE'),
+				'Cidade.cidnome' => array('operator' => 'LIKE'),
+				'Grupocliente.gruclinome' => array('operator' => 'LIKE'),
+				'Formapgto.fornome' => array('operator' => 'LIKE'),
+				'Tipocob.tipcobnome' => array('operator' => 'LIKE'),
+				'Naturalidade.cidnome' => array('operator' => 'LIKE')
+				)
+			)
+			)
+		);
+		$this->Filter->setPaginate('order', 'Cliente.clirazao ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Cliente->recursive = 0;
 		$this->set('clientes', $this->paginate());
 	}

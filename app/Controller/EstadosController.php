@@ -13,6 +13,20 @@ class EstadosController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Estado.estcodigo' => array('operator' => 'LIKE'),
+				'Estado.estnome' => array('operator' => 'LIKE'),
+				'Estado.estsigla' => array('operator' => 'LIKE'),
+				'Pais.painome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Estado.estnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+                
 		$this->Estado->recursive = 0;
 		$this->set('estados', $this->paginate());
 	}

@@ -13,6 +13,18 @@ class GrupoclientesController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Grupocliente.gruclicodigo' => array('operator' => 'LIKE'),
+				'Grupocliente.gruclinome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Grupocliente.gruclinome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Grupocliente->recursive = 0;
 		$this->set('grupoclientes', $this->paginate());
 	}

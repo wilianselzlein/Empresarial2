@@ -13,6 +13,18 @@ class EmpresasController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Empresa.empcodigo' => array('operator' => 'LIKE'),
+                                'Empresa.empnome' => array('operator' => 'LIKE')
+				)
+			)
+			)
+		);
+		$this->Filter->setPaginate('order', 'Empresa.empnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+                
 		$this->Empresa->recursive = 0;
 		$this->set('empresas', $this->paginate());
 	}

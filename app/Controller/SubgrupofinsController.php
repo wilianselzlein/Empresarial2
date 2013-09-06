@@ -13,6 +13,19 @@ class SubgrupofinsController extends AppController {
  * @return void
  */
 	public function index() {
+                $this->Filter->addFilters(
+			array('filter1' => array('OR' => array(
+				'Subgrupofin.subgfcodigo' => array('operator' => 'LIKE'),
+                                'Subgrupofin.subgfnome' => array('operator' => 'LIKE'),
+				'Grupofin.grufinnome' => array('operator' => 'LIKE')
+				)
+                            )
+			)
+		);
+		$this->Filter->setPaginate('order', 'Subgrupofin.subgfnome ASC'); // optional
+		$this->Filter->setPaginate('limit', 10); // optional
+		$this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
 		$this->Subgrupofin->recursive = 0;
 		$this->set('subgrupofins', $this->paginate());
 	}
