@@ -9,6 +9,10 @@ echo $this->html->scriptBlock('
         $("#cnpj").mask("99.999.999/9999-99");
         $("#cep").mask("99999-999");
         $("#data").mask("99/99/9999");
+	$("#data1").mask("99/99/9999");
+	$("#data2").mask("99/99/9999");
+	$("#data3").mask("99/99/9999");
+	$("#data4").mask("99/99/9999");
 	$("#analitico").mask("99.999.999");
     });', array('inline'=>false));
 ?>

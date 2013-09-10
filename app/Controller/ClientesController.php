@@ -54,7 +54,17 @@ class ClientesController extends AppController {
 				'Tipocob.tipcobnome' => array('operator' => 'LIKE'),
 				'Naturalidade.cidnome' => array('operator' => 'LIKE')
 				)
-			)
+			    ),
+			    'filter2' => array(
+				    'Cliente.clisituacao' => array(
+					    'select' => $this->Filter->select('Situação:', array('A' => 'Ativos', 'I' => 'Inativos'))
+				    )
+			    ),
+			    'filter3' => array(
+				    'Cliente.cligrupo' => array(
+					    'select' => $this->Filter->select('Grupos:', $this->Cliente->Grupocliente->find('list'))
+				    )
+			    )
 			)
 		);
 		$this->Filter->setPaginate('order', 'Cliente.clirazao ASC'); // optional

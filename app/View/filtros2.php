@@ -6,7 +6,7 @@
 		<table border="0" width="100%">
 			<tr>
 				<td width="10%"><br><?php echo $this->Search->input('filter2', array('class' => 'select-box chzn-select')); ?></td>
-				<td width="80%"><br><div><?php echo $this->Search->input('filter1', array('style' => 'border: 1px solid #aaa;')); ?></div></td>
+				<td width="80%"><br><?php echo $this->Search->input('filter1', array('style' => 'border: 1px solid #aaa;')); ?></td>
 				<td width="10%"><?php echo $this->Search->end(__('Filtrar', true)); ?></td>
 			</tr>
 		</table>

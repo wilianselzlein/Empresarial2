@@ -70,18 +70,25 @@
 		//echo $this->Form->input('finliquido', array('label' => 'Líquido'));
 		echo $this->Form->input('finobs', array('label' => 'Observação'));
 		//echo $this->Form->input('finobs2', array('label' => 'Observação 2'));?>
-        <table id="mytablepc" border="0" style="width: 350px" cellpadding="0" cellspacing="0">
-            <?php foreach ($financeiroplanocontas as $pc): 
-                $i = $pc['FinanceiroPlanoConta']['finpcid']; ?>
+        <table id="mytablepc" border="0" style="width: 450px" cellpadding="0" cellspacing="0">
+            <?php 
+	        $lastRowpc = -1;
+	        foreach ($financeiroplanocontas as $pc): 
+                $i = $pc['FinanceiroPlanoConta']['finpcid'];
+		$lastRowpc++; ?>
 	    <tr id="pc<?php echo $i?>">
-		<td width="65%"><?php echo $this->Form->input('unusedpc.finpcplanoconta', array('type' => 'select', 'label' => 'Plano de Conta', 'options' => $planocontas, 'value' => $pc['FinanceiroPlanoConta']['finpcplanoconta'])); ?></td>
-		<td><?php echo $this->Form->input('unusedpc.finpcvalor', array('type' => 'number', 'label' => 'Valor', 'value' => $pc['FinanceiroPlanoConta']['finpcvalor'])); ?></td>
-		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Plano de Conta', 'onClick' => 'removePC('.$i.')')) ?></td>
+		<td width="65%"><?php echo $this->Form->input('PlanoConta.'.$lastRowpc.'.finpcplanoconta', array('type' => 'select', 'label' => 'Plano de Conta', 'options' => $planocontas, 'value' => $pc['FinanceiroPlanoConta']['finpcplanoconta'])); ?></td>
+		<td><?php echo $this->Form->input('PlanoConta.'.$lastRowpc.'.finpcvalor', array('type' => 'number', 'label' => 'Valor', 'value' => $pc['FinanceiroPlanoConta']['finpcvalor'])); ?></td>
+		<td><?php echo $this->Form->input('PlanoConta.'.$lastRowpc.'.finpcpercentual', array('type' => 'number', 'label' => '%', 'value' => $pc['FinanceiroPlanoConta']['finpcpercentual'])); ?></td>
+		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Plano de Conta', 'onClick' => 'removePC('.$i.')')) ?>
+		    <?php echo $this->Form->hidden('PlanoConta.'.$lastRowpc.'.finpcid', array('type' => 'number', 'label' => 'Valor', 'value' => $pc['FinanceiroPlanoConta']['finpcid'])); ?>
+		</td>
 	    </tr>
             <?php endforeach; ?>
             <tr id="pc0" style="display:none;">
 		<td width="65%"><?php echo $this->Form->input('unusedpc.finpcplanoconta', array('type' => 'select', 'label' => 'Plano de Conta', 'options' => $planocontas)); ?></td>
 		<td><?php echo $this->Form->input('unusedpc.finpcvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+		<td><?php echo $this->Form->input('unusedpc.finpcpercentual', array('type' => 'number', 'label' => '%')); ?></td>
 		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Plano de Conta')) ?></td>
 	    </tr>
 	    <tr id="trAddpc" >
@@ -90,20 +97,27 @@
 		</td>
 	    </tr>            
 	</table>
-	<table id="mytablecc" border="0" style="width: 350px" cellpadding="0" cellspacing="0">
-	    <?php foreach ($financeirocentrocustos as $cc): 
-                $i = $cc['FinanceiroCentroCusto']['finccid']; ?>
+	<table id="mytablecc" border="0" style="width: 450px" cellpadding="0" cellspacing="0">
+	    <?php 
+	        $lastRowcc = -1;
+		foreach ($financeirocentrocustos as $cc): 
+                $i = $cc['FinanceiroCentroCusto']['finccid']; 
+		$lastRowcc++; ?>
             <tr id="cc<?php echo $i?>"> 
-		<td width="65%"><?php echo $this->Form->input('unusedcc.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos, 'value' => $cc['FinanceiroCentroCusto']['fincccentrocusto'])); ?></td>
-		<td><?php echo $this->Form->input('unusedcc.finccvalor', array('type' => 'number', 'label' => 'Valor', 'value' => $cc['FinanceiroCentroCusto']['finccvalor'])); ?></td>
-		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo', 'onClick' => 'removeCC('.$i.')')) ?></td>
-	    </tr>
+		<td width="65%"><?php echo $this->Form->input('CentroCusto.'.$lastRowcc.'.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos, 'value' => $cc['FinanceiroCentroCusto']['fincccentrocusto'])); ?></td>
+		<td><?php echo $this->Form->input('CentroCusto.'.$lastRowcc.'.finccvalor', array('type' => 'number', 'label' => 'Valor', 'value' => $cc['FinanceiroCentroCusto']['finccvalor'])); ?></td>
+		<td><?php echo $this->Form->input('CentroCusto.'.$lastRowcc.'.finccpercentual', array('type' => 'number', 'label' => '%', 'value' => $cc['FinanceiroCentroCusto']['finccpercentual'])); ?></td>
+		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo', 'onClick' => 'removeCC('.$i.')')) ?>
+		    <?php echo $this->Form->hidden('CentroCusto.'.$lastRowcc.'.finccid', array('type' => 'number', 'label' => 'Valor', 'value' => $cc['FinanceiroCentroCusto']['finccid'])); ?>
+		</td>
+	    </tr>    
+            <?php endforeach; ?>
 	    <tr id="cc0" style="display:none;"> 
 		<td width="65%"><?php echo $this->Form->input('unusedcc.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos)); ?></td>
 		<td><?php echo $this->Form->input('unusedcc.finccvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+		<td><?php echo $this->Form->input('unusedcc.finccpercentual', array('type' => 'number', 'label' => '%')); ?></td>
 		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo')) ?></td>
-	    </tr>            
-            <?php endforeach; ?>
+	    </tr>	    
 	    <tr id="trAddcc" >
 		<td colspan="2">
 		    <?php echo $this->Form->button('Adicionar Centro de Custo',array('type'=>'button','title'=>'Adicionar Centro de Custo','onclick'=>'addCC()'));?>
@@ -131,8 +145,8 @@
 </div>
 
 <script type='text/javascript'>
-	var lastRowcc=0;
-	var lastRowpc=0;
+	var lastRowcc=<?php echo $lastRowcc?>;
+	var lastRowpc=<?php echo $lastRowpc?>;
 
 	function addCC() {
 		lastRowcc++;
@@ -140,6 +154,7 @@
 		$("#cc"+lastRowcc+" img").attr('onclick','removeCC('+lastRowcc+')');
 		$("#cc"+lastRowcc+" select").attr('name','data[CentroCusto]['+lastRowcc+'][fincccentrocusto]').attr('id','CentroCustocencuscodigo'+lastRowcc);
 		$("#cc"+lastRowcc+" input").attr('name','data[CentroCusto]['+lastRowcc+'][finccvalor]').attr('id','CentroCustofinccvalor'+lastRowcc);
+		$("#cc"+lastRowcc+" input").attr('name','data[CentroCusto]['+lastRowcc+'][finccpercentual]').attr('id','CentroCustofinccpercentual'+lastRowcc);
 	}
 
 	function removeCC(x) {
@@ -152,6 +167,7 @@
 		$("#pc"+lastRowpc+" img").attr('onclick','removePC('+lastRowpc+')');
 		$("#pc"+lastRowpc+" select").attr('name','data[PlanoConta]['+lastRowpc+'][finpcplanoconta]').attr('id','PlanoContaplaconcodigo'+lastRowpc);
 		$("#pc"+lastRowpc+" input").attr('name','data[PlanoConta]['+lastRowpc+'][finpcvalor]').attr('id','PlanoContafinpcvalor'+lastRowpc);
+		$("#pc"+lastRowpc+" input").attr('name','data[PlanoConta]['+lastRowpc+'][finpcpercentual]').attr('id','PlanoContafinpcpercentual'+lastRowpc);
 	}
 
 	function removePC(x) {

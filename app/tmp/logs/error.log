@@ -1,0 +1,83 @@
+2013-09-10 21:20:46 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /Empresarial2/clientes
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(3243): Model->setSource('cliente')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#8 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\ClientesController.php(65): Controller->paginate()
+#9 [internal function]: ClientesController->index()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ClientesController), Array)
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
+#13 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-09-10 21:20:51 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /Empresarial2/empresas
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(3243): Model->setSource('empresa')
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#8 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\EmpresasController.php(29): Controller->paginate()
+#9 [internal function]: EmpresasController->index()
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EmpresasController), Array)
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#13 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-09-10 21:31:07 Error: Fatal Error (4): syntax error, unexpected '$subgrupofins' (T_VARIABLE) in [D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirosController.php, line 120]
+2013-09-10 21:31:07 Error: [FatalErrorException] syntax error, unexpected '$subgrupofins' (T_VARIABLE)
+Request URL: /Empresarial2/financeiros
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 120)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 120, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 120, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-11 00:23:28 Error: Fatal Error (4): syntax error, unexpected ';' in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Financeiros\index.ctp, line 11]
+2013-09-11 00:23:28 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Empresarial2/financeiros/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 11, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\PHP\xampp\ht...', 11, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-11 00:24:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=> '17/07/2013'   ORDER BY `Empresa`.`empnome` ASC  LIMIT 10' at line 1
+Request URL: /Empresarial2/financeiros/index/Wm1sc2RHVnlMbVpwYkhSbGNqST0=:/Wm1sc2RHVnlMbVpwYkhSbGNqTT0=:/Wm1sc2RHVnlMbVpwYkhSbGNqUT0=:TVRjdk1EY3ZNakF4TXc9PQ%3D%3D/Wm1sc2RHVnlMbVpwYkhSbGNqRT0=:
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#7 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\FinanceirosController.php(75): Controller->paginate()
+#8 [internal function]: FinanceirosController->index()
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(FinanceirosController), Array)
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

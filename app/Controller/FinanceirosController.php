@@ -48,7 +48,27 @@ class FinanceirosController extends AppController {
 				'Tipocob.tipcobnome' => array('operator' => 'LIKE'),
 				'Subgrupofin.subgfnome' => array('operator' => 'LIKE')
 				)
-                            )
+                            ),
+			    'filter2' => array(
+				    'Financeiro.fincliente' => array(
+					    'select' => $this->Filter->select('Cliente:', $this->Financeiro->Cliente->find('list'))
+				    )
+			    ),
+			    'filter3' => array(
+				    'Financeiro.finsubgrupofin' => array(
+					    'select' => $this->Filter->select('Subgrupo Fin.:', $this->Financeiro->Subgrupofin->find('list'))
+				    )
+			    ),
+			    'filter4' => array(
+				    'Financeiro.finvcto' => array(
+					'operator' => 'between',
+				        'between' => array( 'text' => __(' e ', true), 'date' => true))
+			    ),
+			    'filter5' => array(
+				    'Financeiro.finemissao' => array(
+					'operator' => 'between',
+					'between' => array('text' => __(' e ', true), 'date' => true))
+			    )
 			)
 		);
 		$this->Filter->setPaginate('order', 'Empresa.empnome ASC'); // optional
@@ -82,11 +102,11 @@ class FinanceirosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Financeiro->create();
-			debug($this->request->data); 
-			if ($this->request->data['Financeiro']['findcto2'] > 0)
+			debug($this->request->data); die;
+			//if ($this->request->data['Financeiro']['findcto2'] > 0)
 			    $this->request->data['Financeiro']['finold'] = '1';
-			else
-			    $this->request->data['Financeiro']['finold'] = '2';
+			//else
+			//    $this->request->data['Financeiro']['finold'] = '2';
 			
 			$this->request->data['Financeiro']['finsituacao'] = '1';
 			if ($this->Financeiro->save($this->request->data)) {
@@ -95,7 +115,7 @@ class FinanceirosController extends AppController {
 				    foreach($this->request->data['CentroCusto'] as $financeirocentrocusto) {
 					    //$ret = $this->query("INSERT INTO Notes (user_id,date_added,date_modified,details)  VALUES (1,'2008-01-01 17:22','2008-01-01','Test');"); 
 					    $financeirocentrocusto['finccregistro']=$id;
-					    $financeirocentrocusto['finccpercentual']=0.00;
+					    //$financeirocentrocusto['finccpercentual']=0.00;
 					    $this->Financeiro->FinanceiroCentroCusto->create();
 					    $this->Financeiro->FinanceiroCentroCusto->save($financeirocentrocusto);
 				    }
@@ -103,20 +123,20 @@ class FinanceirosController extends AppController {
 				if (isset($this->request->data['PlanoConta'])) {
 				    foreach($this->request->data['PlanoConta'] as $financeiroplanocontum) {
 					    $financeiroplanocontum['finpcregistro']=$id;
-					    $financeiroplanocontum['finpcpercentual']=0.00;
+					    //$financeiroplanocontum['finpcpercentual']=0.00;
 					    $this->Financeiro->FinanceiroPlanoConta->create();
 					    $this->Financeiro->FinanceiroPlanoConta->save($financeiroplanocontum);
 				    }
 				}
-				$this->Session->setFlash(__('Documento  ' . $this->request->data['Financeiro']['findcto1'] . ' salvo. Id ' . $id));
+				$this->Session->setFlash(__('Documento ' . $this->request->data['Financeiro']['findcto1'] . ' salvo. Id ' . $id));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('Documento nao pode ser salvo. Tente novamente.'));
 			}
 		}
 		$empresas = $this->Financeiro->Empresa->find('list');
-		$clientes = $this->Financeiro->Cliente->find('list');
-		$tipocobs = $this->Financeiro->Tipocob->find('list');
+		$clientes = $this->Financeiro->Cliente->find('list', array('conditions' => array('cliente.clisituacao' => 'A')));
+		$tipocobs = $this->Financeiro->Tipocob->find('list', array('conditions' => array('tipocob.tipcobsituacao' => 'A')));
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
 		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
 		$planocontas = $this->Financeiro->FinanceiroPlanoConta->PlanoConta->find('list');
@@ -135,8 +155,26 @@ class FinanceirosController extends AppController {
 			throw new NotFoundException(__('Invalid financeiro'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-                    debug($this->request->data); die;
+                    //debug($this->request->data); die;
 			if ($this->Financeiro->save($this->request->data)) {
+			    	if (isset($this->request->data['PlanoConta'])) {
+				    foreach($this->request->data['PlanoConta'] as $financeiroplanocontum) {
+					    $financeiroplanocontum['finpcregistro']=$id;
+					    //$financeiroplanocontum['finpcpercentual']=0.00;
+					    if ($financeiroplanocontum['finpcid'] == 0)
+						$this->Financeiro->FinanceiroPlanoConta->create();
+					    $this->Financeiro->FinanceiroPlanoConta->save($financeiroplanocontum);
+				    }
+				}
+				if (isset($this->request->data['CentroCusto'])) {
+				    foreach($this->request->data['CentroCusto'] as $financeirocentrocusto) {
+					    $financeirocentrocusto['finccregistro']=$id;
+					    //$financeirocentrocusto['finccpercentual']=0.00;
+					    if ($financeirocentrocusto['finccid'] == 0)
+					        $this->Financeiro->FinanceiroCentroCusto->create();
+					    $this->Financeiro->FinanceiroCentroCusto->save($financeirocentrocusto);
+				    }
+				}
 				$this->Session->setFlash(__('Documento salvo.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -147,8 +185,8 @@ class FinanceirosController extends AppController {
 			$this->request->data = $this->Financeiro->find('first', $options);
 		}
 		$empresas = $this->Financeiro->Empresa->find('list');
-		$clientes = $this->Financeiro->Cliente->find('list');
-		$tipocobs = $this->Financeiro->Tipocob->find('list');
+		$clientes = $this->Financeiro->Cliente->find('list', array('conditions' => array('cliente.clisituacao' => 'A')));
+		$tipocobs = $this->Financeiro->Tipocob->find('list', array('conditions' => array('tipocob.tipcobsituacao' => 'A')));
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
 		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
 		$planocontas = $this->Financeiro->FinanceiroPlanoConta->PlanoConta->find('list');

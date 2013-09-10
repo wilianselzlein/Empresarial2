@@ -74,9 +74,10 @@
 	    <tr id="pc0" style="display:none;">
 		<td width="65%"><?php echo $this->Form->input('unused.finpcplanoconta', array('type' => 'select', 'label' => 'Plano de Conta', 'options' => $planocontas)); ?></td>
 		<td><?php echo $this->Form->input('unused.finpcvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+		<td><?php echo $this->Form->input('unused.finpcpercentual', array('type' => 'number', 'label' => '%')); ?></td>
 		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Plano de Conta')) ?></td>
 	    </tr>
-	    <tr id="trAddpc" >
+	    <tr id="trAddpc">
 		<td colspan="2">
 		    <?php echo $this->Form->button('Adicionar Plano de Conta',array('type'=>'button','title'=>'Adicionar Plano de Conta','onclick'=>'addPC()'));?>
 		</td>
@@ -86,9 +87,10 @@
 	    <tr id="cc0" style="display:none;"> 
 		<td width="65%"><?php echo $this->Form->input('unused.fincccentrocusto', array('type' => 'select', 'label' => 'Centro de Custo', 'options' => $centrocustos)); ?></td>
 		<td><?php echo $this->Form->input('unused.finccvalor', array('type' => 'number', 'label' => 'Valor')); ?></td>
+		<td><?php echo $this->Form->input('unused.finccpercentual', array('type' => 'number', 'label' => '%')); ?></td>
 		<td><br/><?php echo $this->Html->image('minus.png', array('alt' => 'Remover Centro de Custo')) ?></td>
 	    </tr>
-	    <tr id="trAddcc" >
+	    <tr id="trAddcc">
 		<td colspan="2">
 		    <?php echo $this->Form->button('Adicionar Centro de Custo',array('type'=>'button','title'=>'Adicionar Centro de Custo','onclick'=>'addCC()'));?>
 		</td>
@@ -122,6 +124,7 @@
 		$("#cc"+lastRowcc+" img").attr('onclick','removeCC('+lastRowcc+')');
 		$("#cc"+lastRowcc+" select").attr('name','data[CentroCusto]['+lastRowcc+'][fincccentrocusto]').attr('id','CentroCustocencuscodigo'+lastRowcc);
 		$("#cc"+lastRowcc+" input").attr('name','data[CentroCusto]['+lastRowcc+'][finccvalor]').attr('id','CentroCustofinccvalor'+lastRowcc);
+		$("#cc"+lastRowcc+" input").attr('name','data[CentroCusto]['+lastRowcc+'][finccpercentual]').attr('id','CentroCustofinccpercentual'+lastRowcc);
 	}
 
 	function removeCC(x) {
@@ -134,6 +137,7 @@
 		$("#pc"+lastRowpc+" img").attr('onclick','removePC('+lastRowpc+')');
 		$("#pc"+lastRowpc+" select").attr('name','data[PlanoConta]['+lastRowpc+'][finpcplanoconta]').attr('id','PlanoContaplaconcodigo'+lastRowpc);
 		$("#pc"+lastRowpc+" input").attr('name','data[PlanoConta]['+lastRowpc+'][finpcvalor]').attr('id','PlanoContafinpcvalor'+lastRowpc);
+		$("#pc"+lastRowpc+" input").attr('name','data[PlanoConta]['+lastRowpc+'][finpcpercentual]').attr('id','PlanoContafinpcpercentual'+lastRowpc);
 	}
 
 	function removePC(x) {

@@ -54,3 +54,9 @@ App::uses('Debugger', 'Utility');
 		<li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
+<div class="form">
+Graficos</br>
+Graficos</br>
+Graficos</br></br>
+raficos</br>
+</div>

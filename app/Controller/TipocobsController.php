@@ -19,7 +19,12 @@ class TipocobsController extends AppController {
                                 'Tipocob.tipcobnome' => array('operator' => 'LIKE'),
 				'Tipocob.tipcobsituacao' => array('operator' => 'LIKE')
 				)
-                            )
+                            ),
+				'filter2' => array(
+					'Tipocob.tipcobsituacao' => array(
+						'select' => $this->Filter->select('Situação:', array('A' => 'Ativos', 'I' => 'Inativos'))
+				)
+			    )
 			)
 		);
 		$this->Filter->setPaginate('order', 'Tipocob.tipcobnome ASC'); // optional

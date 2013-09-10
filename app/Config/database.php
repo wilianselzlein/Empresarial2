@@ -1,7 +1,7 @@
 <?php
 class DATABASE_CONFIG {
 
-	/*public $default = array(
+	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -9,8 +9,8 @@ class DATABASE_CONFIG {
 		'password' => '',
 		'database' => 'empresarial',
 		'prefix' => 't',
-	);*/
-	public $default = array(
+	);
+	/*public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
