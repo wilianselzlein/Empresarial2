@@ -102,7 +102,7 @@ class FinanceirosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Financeiro->create();
-			debug($this->request->data); die;
+			//debug($this->request->data); die;
 			//if ($this->request->data['Financeiro']['findcto2'] > 0)
 			    $this->request->data['Financeiro']['finold'] = '1';
 			//else

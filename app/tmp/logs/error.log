@@ -81,3 +81,1545 @@ Stack Trace:
 #11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(FinanceirosController), Object(CakeRequest), Object(CakeResponse))
 #12 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-09-11 15:19:26 Error: [MissingHelperException] Helper class MenuHelper could not be found.
+Exception Attributes: array (
+  'class' => 'MenuHelper',
+  'plugin' => false,
+)
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Menu')
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(835): HelperCollection->__isset('Menu')
+#2 D:\PHP\xampp\htdocs\Empresarial2\app\View\Pages\home.ctp(66): View->__get('Menu')
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#6 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render('home', NULL)
+#7 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\PagesController.php(73): Controller->render('home')
+#8 [internal function]: PagesController->display('home')
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#12 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-09-11 16:06:03 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/js/aba.js
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:08:25 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:08:25 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:08:54 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:08:54 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:09:17 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:09:17 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:09:48 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:09:48 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:10:11 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:10:26 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:10:26 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:14:34 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:14:34 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:15:19 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:15:19 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:15:38 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:15:38 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:15:57 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:15:57 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:16:06 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:16:06 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:20:40 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:20:40 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:20:58 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:20:58 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:21:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:21:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:21:39 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:21:39 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:21:48 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:21:48 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:22:56 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:22:56 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:23:14 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:23:14 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:23:21 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:23:21 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:23:42 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:23:42 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:24:15 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:24:15 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:24:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:24:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:25:14 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:25:14 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:25:55 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:25:55 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:26:34 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:26:34 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:31:09 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:31:09 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:31:20 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:31:20 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:31:53 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:31:53 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:32:49 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:32:49 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:32:56 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:32:56 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:14 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:14 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:26 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:26 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:45 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:45 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:33:58 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:34:26 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:34:26 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:34:57 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:34:57 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:35:11 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:35:11 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:35:16 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:35:16 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:56:57 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 16:56:57 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:18:44 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php, line 48]
+2013-09-11 19:18:44 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-11 19:19:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php, line 48]
+2013-09-11 19:19:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-11 19:19:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php, line 48]
+2013-09-11 19:19:16 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\PHP\xampp\ht...', 48, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-11 19:19:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Article.id' in 'where clause'
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php(53): Model->find('all', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\View\Pages\home.ctp(101): MenuHelper->GrafAnual('maior')
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render('home', NULL)
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\PagesController.php(73): Controller->render('home')
+#12 [internal function]: PagesController->display('home')
+#13 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-09-11 19:19:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Article.id' in 'where clause'
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Finance...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Finance...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Finance...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php(53): Model->find('list', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\View\Pages\home.ctp(101): MenuHelper->GrafAnual('maior')
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render('home', NULL)
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\PagesController.php(73): Controller->render('home')
+#12 [internal function]: PagesController->display('home')
+#13 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-09-11 19:22:17 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:22:17 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:22:53 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:22:53 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:24:33 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:24:33 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:25:43 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:25:44 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:25:44 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:26:08 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:26:08 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:26:24 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:26:24 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:26:49 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:26:49 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:27:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:27:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:27:24 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:27:24 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:36:06 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:36:06 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:36:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:36:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:38:54 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+
+2013-09-11 19:39:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as mes  ORDER BY extract(month from finvcto) as mes ASC' at line 1
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT extract(...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT extract(...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT extract(...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php(57): Model->find('all', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\View\Pages\home.ctp(374): MenuHelper->GrafAnual('1')
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render('home', NULL)
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\PagesController.php(73): Controller->render('home')
+#12 [internal function]: PagesController->display('home')
+#13 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-09-11 19:39:09 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:39:09 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:39:45 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:39:45 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:40:05 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname from finvcto) as mes, SUM(`Financeiro`.`finvalor`) as valor, `Financei' at line 1
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT extract(...', Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT extract(...', Array, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT extract(...', false)
+#4 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Financeiro), Array)
+#5 D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php(57): Model->find('all', Array)
+#6 D:\PHP\xampp\htdocs\Empresarial2\app\View\Pages\home.ctp(374): MenuHelper->GrafAnual('1', false)
+#7 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(947): include('D:\PHP\xampp\ht...')
+#8 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(909): View->_evaluate('D:\PHP\xampp\ht...', Array)
+#9 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\View\View.php(471): View->_render('D:\PHP\xampp\ht...')
+#10 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(948): View->render('home', NULL)
+#11 D:\PHP\xampp\htdocs\Empresarial2\app\Controller\PagesController.php(73): Controller->render('home')
+#12 [internal function]: PagesController->display('home')
+#13 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-09-11 19:40:05 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:40:05 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:42:28 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:42:28 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:07 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:07 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:15 Error: Fatal Error (64): Cannot use [] for reading in [D:\PHP\xampp\htdocs\Empresarial2\app\View\Helper\MenuHelper.php, line 53]
+2013-09-11 19:44:15 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /Empresarial2/
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'D:\PHP\xampp\ht...', 53)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'D:\PHP\xampp\ht...', 53, Array)
+#2 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'D:\PHP\xampp\ht...', 53, Array)
+#3 D:\PHP\xampp\htdocs\Empresarial2\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-11 19:44:29 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:32 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:32 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:39 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:39 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:45 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:44:45 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:45:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:45:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:48:11 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:48:11 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:48:35 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:48:35 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:48:40 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:48:40 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:52:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:52:23 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:52:52 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:52:52 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:53:20 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:53:20 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:53:30 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:53:30 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:56:12 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:56:12 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:56:34 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 19:56:34 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:23:33 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:23:33 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:27:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:27:02 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:27:42 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:27:42 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:27:50 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:27:50 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:28:10 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+
+2013-09-11 23:51:48 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:51:48 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:52:18 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:52:18 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:52:33 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddleclick.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-11 23:52:33 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
+Stack Trace:
+#0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
