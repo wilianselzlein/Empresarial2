@@ -103,7 +103,8 @@
  * included primarily as a development convenience - and
  * thus not recommended for production applications.
  */
-	//Configure::write('App.baseUrl', env('SCRIPT_NAME'));
+    if (! strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') 
+	Configure::write('App.baseUrl', env('SCRIPT_NAME'));
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.
