@@ -4115,3 +4115,13 @@ Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
 Stack Trace:
 #0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-09-12 22:04:01 Error: [MissingControllerException] Controller class Empresarial2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Empresarial2Controller',
+  'plugin' => NULL,
+)
+Request URL: /Empresarial2/index.php/Empresarial2/
+Stack Trace:
+#0 /var/www/Empresarial2/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/Empresarial2/index.php(43): require('/var/www/Empres...')
+#2 {main}

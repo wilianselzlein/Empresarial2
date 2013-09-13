@@ -103,7 +103,7 @@
  * included primarily as a development convenience - and
  * thus not recommended for production applications.
  */
-    if (! strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') 
+    if ( strtoupper(substr(PHP_OS, 0, 3)) <> 'WIN') 
 	Configure::write('App.baseUrl', env('SCRIPT_NAME'));
 
 /**

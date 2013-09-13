@@ -741,7 +741,11 @@ App::uses('Debugger', 'Utility');
 	<li><strong><?php echo ClassRegistry::init('Financeiro')->find('count', array('conditions' => array('Financeiro.fintipo' => '2'))); ?></strong>&nbsp;Conta(s) a pagar;</li>    
     </ul>
     <br/>
-    <?php $cam = '/empresarial2'; //no linux se usa em branco ?>
+    <?php
+	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') 
+		$cam = '/empresarial2';
+	else
+		$cam = '/Empresarial2/app/webroot';?>
     <script src="<?php echo $cam; ?>/js/aba.js" type="text/javascript"></script>
     <link href="<?php echo $cam; ?>/css/aba.css" type="text/css" rel="stylesheet">
     <script src="<?php echo $cam; ?>/js/highcharts/highcharts.js"></script>
