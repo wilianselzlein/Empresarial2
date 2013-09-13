@@ -135,8 +135,8 @@ class FinanceirosController extends AppController {
 			}
 		}
 		$empresas = $this->Financeiro->Empresa->find('list');
-		$clientes = $this->Financeiro->Cliente->find('list', array('conditions' => array('cliente.clisituacao' => 'A')));
-		$tipocobs = $this->Financeiro->Tipocob->find('list', array('conditions' => array('tipocob.tipcobsituacao' => 'A')));
+		$clientes = $this->Financeiro->Cliente->find('list', array('conditions' => array('Cliente.clisituacao' => 'A')));
+		$tipocobs = $this->Financeiro->Tipocob->find('list', array('conditions' => array('Tipocob.tipcobsituacao' => 'A')));
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
 		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
 		$planocontas = $this->Financeiro->FinanceiroPlanoConta->PlanoConta->find('list');
@@ -185,8 +185,8 @@ class FinanceirosController extends AppController {
 			$this->request->data = $this->Financeiro->find('first', $options);
 		}
 		$empresas = $this->Financeiro->Empresa->find('list');
-		$clientes = $this->Financeiro->Cliente->find('list', array('conditions' => array('cliente.clisituacao' => 'A')));
-		$tipocobs = $this->Financeiro->Tipocob->find('list', array('conditions' => array('tipocob.tipcobsituacao' => 'A')));
+		$clientes = $this->Financeiro->Cliente->find('list', array('conditions' => array('Cliente.clisituacao' => 'A')));
+		$tipocobs = $this->Financeiro->Tipocob->find('list', array('conditions' => array('Tipocob.tipcobsituacao' => 'A')));
 		$subgrupofins = $this->Financeiro->Subgrupofin->find('list');
 		$centrocustos = $this->Financeiro->FinanceiroCentroCusto->CentroCusto->find('list');
 		$planocontas = $this->Financeiro->FinanceiroPlanoConta->PlanoConta->find('list');
