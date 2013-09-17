@@ -23,10 +23,28 @@ endif;
 App::uses('Debugger', 'Utility');
 ?>
 <div class="actions">
-	<h4><?php echo __('Parâmetros'); ?></h4>
+	<h4><?php echo __('Financeiro'); ?></h4>
 	<ul>
-		<li><?php echo $this->Html->link(__('Empresa'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Usuários'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Financeiro'), array('controller' => 'financeiros', 'action' => 'index')); ?> </li>	
+		<li><?php echo $this->Html->link(__('Pagamentos'), array('controller' => 'financeiropgtos', 'action' => 'index')); ?> </li>	
+		<li><?php echo $this->Html->link(__('Bancos'), array('controller' => 'bancos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Centros de Custo'), array('controller' => 'centrocustos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Planos de Conta'), array('controller' => 'planoconta', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Grupos Financeiros'), array('controller' => 'grupofins', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Subgrupos Financeiros'), array('controller' => 'subgrupofins', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
+	</ul>
+        <br/>
+	<h4><?php echo __('Caixa'); ?></h4>
+	<ul>
+		<li><?php echo $this->Html->link(__('Lançamentos'), array('controller' => 'caixalctos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Tipos de Cobrança'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>
+	</ul>
+	<br/>
+	<h4><?php echo __('Clientes'); ?></h4>
+	<ul>
+		<li><?php echo $this->Html->link(__('Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Grupos de Clientes'), array('controller' => 'grupoclientes', 'action' => 'index')); ?> </li>
 	</ul>
 	<br/>
 	<h4><?php echo __('Cidades'); ?></h4>
@@ -36,23 +54,11 @@ App::uses('Debugger', 'Utility');
 		<li><?php echo $this->Html->link(__('Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 	</ul>
 	<br/>
-	<h4><?php echo __('Clientes'); ?></h4>
+	<h4><?php echo __('Parâmetros'); ?></h4>
 	<ul>
-		<li><?php echo $this->Html->link(__('Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Grupos de Clientes'), array('controller' => 'grupoclientes', 'action' => 'index')); ?> </li>
-	</ul>
-        <br/>
-	<h4><?php echo __('Financeiro'); ?></h4>
-	<ul>
-		<li><?php echo $this->Html->link(__('Financeiro'), array('controller' => 'financeiros', 'action' => 'index')); ?> </li>	
-		<li><?php echo $this->Html->link(__('Bancos'), array('controller' => 'bancos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Centros de Custo'), array('controller' => 'centrocustos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Planos de Conta'), array('controller' => 'planoconta', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Tipos de Cobrança'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Grupos Financeiros'), array('controller' => 'grupofins', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Subgrupos Financeiros'), array('controller' => 'subgrupofins', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
-	</ul>
+		<li><?php echo $this->Html->link(__('Empresa'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Usuários'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+	</ul>	
 </div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

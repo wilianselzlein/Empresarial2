@@ -497,3 +497,19 @@ CREATE TABLE IF NOT EXISTS `tusers` (
 INSERT INTO `tusers` (`id`, `username`, `password`, `role`, `created`, `modified`) VALUES
 (6, 'PERF', 'd742316777364bb6b1667475c6b36a9ec71f5e03', NULL, '2013-07-01 16:27:30', '2013-07-01 16:27:30'),
 (8, 'PERF', 'c55f3a636eb88d28a6cb9060910cf7064a17099f', NULL, '2013-07-01 22:07:54', '2013-07-01 22:07:54');
+
+create table if not exists tcaixalcto (
+  cailctcodigo int(10) unsigned not null auto_increment,
+  cailctitem   int(11),
+  cailctdcto    int(11),
+  cailctoperacao     varchar(1),
+  cailctvalor     double not null,
+  cailctformapgto   int(11),
+  cailcthistorico     varchar(100),
+  cailctdata     date,
+  cailcthora     time,
+  cailctprograma int(11),
+  cailctold     varchar(1),
+  cailctdcto2     varchar(10),
+ primary key (cailctcodigo)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

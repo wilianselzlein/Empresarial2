@@ -32,7 +32,7 @@ body {
 a {
 	color: #003d4c;
 	text-decoration: underline;
-	font-weight: bold;
+	*font-weight: bold;
 }
 a:hover {
 	color: #367889;
@@ -52,7 +52,7 @@ h1 {
 }
 h2 {
 	background:#fff;
-	color: #e32;
+	color: #6a6a6a;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
 }
@@ -62,7 +62,7 @@ h3 {
 	font-size: 165%;
 }
 h4 {
-	color: #993;
+	color: #003399;
 	font-weight: normal;
 }
 ul, li {
@@ -266,7 +266,7 @@ fieldset {
 	padding: 8px 5px;
 }
 fieldset legend {
-	color: #e32;
+	color: #111;
 	font-size: 110%;
 	font-weight: bold;
 }
@@ -285,7 +285,7 @@ fieldset fieldset div {
 form div {
 	clear: both;
 	margin-bottom: 1em;
-	padding: .5em;
+	*padding: .5em;
 	vertical-align: text-top;
 }
 form .input {
@@ -295,7 +295,7 @@ form .required {
 	font-weight: bold;
 }
 form .required label:after {
-	color: #e32;
+	color: #bbb;
 	content: '*';
 	display:inline;
 }
@@ -306,19 +306,19 @@ form div.submit {
 }
 label {
 	display: block;
-	font-size: 110%;
-	margin-bottom:1px;
+	font-size: 100%;
+	*margin-bottom:1px;
 }
 input, textarea {
 	clear: both;
 	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
 	border: 1px solid #aaa;	
 	padding: 0.5%;
-	width:98%;
+	*width:98%;
 }
 select {
 	clear: both;
-	font-size: 120%;
+	*font-size: 120%;
 	border: 1px solid #aaa;	
 	vertical-align: text-bottom;
 }
