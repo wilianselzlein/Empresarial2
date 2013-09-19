@@ -1,4 +1,9 @@
-<link rel="stylesheet" href="/rh1/css/chosen.css" />
+<?php 
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')  
+	echo '<link rel="stylesheet" href="/css/chosen.css"/>';
+    else 
+	echo '<link rel="stylesheet" href="/Empresarial2/app/webroot/css/chosen.css"/>';
+?>
 <style type="text/css" media="all">
 	/* fix rtl for demo */
 	.chzn-rtl .chzn-search { left: -9000px; }

@@ -1,4 +1,9 @@
-<script src="/rh1/js/chosen.jquery.js" type="text/javascript"></script>
+<?php 
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')  
+	echo '<script src="/js/chosen.jquery.js" type="text/javascript"></script>';
+    else 
+	echo '<script src="/Empresarial2/app/webroot/js/chosen.jquery.js" type="text/javascript"></script>';
+?>
 <script type="text/javascript"> 
 	var config = {
 		'.chzn-select'           : {},
