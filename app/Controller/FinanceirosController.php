@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Financeiro $Financeiro
  */
 class FinanceirosController extends AppController {
-
+        
 /**
  * index method
  *
@@ -68,8 +68,12 @@ class FinanceirosController extends AppController {
 				    'Financeiro.finemissao' => array(
 					'operator' => 'between',
 					'between' => array('text' => __(' e ', true), 'date' => true))
-			    )
-			)
+			    ),
+			    'filter6' => array(
+				    'Financeiro.fintipo' => array(
+                                        'select' => $this->Filter->select('TIpo:', array(1 => 'Receber', 2 => 'Pagar')))
+                            )
+                        )
 		);
 		$this->Filter->setPaginate('order', 'Empresa.empnome ASC'); // optional
 		$this->Filter->setPaginate('limit', 10); // optional

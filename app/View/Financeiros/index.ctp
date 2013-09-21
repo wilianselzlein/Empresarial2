@@ -6,11 +6,12 @@
 	<div class="filter">
 		<table border="0" width="100%">
 			<tr>
-				<td width="10%"><br><?php echo $this->Search->input('filter2', array('class' => 'select-box chzn-select')); ?></td>
+                                <td width="10%"><br><?php echo $this->Search->input('filter6', array('class' => 'select-box chzn-select')); ?></td>
+                                <td width="10%"><br><?php echo $this->Search->input('filter2', array('class' => 'select-box chzn-select')); ?></td>
 				<td width="10%"><br><?php echo $this->Search->input('filter3', array('class' => 'select-box chzn-select')); ?></td>
 				<td width="10%"><br>Vencimento:<?php echo $this->Search->input('filter4', array('id' => 'data1'), array('id' => 'data2')); ?></td>
 				<td width="10%"><br>Emiss&atilde;o:<?php echo $this->Search->input('filter5', array('id' => 'data3'), array('id' => 'data4')); ?></td>
-				<td width="50%"><br><div><?php echo $this->Search->input('filter1', array('style' => 'border: 1px solid #aaa;')); ?></div></td>
+				<td width="40%"><br><div><?php echo $this->Search->input('filter1', array('style' => 'border: 1px solid #aaa;')); ?></div></td>
 				<td width="10%"><?php echo $this->Search->end(__('Filtrar', true)); ?></td>
 			</tr>
 		</table>
@@ -96,7 +97,8 @@
 		<td><?php echo $this->Locale->currency($financeiro['Financeiro']['finliquido']); ?>&nbsp;</td>
 		<td><?php echo h($financeiro['Financeiro']['finobs']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $financeiro['Financeiro']['finregistro'])); ?>
+			<?php echo $this->Html->link(__('Baixar'), array('controller' => 'financeiropgtos', 'action' => 'add', $financeiro['Financeiro']['finregistro'])); ?>
+                        <?php echo $this->Html->link(__('Ver'), array('action' => 'view', $financeiro['Financeiro']['finregistro'])); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $financeiro['Financeiro']['finregistro'])); ?>
 			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $financeiro['Financeiro']['finregistro']), null, __('Deseja excluir# %s?', $financeiro['Financeiro']['finregistro'])); ?>
 		</td>
@@ -121,8 +123,8 @@
 	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Novo Empresa'), array('controller' => 'empresas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Pagamento/Recebimento'), array('controller' => 'financeiropgtos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Pagamentos/Recebimentos'), array('controller' => 'financeiropgtos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Listar Clientes'), array('controller' => 'clientes', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Novo Cliente'), array('controller' => 'clientes', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Listar Tipos de Cob.'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>

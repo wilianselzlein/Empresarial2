@@ -19,7 +19,7 @@ class Financeiropgto extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'finpgid';
+	public $primaryKey = 'finpgregistroid';
 
 /**
  * Display field
@@ -34,7 +34,7 @@ class Financeiropgto extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'finpgid' => array(
+		'finpgregistroid' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',

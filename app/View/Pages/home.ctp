@@ -26,7 +26,7 @@ App::uses('Debugger', 'Utility');
 	<h4><?php echo __('Financeiro'); ?></h4>
 	<ul>
 		<li><?php echo $this->Html->link(__('Financeiro'), array('controller' => 'financeiros', 'action' => 'index')); ?> </li>	
-		<li><?php echo $this->Html->link(__('Pagamentos'), array('controller' => 'financeiropgtos', 'action' => 'index')); ?> </li>	
+		<li><?php echo $this->Html->link(__('Pagamentos/Recebimentos'), array('controller' => 'financeiropgtos', 'action' => 'index')); ?> </li>	
 		<li><?php echo $this->Html->link(__('Bancos'), array('controller' => 'bancos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Centros de Custo'), array('controller' => 'centrocustos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Planos de Conta'), array('controller' => 'planoconta', 'action' => 'index')); ?> </li>

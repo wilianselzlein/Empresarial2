@@ -5,13 +5,13 @@
 		<legend><?php echo __('Novo Financeiro'); ?></legend>
 		<table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 0px">
 		<tr style="padding: 0px;">
-		    <td style="padding: 0px; border-bottom:0px" width="25%">
+		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('fintipo', array('type' => 'select', 'label' => 'Tipo', 'options' => $tipo)); ?>
 		    </td>
-		    <td style="padding: 0px; border-bottom:0px" width="25%">
+		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('finempresa' ,array('type' => 'select', 'label' => 'Empresa','options'=>$empresas)); //echo $this->Form->input('finold'); ?>
 		    </td>
-		    <td style="padding: 0px; border-bottom:0px" width="50%">
+		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('fincliente' ,array('type' => 'select', 'label' => 'Cliente','options'=>$clientes));?>
 		    </td>
 		</tr>
@@ -31,11 +31,14 @@
 		</table>
 		<table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 0px">
 		<tr style="padding: 0px;">
-		    <td style="padding: 0px; border-bottom:0px" width="50%">
+		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('finemissao', array('label' => 'Emissão', 'dateFormat' => 'DMY')); ?>
 		    </td>
-		    <td style="padding: 0px; border-bottom:0px" width="50%">
+                    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('finvcto', array('label' => 'Vencimento', 'dateFormat' => 'DMY')); ?>
+		    </td>
+                    <td style="padding: 0px; border-bottom:0px">
+			
 		    </td>
 		</tr>
 		</table>
@@ -54,10 +57,10 @@
 		</table>
 		<table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 0px">
 		<tr style="padding: 0px;">
-		    <td style="padding: 0px; border-bottom:0px" width="50%">
+		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('fintipocob' ,array('type' => 'select', 'label' => 'Tipo de Cobrança','options'=>$tipocobs)); ?>
 		    </td>
-		    <td style="padding: 0px; border-bottom:0px" width="50%">
+                    <td style="padding: 0px; border-bottom:0px" colspan="2">
 			<?php echo $this->Form->input('finsubgrupofin' ,array('type' => 'select', 'label' => 'Subgrupo Fin.','options'=>$subgrupofins)); ?>
 		    </td>
 		</tr>

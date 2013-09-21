@@ -1,5 +1,5 @@
 <div class="financeiropgtos view">
-<h2><?php  echo __('Pagamento'); ?></h2>
+<h2><?php  echo __('Pagamento/Recebimento'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
