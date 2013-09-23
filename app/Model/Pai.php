@@ -67,4 +67,19 @@ class Pai extends AppModel {
 			),
 		),
 	);
+	public $hasMany = array(
+		'Estado' => array(
+			'className' => 'Estado',
+			'foreignKey' => 'estpais',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
 }

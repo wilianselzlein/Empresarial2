@@ -102,4 +102,20 @@ class Cidade extends AppModel {
 			'order' => ''
 		)
 	);
+	public $hasMany = array(
+		'Cliente' => array(
+			'className' => 'Cliente',
+			'foreignKey' => 'clicidade',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+	
 }

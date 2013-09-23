@@ -32,3 +32,36 @@
 		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>
+<div class="related">
+	<h3><?php echo __('Estados'); ?></h3>
+	<?php if (!empty($pai['Estado'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Código'); ?></th>
+		<th><?php echo __('Nome'); ?></th>
+		<th><?php echo __('Sigla'); ?></th>
+		<th class="actions"><?php echo __('Menu'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($pai['Estado'] as $estado): ?>
+		<tr>
+			<td><?php echo $estado['estcodigo']; ?></td>
+			<td><?php echo $estado['estnome']; ?></td>
+			<td><?php echo $estado['estsigla']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('Ver'), array('controller' => 'estados', 'action' => 'view', $estado['estcodigo'])); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'estados', 'action' => 'edit', $estado['estcodigo'])); ?>
+				<?php echo $this->Form->postLink(__('Deletar'), array('controller' => 'estados', 'action' => 'delete', $estado['estcodigo']), null, __('Deseja excluir# %s?', $estado['estcodigo'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('Novo Estado'), array('controller' => 'estados', 'action' => 'add')); ?> </li>
+		</ul>
+	</div>
+</div>

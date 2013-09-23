@@ -93,4 +93,20 @@ class Estado extends AppModel {
 			'order' => ''
 		)
 	);
+	public $hasMany = array(
+		'Cidade' => array(
+			'className' => 'Cidade',
+			'foreignKey' => 'cidestado',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+	
 }

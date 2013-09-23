@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Grupocliente Model
  *
+ * @property Cliente $Grupocliente
  */
 class Grupocliente extends AppModel {
 
@@ -54,4 +55,28 @@ class Grupocliente extends AppModel {
 			),
 		),
 	);
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Cliente' => array(
+			'className' => 'Cliente',
+			'foreignKey' => 'cligrupo',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

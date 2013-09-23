@@ -33,12 +33,12 @@ class FinanceiropgtosController extends AppController {
 					    'select' => $this->Filter->select('Tipo Cob.:', $this->Financeiropgto->Tipocob->find('list'))
 				    )
 			    ),
-			    'filter4' => array(
+			    'filter3' => array(
 				    'Financeiropgto.finpgdata' => array(
 					'operator' => 'between',
 				        'between' => array( 'text' => __(' e ', true), 'date' => true))
 			    ),
-			    'filter6' => array(
+			    'filter4' => array(
 				    'Financeiropgto.finpgtipo' => array(
                                         'select' => $this->Filter->select('Tipo:', array('P' => 'Parcial', 'Q' => 'Quitação')))
                             )

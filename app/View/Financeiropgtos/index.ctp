@@ -1,10 +1,13 @@
 <div class="financeiropgtos index">
 	<h2><?php echo __('Pagamentos/Recebimentos'); ?></h2>
+	<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
+	<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'chosen.html'; ?>	
+	<?php echo $this->Search->create(); ?>
 	<table cellpadding="0" cellspacing="0">
         <tr>
-                <td width="10%"><br><?php echo $this->Search->input('filter6', array('class' => 'select-box chzn-select')); ?></td>
+                <td width="10%"><br><?php echo $this->Search->input('filter4', array('class' => 'select-box chzn-select')); ?></td>
                 <td width="10%"><br><?php echo $this->Search->input('filter2', array('class' => 'select-box chzn-select')); ?></td>
-                <td width="10%"><br>Vencimento:<?php echo $this->Search->input('filter4', array('id' => 'data1'), array('id' => 'data2')); ?></td>
+                <td width="10%"><br>Vencimento:<?php echo $this->Search->input('filter3', array('id' => 'data1'), array('id' => 'data2')); ?></td>
                 <td width="60%"><br><div><?php echo $this->Search->input('filter1', array('style' => 'border: 1px solid #aaa;')); ?></div></td>
                 <td width="10%"><?php echo $this->Search->end(__('Filtrar', true)); ?></td>
         </tr>
