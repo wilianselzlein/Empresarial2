@@ -7,7 +7,7 @@ App::uses('AppModel', 'Model');
  * @property Cidade $Naturalidade
  */
 class Cliente extends AppModel {
-
+	public $actsAs = array('Containable');
 /**
  * Use table
  *
@@ -432,6 +432,21 @@ class Cliente extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		)
+	);
+	public $hasMany = array(
+		'Fin' => array(
+			'className' => 'Financeiro',
+			'foreignKey' => 'fincliente',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
 }

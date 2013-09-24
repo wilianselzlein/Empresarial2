@@ -6,6 +6,7 @@ App::uses('AppModel', 'Model');
  */
 class Tipocob extends AppModel {
 
+	public $actsAs = array('Containable');
 /**
  * Use table
  *
@@ -71,5 +72,5 @@ class Tipocob extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);  
+	);
 }

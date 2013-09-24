@@ -27,7 +27,6 @@
 		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>
-
 <div class="related">
 	<h3><?php echo __('Financeiros'); ?></h3>
 	<?php if (!empty($tipocob['Fin'])): ?>
@@ -38,10 +37,10 @@
 		<th><?php echo __('Parcela'); ?></th>
                 <th><?php echo __('Emissão'); ?></th>
                 <th><?php echo __('Vencimento'); ?></th>
-                <th><?php echo __('Valor'); ?></th>
-                <th><?php echo __('Subgrupo Fin'); ?></th> 
                 <th><?php echo __('Situação'); ?></th> 
+                <th><?php echo __('Valor'); ?></th>
                 <th><?php echo __('Valor Pago'); ?></th> 
+                <th><?php echo __('Subgrupo Fin'); ?></th> 
                 <th><?php echo __('Obs'); ?></th> 
 		<th class="actions"><?php echo __('Menu'); ?></th>
 	</tr>
@@ -49,15 +48,15 @@
 		$i = 0;
 		foreach ($tipocob['Fin'] as $tipocob): ?>
 		<tr>
-			<td><?php echo $tipocob['fincliente']; ?></td>
+			<td><?php echo $this->Html->link($tipocob['Cliente']['clifantasia'], array('controller' => 'clientes', 'action' => 'view', $tipocob['Cliente']['clicodigo'])); ?></td>
 			<td><?php echo $tipocob['findcto1']; ?></td>
 			<td><?php echo $tipocob['finparcela']; ?></td>
-                        <td><?php echo $tipocob['finemissao']; ?></td>
-                        <td><?php echo $tipocob['finvcto']; ?></td>
-                        <td><?php echo $tipocob['finvalor']; ?></td>
-                        <td><?php echo $tipocob['finsubgrupofin']; ?></td>
-                        <td><?php echo $tipocob['finsituacao']; ?></td>
-                        <td><?php echo $tipocob['finvalorpago']; ?></td>
+                        <td><?php echo $this->Locale->date($tipocob['finemissao']); ?></td>
+                        <td><?php echo $this->Locale->date($tipocob['finvcto']); ?></td>
+			<td><?php if ($tipocob['finsituacao'] == 0) echo 'Aberto'; else echo 'Fechado'; ?>&nbsp;</td>
+                        <td><?php echo $this->Locale->currency($tipocob['finvalor']); ?></td>
+                        <td><?php echo $tipocob['finvalorpago']; ?></td>			
+			<td><?php echo $this->Html->link($tipocob['Subgrupofin']['subgfnome'], array('controller' => 'subgrupofins', 'action' => 'view', $tipocob['Subgrupofin']['subgfcodigo'])); ?></td>
                         <td><?php echo $tipocob['finobs']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('Ver'), array('controller' => 'financeiros', 'action' => 'view', $tipocob['finregistro'])); ?>

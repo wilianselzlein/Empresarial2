@@ -44,9 +44,14 @@ class TipocobsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Tipocob->exists($id)) {
-			throw new NotFoundException(__('Invalid Tipo de Cob.'));
-		}
-		$options = array('conditions' => array('Tipocob.' . $this->Tipocob->primaryKey => $id));
+			throw new NotFoundException(__('Tipo de Cobrança inválido.'));
+		}			
+		$options = array('conditions' => array('Tipocob.' . $this->Tipocob->primaryKey => $id), 
+		    'contain' => array('Fin' => 
+			array('fields' => 'finregistro', 'fincliente', 'fintipo', 'findcto1', 'finparcela', 'finemissao', 'finvcto', 'finvalor', 'finsubgrupofin', 'finsituacao', 'finvalorpago', 'finobs', 
+			    'Cliente' => array('fields' => array('clicodigo','clirazao','clifantasia')),
+			    'Subgrupofin' => array('fields' => array('subgfcodigo','subgfnome')),
+			)));
 		$this->set('tipocob', $this->Tipocob->find('first', $options));
 	}
 

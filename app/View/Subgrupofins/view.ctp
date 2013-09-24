@@ -29,3 +29,23 @@
 		<li><?php echo $this->Html->link(__('Novo Grupos Financeiro'), array('controller' => 'grupofins', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+<div class="related">
+    <h3><?php echo __('Grupo Financeiro'); ?></h3>
+    <?php if (!empty($subgrupofin['Grupofin'])): ?>
+	<dl>
+	    <dt><?php echo __('Código'); ?></dt>
+		<dd>
+		    <?php echo $subgrupofin['Grupofin']['grufincodigo']; ?> &nbsp;
+		</dd>
+	    <dt><?php echo __('Nome'); ?></dt>
+		<dd>
+		    <?php echo $subgrupofin['Grupofin']['grufinnome']; ?> &nbsp;
+		</dd>
+	</dl>
+    <?php endif; ?>
+    <div class="actions">
+	<ul>
+	    <li><?php echo $this->Html->link(__('Editar'), array('controller' => 'grupofins', 'action' => 'edit', $subgrupofin['Grupofin']['grufincodigo'])); ?></li>
+	</ul>
+    </div>
+</div>

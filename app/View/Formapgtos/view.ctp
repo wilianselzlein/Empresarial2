@@ -73,9 +73,9 @@
 			<td><?php echo $formapgto['cailctcodigo']; ?></td>
 			<td><?php echo $formapgto['cailctdcto']; ?></td>
 			<td><?php echo $formapgto['cailctoperacao']; ?></td>
-                        <td><?php echo $formapgto['cailctvalor']; ?></td>
+                        <td><?php echo  $this->Locale->currency($formapgto['cailctvalor']); ?></td>
                         <td><?php echo $formapgto['cailcthistorico']; ?></td>
-                        <td><?php echo $formapgto['cailctdata']; ?></td>
+                        <td><?php echo  $this->Locale->date($formapgto['cailctdata']); ?></td>
                         <td><?php echo $formapgto['cailcthora']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('Ver'), array('controller' => 'caixalctos', 'action' => 'view', $formapgto['cailctformapgto'])); ?>

@@ -86,7 +86,12 @@ class ClientesController extends AppController {
 		if (!$this->Cliente->exists($id)) {
 			throw new NotFoundException(__('Invalid cliente'));
 		}
-		$options = array('conditions' => array('Cliente.' . $this->Cliente->primaryKey => $id));
+		$options = array('conditions' => array('Cliente.' . $this->Cliente->primaryKey => $id), 
+		    'contain' => array('Cidade', 'Naturalidade', 'Grupocliente', 'Formapgto', 'Tipocob', 'Fin' => 
+			array('fields' => 'finregistro', 'fincliente', 'fintipo', 'findcto1', 'finparcela', 'finemissao', 'finvcto', 'finvalor', 'finsubgrupofin', 'finsituacao', 'finvalorpago', 'finobs', 
+			    'Tipocob' => array('fields' => array('tipcobcodigo','tipcobnome')),
+			    'Subgrupofin' => array('fields' => array('subgfcodigo','subgfnome')),
+			)));
 		$this->set('cliente', $this->Cliente->find('first', $options));
 	}
 

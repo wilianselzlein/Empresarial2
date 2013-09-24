@@ -54,4 +54,19 @@ class Grupofin extends AppModel {
 			),
 		),
 	);
+	public $hasMany = array(
+		'Subgrupofin' => array(
+			'className' => 'Subgrupofin',
+			'foreignKey' => 'subgfgrupo',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
 }

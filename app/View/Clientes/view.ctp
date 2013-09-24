@@ -66,7 +66,7 @@
 			<?php echo h($cliente['Cliente']['clifone']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('FAx'); ?></dt>
+		<dt><?php echo __('Fax'); ?></dt>
 		<dd>
 			<?php echo h($cliente['Cliente']['clifax']); ?>
 			&nbsp;
@@ -198,4 +198,50 @@
 		<li><?php echo $this->Html->link(__('Listar Cidades'), array('controller' => 'cidades', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Novo Cidade'), array('controller' => 'cidades', 'action' => 'add')); ?> </li>
 	</ul>
+</div>
+<div class="related">
+    <h3><?php echo __('Financeiros'); ?></h3>
+    <?php if (!empty($cliente['Fin'])): ?>
+    <table cellpadding = "0" cellspacing = "0">
+    <tr>
+	<th><?php echo __('Tipo de Cob.'); ?></th>
+	<th><?php echo __('Documento'); ?></th>
+	<th><?php echo __('Parcela'); ?></th>
+	<th><?php echo __('Emissão'); ?></th>
+	<th><?php echo __('Vencimento'); ?></th>
+	<th><?php echo __('Situação'); ?></th> 
+	<th><?php echo __('Valor'); ?></th>
+	<th><?php echo __('Valor Pago'); ?></th> 
+	<th><?php echo __('Subgrupo Fin'); ?></th> 
+	<th><?php echo __('Obs'); ?></th> 
+	<th class="actions"><?php echo __('Menu'); ?></th>
+    </tr>
+    <?php
+	$i = 0;
+	foreach ($cliente['Fin'] as $cliente): ?>
+	<tr>
+	    <td><?php echo $this->Html->link($cliente['Tipocob']['tipcobnome'], array('controller' => 'tipocobs', 'action' => 'view', $cliente['Tipocob']['tipcobcodigo'])); ?></td>
+	    <td><?php echo $cliente['findcto1']; ?></td>
+	    <td><?php echo $cliente['finparcela']; ?></td>
+	    <td><?php echo $this->Locale->date($cliente['finemissao']); ?></td>
+	    <td><?php echo $this->Locale->date($cliente['finvcto']); ?></td>
+	    <td><?php if ($cliente['finsituacao'] == 0) echo 'Aberto'; else echo 'Fechado'; ?>&nbsp;</td>
+	    <td><?php echo $this->Locale->currency($cliente['finvalor']); ?></td>
+	    <td><?php echo $cliente['finvalorpago']; ?></td>			
+	    <td><?php echo $this->Html->link($cliente['Subgrupofin']['subgfnome'], array('controller' => 'subgrupofins', 'action' => 'view', $cliente['Subgrupofin']['subgfcodigo'])); ?></td>
+	    <td><?php echo $cliente['finobs']; ?></td>
+	    <td class="actions">
+		<?php echo $this->Html->link(__('Ver'), array('controller' => 'financeiros', 'action' => 'view', $cliente['finregistro'])); ?>
+		<?php echo $this->Html->link(__('Editar'), array('controller' => 'financeiros', 'action' => 'edit', $cliente['finregistro'])); ?>
+		<?php echo $this->Form->postLink(__('Deletar'), array('controller' => 'financeiros', 'action' => 'delete', $cliente['finregistro']), null, __('Deseja excluir# %s?', $cliente['finregistro'])); ?>
+	    </td>
+	</tr>
+    <?php endforeach; ?>
+    </table>
+    <?php endif; ?>
+    <div class="actions">
+	<ul>
+	    <li><?php echo $this->Html->link(__('Novo Financeiro'), array('controller' => 'financeiros', 'action' => 'add')); ?> </li>
+	</ul>
+    </div>
 </div>
