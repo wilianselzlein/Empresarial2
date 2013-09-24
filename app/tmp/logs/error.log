@@ -392,3 +392,23 @@ Request URL: /Empresarial2/empresarial2/css/images/abamiddlenormal.gif
 Stack Trace:
 #0 D:\PHP\xampp\htdocs\Empresarial2\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-09-23 22:52:41 Error: [MissingTableException] Table tcaixalcto for model Caixalcto was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'tcaixalcto',
+  'class' => 'Caixalcto',
+  'ds' => 'default',
+)
+Request URL: /Empresarial2/index.php/caixalctos
+Stack Trace:
+#0 /var/www/Empresarial2/lib/Cake/Model/Model.php(3243): Model->setSource('caixalcto')
+#1 /var/www/Empresarial2/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#2 /var/www/Empresarial2/lib/Cake/Controller/Component/PaginatorComponent.php(197): Model->find('all', Array)
+#3 /var/www/Empresarial2/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#4 /var/www/Empresarial2/app/Controller/CaixalctosController.php(17): Controller->paginate()
+#5 [internal function]: CaixalctosController->index()
+#6 /var/www/Empresarial2/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CaixalctosController), Array)
+#7 /var/www/Empresarial2/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/Empresarial2/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CaixalctosController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/Empresarial2/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/Empresarial2/index.php(43): require('/var/www/Empres...')
+#11 {main}

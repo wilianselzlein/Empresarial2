@@ -93,4 +93,19 @@ class Formapgto extends AppModel {
 			'rule' => array('multiple', array('in'  => array('S', 'N')))
 		),
 	);
+	public $hasMany = array(
+		'Lctos' => array(
+			'className' => 'Caixalcto',
+			'foreignKey' => 'cailctformapgto',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);        
 }

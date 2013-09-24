@@ -57,4 +57,19 @@ class Tipocob extends AppModel {
 			'rule' => array('multiple', array('in'  => array('A', 'I')))
 		),
 	);
+	public $hasMany = array(
+		'Fin' => array(
+			'className' => 'Financeiro',
+			'foreignKey' => 'fintipocob',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);  
 }

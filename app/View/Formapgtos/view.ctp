@@ -52,3 +52,44 @@
 		<li><?php echo $this->Html->link(__('Novo'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>
+<div class="related">
+	<h3><?php echo __('Lançamentos no Caixa'); ?></h3>
+	<?php if (!empty($formapgto['Lctos'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Lançamento'); ?></th>
+		<th><?php echo __('Documento'); ?></th>
+		<th><?php echo __('Operação'); ?></th>
+                <th><?php echo __('Valor'); ?></th>
+                <th><?php echo __('Histórico'); ?></th>
+                <th><?php echo __('Data'); ?></th>
+                <th><?php echo __('Hora'); ?></th> 
+		<th class="actions"><?php echo __('Menu'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($formapgto['Lctos'] as $formapgto): ?>
+		<tr>
+			<td><?php echo $formapgto['cailctcodigo']; ?></td>
+			<td><?php echo $formapgto['cailctdcto']; ?></td>
+			<td><?php echo $formapgto['cailctoperacao']; ?></td>
+                        <td><?php echo $formapgto['cailctvalor']; ?></td>
+                        <td><?php echo $formapgto['cailcthistorico']; ?></td>
+                        <td><?php echo $formapgto['cailctdata']; ?></td>
+                        <td><?php echo $formapgto['cailcthora']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('Ver'), array('controller' => 'caixalctos', 'action' => 'view', $formapgto['cailctformapgto'])); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'caixalctos', 'action' => 'edit', $formapgto['cailctformapgto'])); ?>
+				<?php echo $this->Form->postLink(__('Deletar'), array('controller' => 'caixalctos', 'action' => 'delete', $formapgto['cailctformapgto']), null, __('Deseja excluir# %s?', $formapgto['cailctformapgto'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('Novo Lançamento'), array('controller' => 'caixalctos', 'action' => 'add')); ?> </li>
+		</ul>
+	</div>
+</div>

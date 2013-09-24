@@ -32,13 +32,13 @@ App::uses('Debugger', 'Utility');
 		<li><?php echo $this->Html->link(__('Planos de Conta'), array('controller' => 'planoconta', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Grupos Financeiros'), array('controller' => 'grupofins', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Subgrupos Financeiros'), array('controller' => 'subgrupofins', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Tipos de Cobrança'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>
 	</ul>
         <br/>
 	<h4><?php echo __('Caixa'); ?></h4>
 	<ul>
-		<li><?php echo $this->Html->link(__('Lançamentos'), array('controller' => 'caixalctos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Tipos de Cobrança'), array('controller' => 'tipocobs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lançamentos'), array('controller' => 'caixalctos', 'action' => 'index')); ?> </li>	
+                <li><?php echo $this->Html->link(__('Formas de Pgto'), array('controller' => 'formapgtos', 'action' => 'index')); ?> </li>
 	</ul>
 	<br/>
 	<h4><?php echo __('Clientes'); ?></h4>

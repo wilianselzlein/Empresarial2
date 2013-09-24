@@ -116,6 +116,5 @@ class Cidade extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
-	
+	);	
 }
